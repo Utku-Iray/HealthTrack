@@ -1,0 +1,127 @@
+<?php
+require "../database/connection.php";
+require "controller.php";
+
+include "API/get-team-members.php";
+?>
+<!doctype html>
+<html class="no-js " lang="en">
+
+<head>
+    <?php include "utility/head.php" ?>
+    <title>Healthtrack Admin | Ekip Üyeleri</title>
+</head>
+
+<body data-alpino="theme-cyan">
+
+    <?php include "utility/header.php" ?>
+
+    <!-- Main Content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row clearfix g-3">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="header d-flex justify-content-between">
+                            <h2><strong>Healthtrack Admin |</strong> Ekip Üyeleri</h2>
+
+                            <a href="add-new-team-member.php" class="btn btn-primary"> <strong>Yeni Ekle</strong></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row clearfix g-3">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="body">
+                            <div class="table-responsive">
+                                <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                    <thead>
+                                        <tr>
+                                            <th>Ad, Soyad</th>
+                                            <th>Ünvan</th>
+                                            <th>Düzenle</th>
+                                            <th>Sil</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        foreach ($membersResult as $singleMember) { ?>
+                                            <tr class="member-<?= $singleMember->member_id ?>">
+                                                <td><?= $singleMember->member_name ?></td>
+                                                <td><?= $singleMember->title ?></td>
+                                                <td class="text-center"><a href="team-member-details.php?mid=<?= $singleMember->member_id ?>" class="btn btn-info">DÜZENLE</a></td>
+                                                <td class="text-center"><button class="btn btn-danger memberDeleteBtn" member-id="<?= $singleMember->member_id ?>">SİL</button></td>
+                                            </tr>
+                                        <?php }
+                                        ?>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <?php include "utility/script.php"; ?>
+    <!-- Delete Member -->
+    <script>
+        $(document).on('click', '.memberDeleteBtn', function() {
+            event.preventDefault();
+            var memberID = $(this).attr("member-id");
+
+            Swal.fire({
+                title: 'Ekip üyesini silmek istediğinize emin misiniz?',
+                text: "Not: Geri dönüşü olmayacaktır. Tekrar eklemek zorunda kalabilirsiniz.",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: "#18ce0f",
+                cancelButtonColor: "#FF3636",
+                confirmButtonText: 'Evet, eminim!',
+                cancelButtonText: 'Vazgeç',
+                reverseButtons: true
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        url: "API/delete-member.php",
+                        type: "POST",
+                        data: {
+                            memberID: memberID
+                        },
+                        cache: false,
+                        dataType: "json",
+                        success: function(data) {
+                            if (data.status == true) {
+                                $(".member-" + memberID).fadeOut('slow');
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'success',
+                                    title: data.message,
+                                    showConfirmButton: false,
+                                    timer: 2000
+                                })
+                                setInterval(reloadHandler, 3000)
+                            } else {
+                                Swal.fire({
+                                    position: 'top-end',
+                                    icon: 'error',
+                                    title: data.message,
+                                    showConfirmButton: false,
+                                    timer: 2000
+                                })
+                            }
+
+                        }
+                    });
+                }
+            })
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,10 +1,14 @@
 <?php
-include 'header.php';
+include 'utility/header.php';
+
+require_once 'utility/api/get-news.php';
+require_once 'utility/api/get-homepage-translations.php';
+
 
 ?>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-<div class="container">
+<!-- <div class="container">
   <div class="time-table-sec">
     <ul id="accordion2" class="accordion2">
       <li>
@@ -17,7 +21,7 @@ include 'header.php';
             <span class="divider">-</span>
             <span class="time">9.00 - 19.00</span>
           </li>
-         
+
           <li>
             <span class="day">Pazar</span> <span class="divider">-</span>
             <span class="time">Kapalı</span>
@@ -29,7 +33,7 @@ include 'header.php';
       </li>
     </ul>
   </div>
-</div>
+</div> -->
 
 <!--Start Banner-->
 
@@ -41,8 +45,8 @@ include 'header.php';
       <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
         <img src="images/slides/slider-1.jpeg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat" />
 
-     
-        
+
+
 
         <!-- <div
                 class="tp-caption small-title tp-resizeme rs-parallaxlevel-0 fade start"
@@ -66,7 +70,7 @@ include 'header.php';
                 Lorem IPSUM
               </div> -->
 
-     
+
       </li>
 
 
@@ -154,11 +158,10 @@ include 'header.php';
           </div>
           <div class="step__title">
             <h5 style="font-weight: 400;">
-              Dİnlİyoruz
+              <?= $generalInfoService1["title"] ?>
             </h5>
           </div>
-          <p class="step__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Explicabo, architecto alias! Nemo dolorem aliquam fugiat</p>
+          <p class="step__text"> <?= $generalInfoService1["description"] ?></p>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
@@ -170,11 +173,10 @@ include 'header.php';
           </div>
           <div class="step__title">
             <h5 style="font-weight: 400;">
-              İncelİyoruz
+              <?= $generalInfoService2["title"] ?>
             </h5>
           </div>
-          <p class="step__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Explicabo, architecto alias! Nemo dolorem aliquam fugiat</p>
+          <p class="step__text"> <?= $generalInfoService2["description"] ?></p>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
@@ -186,11 +188,10 @@ include 'header.php';
           </div>
           <div class="step__title">
             <h5 style="font-weight: 400;">
-              Planlıyoruz
+              <?= $generalInfoService3["title"] ?>
             </h5>
           </div>
-          <p class="step__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Explicabo, architecto alias! Nemo dolorem aliquam fugiat</p>
+          <p class="step__text"> <?= $generalInfoService3["description"] ?></p>
         </div>
       </div>
       <div class="col-md-3 col-sm-6">
@@ -202,24 +203,23 @@ include 'header.php';
           </div>
           <div class="step__title">
             <h5 style="font-weight: 400;">
-              İzlİyoruz
+              <?= $generalInfoService4["title"] ?>
             </h5>
           </div>
-          <p class="step__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Explicabo, architecto alias! Nemo dolorem aliquam fugiat</p>
+          <p class="step__text"> <?= $generalInfoService4["description"] ?></p>
         </div>
       </div>
     </div>
   </div>
 
-    <!--Start Services-->
+  <!--Start Services-->
   <div class="services-two">
     <div class="container">
       <div class="row">
         <div class="col-md-6">
           <div class="service-sec">
             <div class="icon" style="background-color: #f4911c;">
-            <img src="images/deneme.jpg" alt="">
+              <img src="images/deneme.jpg" alt="">
               <!-- <img
                       style="width: 70%; padding-top: 12px; background-color:#02adc6;"
                       src="images/icon-1.png"
@@ -228,17 +228,13 @@ include 'header.php';
             </div>
 
             <div class="detail">
-              <h5>Bütüncül Yaklaşım </h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Est, excepturi optio tempore voluptatum temporibus
-                sapiente quisquam fugit eligendi quo nemo?
-              </p>
+              <h5> <?= $generalInfoPrinciple1["title"] ?></h5>
+              <?= $generalInfoPrinciple1["description"] ?>
             </div>
           </div>
           <div class="service-sec">
             <div class="icon" style="background-color: #c2185f;">
-            <img src="images/deneme-2.jpg" alt="">
+              <img src="images/deneme-2.jpg" alt="">
               <!-- <img
                       style="width: 70%; padding-top: 12px"
                       src="images/icon-2.png"
@@ -247,17 +243,13 @@ include 'header.php';
             </div>
 
             <div class="detail">
-              <h5>Multidisipliner Bakış Açısı </h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Eligendi rem minus tenetur nesciunt quae cum mollitia eius
-                eveniet repudiandae enim!
-              </p>
+              <h5><?= $generalInfoPrinciple2["title"] ?></h5>
+              <?= $generalInfoPrinciple2["description"] ?>
             </div>
           </div>
           <div class="service-sec">
             <div class="icon" style="background-color: #39919d;">
-            <img src="images/deneme-3.jpg" alt="">
+              <img src="images/deneme-3.jpg" alt="">
               <!-- <img
                       style="width: 70%; padding-top: 12px"
                       src="images/icon-3.png"
@@ -266,12 +258,8 @@ include 'header.php';
             </div>
 
             <div class="detail">
-              <h5>Güvenilir Kanıta Dayalı Tedavi </h5>
-              <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Explicabo, architecto alias! Nemo dolorem aliquam fugiat
-                explicabo quo, nobis earum consequatur.
-              </p>
+              <h5><?= $generalInfoPrinciple3["title"] ?></h5>
+              <?= $generalInfoPrinciple3["description"] ?>
             </div>
           </div>
         </div>
@@ -314,32 +302,34 @@ include 'header.php';
 
       <div id="tabbed-nav">
         <ul>
-          <li><a>Hücresel Sağlık </a></li>
-          <li><a>Mental Sağlık</a></li>
-          <li><a>Bedensel Sağlık</a></li>
-          <!-- <li><a>Kozmetik Terapi</a></li> -->
+          <?php foreach ($treatmentsResult as $singleTreatment) { ?>
+            <li><a><?= $singleTreatment->name ?></a></li>
+          <?php  } ?>
+
+
         </ul>
 
         <div>
           <div>
             <div class="row">
-              <div class="col-md-6">
-                <div class="welcome-serv-img">
-                  <img src="images/cancer-img.jpg" alt="" />
-                </div>
-              </div>
+              <?php foreach ($treatmentsResult as $singleTreatment) { ?>
 
-              <div class="col-md-6">
-                <div class="detail" style="padding-top: 30px">
-                  <h4>Lorem Ipsum Dolor Sit</h4>
-                  <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing
-                    elit. A consequuntur eius reiciendis veniam officia
-                    adipisci consequatur ut culpa quos fugit!
-                  </p>
-                  <a href="#">Lorem İpsum</a>
+                <div class="col-md-6">
+                  <div class="welcome-serv-img">
+                    <img style="width: 576px; height:504px;" src="<?= $singleTreatment->treatment_main_img ?>" alt="" />
+                  </div>
                 </div>
-              </div>
+
+                <div class="col-md-6">
+                  <div class="detail" style="padding-top: 30px">
+                    <h4><?= $singleTreatment->name ?></h4>
+                    <p> <?= $singleTreatment->short_content ?></p>
+                    <a href="tedavi-detay.php?url=<?= $singleTreatment->url ?>">DEVAMINI OKU</a>
+                  </div>
+                </div>
+              <?php  } ?>
+
+
             </div>
           </div>
 
@@ -377,8 +367,8 @@ include 'header.php';
                 <div class="detail" style="padding-top: 30px">
                   <h4>Lorem Ipsum</h4>
                   <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Explicabo, architecto alias! Nemo dolorem aliquam fugiat
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Explicabo, architecto alias! Nemo dolorem aliquam fugiat
                   </p>
                   <a href="#">Lorem İpsum</a>
                 </div>
@@ -398,8 +388,8 @@ include 'header.php';
                 <div class="detail" style="padding-top: 30px">
                   <h4>Lorem Ipsum</h4>
                   <p>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Explicabo, architecto alias! Nemo dolorem aliquam fugiat
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                    Explicabo, architecto alias! Nemo dolorem aliquam fugiat
                   </p>
                   <a href="#">Lorem İpsum</a>
                 </div>
@@ -567,21 +557,15 @@ include 'header.php';
       </div> 
     </div>
   </section> -->
-  <!--Start Specialists-->
-
-  <!--End Specialists-->
 
   <!--Start Doctor Quote-->
   <div class="dr-quote">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <span class="quote">Healthtrack Clinic’te kişiselleştirilmiş bütüncül bir yaklaşım ile tanışacaksınız.
-            Danışanlarımız her birinin optimal sağlığını hedefleyerek kendilerine özel planladığımız yaklaşımımızın bizi farklılaştırdığını düşünüyor.
-            Tıpkı bir denizatı gibi sakin ve kendinden emin ilerleyeceğimiz,
-            sağlıklı ve iyi olma yolculuğunuz için hazır mısınız?
+          <span class="quote"> <?= $generalInfoBanner1["description"] ?>
           </span>
-          <span class="name">- Healthtrack Clinic</span>
+          <span class="name"> <?= $generalInfoBanner1["title"] ?></span>
         </div>
       </div>
     </div>
@@ -781,18 +765,14 @@ include 'header.php';
       </div>
     </div>
   </div> -->
+
   <!--Start Latest News-->
-  <!--  -->
-
-
-
-
   <div class="latest-news dark-yeni">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
           <div class="main-title">
-            <h2><span>Lorem Ipsum</span> Blog</h2>
+            <h2><span>Sağlıklı</span> Haber</h2>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit.
               Similique aut rerum atque molestiae, quos sequi.
@@ -806,78 +786,25 @@ include 'header.php';
           <div class="row">
             <div class="span12">
               <div id="owl-demo" class="owl-carousel">
-                <div class="post item">
-                  <img class="lazyOwl" src="images/blog-4.jpg" alt="" />
-                  <div class="detail">
-                    <img src="images/bloglar-ana-kapak.jpg" alt="" />
-                    <h4 style="font-weight: 500; padding-bottom:10px;"><a href="#"></a>Lorem ipsum dolor sit amet.</h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, dicta soluta quos repudiandae possimus expedita corporis minima reprehenderit saepe doloremque.
-                    </p>
-                    <div style="padding-top: 18px;">
-                    <button class="btn" style="background-color: #3B919E; color:white;">Devamını Okuyun</button>
-                    </div>
-                    <!-- <span><i class="icon-clock3"></i> Apr 22, 2016</span>
-                            <span class="comment"><a href="#"><i class="icon-icons206"></i> 5 Comments</a></span> -->
+                <?php foreach ($newsResult  as $singleNews) { ?>
+                  <div class="post item">
+                    <a href="saglikli-haber-detay.php?url=<?= $singleNews->url ?>">
+                      <img class="lazyOwl" style="object-fit:contain !important;" src="<?= $singleNews->news_image ?>" alt="" />
+                      <div class="detail">
+                        <img src="images/bloglar-ana-kapak.jpg" alt="" />
+                        <h4 style="font-weight: 500; padding-bottom:10px;"><?= $singleNews->title ?></h4>
+                        <p>
+                          <?= $singleNews->short_content ?>
+                        </p>
+                        <div style="padding-top: 18px;">
+                          <a href="saglikli-haber-detay.php?url=<?= $singleNews->url ?>" class="btn" style="background-color: #3B919E; color:white;">Devamını Okuyun</a>
+                        </div>
+                        <span><i class="icon-clock3"></i> <?= $singleNews->created_at ?></span>
+                        <!-- <span class="comment"><a href="#"><i class="icon-icons206"></i> 5 Comments</a></span> -->
+                      </div>
+                    </a>
                   </div>
-                </div>
-                <div class="post item">
-                  <img class="lazyOwl" src="images/blog-5.jpg" alt="" />
-                  <div class="detail">
-                    <img src="images/bloglar-ana-kapak.jpg" alt="" />
-                    <h4 style="font-weight: 500; padding-bottom:10px;">
-                      <a href="#">Lorem ipsum dolor sit amet.</a>
-                    </h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem expedita facilis natus incidunt voluptatum fugiat saepe quos quo nemo odio.
-                    </p>
-                    <div style="padding-top: 18px;">
-                    <button class="btn" style="background-color: #3B919E; color:white;">Devamını Okuyun</button>
-                    </div>
-                    <!-- <span><i class="icon-clock3"></i> Apr 09, 2016</span>
-                        <span class="comment"><a href="#"><i class="icon-icons206"></i> 3 Comments</a></span> -->
-                  </div>
-                </div>
-
-                <div class="post item">
-                  <img class="lazyOwl" src="images/blog-6.jpg" alt="" />
-                  <div class="detail">
-                    <img src="images/bloglar-ana-kapak.jpg" alt="" />
-                    <h4 style="font-weight: 500; padding-bottom:10px;">
-                      <a href="#">Lorem ipsum dolor sit amet.</a>
-                    </h4>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem expedita facilis natus incidunt voluptatum fugiat saepe quos quo nemo odio.
-                    </p>
-                    <div style="padding-top: 18px;">
-                    <button class="btn" style="background-color: #3B919E; color:white;">Devamını Okuyun</button>
-                    </div>
-                    <!-- <span><i class="icon-clock3"></i> Mar 28, 2016</span>
-                        <span class="comment"><a href="#"><i class="icon-icons206"></i> 0 Comments</a></span> -->
-                  </div>
-                </div>
-
-                <!-- <div class="post item">
-                    <img class="lazyOwl" src="images/news-img4.jpg" alt="">
-                    <div class="detail">
-                        <img src="images/news-dr2.jpg" alt="">
-                        <h4><a href="#">Child Birth</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit eros...</p>
-                        <span><i class="icon-clock3"></i> Mar 15, 2016</span>
-                        <span class="comment"><a href="#"><i class="icon-icons206"></i> 0 Comments</a></span>
-                    </div>
-                </div>
-                
-                <div class="post item">
-                    <img class="lazyOwl" src="images/news-img5.jpg" alt="">
-                    <div class="detail">
-                        <img src="images/news-dr2.jpg" alt="">
-                        <h4><a href="#">Special Treatment</a></h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit eros...</p>
-                        <span><i class="icon-clock3"></i> Mar 04, 2016</span>
-                        <span class="comment"><a href="#"><i class="icon-icons206"></i> 11 Comments</a></span>
-                    </div>
-                </div>     -->
+                <?php } ?>
               </div>
             </div>
           </div>
@@ -893,10 +820,8 @@ include 'header.php';
       <div class="row">
         <div class="col-md-12">
           <div class="main-title main-title2">
-            <h2><span>Çok iddialı gelebilir size, ancak Healthtrack Clinic olarak 
-sunduğumuz bütüncül sağlık desteği ve çözümleri ile 
-öncelikle sağlığınızı koruyacak ve hastalıkların oluşmasını engelleyeceğiz. <br>
-</span> - Uzm. Dr. Kadir Doğruer</h2>
+            <h2><span><?= $generalInfoBanner2["description"] ?> <br>
+              </span><?= $generalInfoBanner2["title"] ?></h2>
           </div>
         </div>
       </div>
@@ -963,4 +888,4 @@ sunduğumuz bütüncül sağlık desteği ve çözümleri ile
 </div>
 <!--End Content-->
 
-<?php include 'footer.php'; ?>
+<?php include 'utility/footer.php'; ?>

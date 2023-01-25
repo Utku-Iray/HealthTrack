@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'utility/header.php'; ?>
 <!--Start Banner-->
 
 <div class="sub-banner">
@@ -150,4 +150,4 @@
 	<!--End Content-->
 
 
-	<?php include 'footer.php'; ?>
+	<?php include 'utility/footer.php'; ?>
