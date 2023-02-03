@@ -46,14 +46,14 @@ require_once 'utility/api/get-homepage-translations.php';
 
                     <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
                         <!-- MAIN IMAGE -->
-                        <img src="images/slides/banner-img5.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <img src="images/slides/healthslider.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                         <!-- LAYERS -->
 
                         <div class="tp-caption black_thin_34 black_thin_34_bold customin tp-resizeme rs-parallaxlevel-0" data-x="0" data-y="250" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
                             data-speed="500" data-start="1400" data-easing="Back.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap; font-size: 52px;">Tanışalım
                             <br>
                             <h6 data-easing="Back.easeOut">Lorem ipsım dolor yazılar  yazılar yazılar deneme</h6>
-                            <a href="about-us.html" class="read-more" style="background-color:#10464e; line-height: initial; color: #fff; text-transform: uppercase; font-weight: 500; padding: 12px 36px; display: inline-block; font-size: 18px;">Daha Fazlası</a>
+                            <a href="ekip.php" class="read-more" style="background-color:#10464e; line-height: initial; color: #fff; text-transform: uppercase; font-weight: 500; padding: 12px 36px; display: inline-block; font-size: 18px;">Daha Fazlası</a>
                         </div>
                       
 
