@@ -24,13 +24,13 @@
 // DEVELOPMENT PROCESS - HOST INFORMATION
 
 try {
-    $servername = "ni-jungle.guzelhosting.com";
+    $servername = "server.essehost.com";
 
-    $databasename = 'ideapoln_proje_health';
+    $databasename = 'essehost_healthtrack';
 
-    $username = "ideapoln_admin";
+    $username = "essehost_admin";
 
-    $password = "ideapol.123.123";
+    $password = "Essebilisim2023.";
 
     $vt = new PDO("mysql:host=$servername;dbname=$databasename;charset=utf8", $username, $password);
     // set the PDO error mode to exception
