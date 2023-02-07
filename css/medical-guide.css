@@ -2781,7 +2781,7 @@ img:hover {
 }
 
 .procedures .procedure-text ul {
-    margin: 55px 0 0 0;
+    margin: 20px 0 0 0;
 }
 
 .procedures .procedure-text ul li {
@@ -2789,7 +2789,7 @@ img:hover {
     font-size: 20px;
     margin: 0 0 0 18px;
     float: left;
-    width: 30%;
+    width: 100%;
     line-height: 34px;
 }
 
