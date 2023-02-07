@@ -1,16 +1,17 @@
 <?php
 
 
-// MAIN HOST INFORMATION
+// ESSE
+
 
 // try {
-//     $servername = "";
+//     $servername = "server.essehost.com";
 
-//     $databasename = '';
+//     $databasename = 'essehost_healthtrack';
 
-//     $username = "";
+//     $username = "essehost_admin";
 
-//     $password = "";
+//     $password = "Essebilisim2023.";
 
 //     $vt = new PDO("mysql:host=$servername;dbname=$databasename;charset=utf8", $username, $password);
 //     // set the PDO error mode to exception
@@ -21,17 +22,18 @@
 // }
 
 
-// DEVELOPMENT PROCESS - HOST INFORMATION
+
+// guzel
 
 try {
-    $servername = "server.essehost.com";
+    $servername = "ni-jungle.guzelhosting.com";
 
-    $databasename = 'essehost_healthtrack';
+    $databasename = "ideapoln_proje_health";
 
-    $username = "essehost_admin";
+    $username = "ideapoln_admin";
 
-    $password = "Essebilisim2023.";
-
+    $password = "ideapol.123.123";
+    
     $vt = new PDO("mysql:host=$servername;dbname=$databasename;charset=utf8", $username, $password);
     // set the PDO error mode to exception
     $vt->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -39,3 +41,6 @@ try {
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
 }
+
+
+

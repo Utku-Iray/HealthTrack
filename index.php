@@ -38,30 +38,29 @@ require_once 'utility/api/get-homepage-translations.php';
 <!--Start Banner-->
 
 <div class="tp-banner-container">
-            <div class="tp-banner">
-                <ul>
-                    <!-- SLIDE  -->
+  <div class="tp-banner">
+    <ul>
+      <!-- SLIDE  -->
 
-                   
 
-                    <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
-                        <!-- MAIN IMAGE -->
-                        <img src="images/slides/healthslider.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-                        <!-- LAYERS -->
 
-                        <div class="tp-caption black_thin_34 black_thin_34_bold customin tp-resizeme rs-parallaxlevel-0" data-x="0" data-y="250" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;"
-                            data-speed="500" data-start="1400" data-easing="Back.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap; font-size: 52px;">Tanışalım
-                            <br>
-                            <h6 data-easing="Back.easeOut">Lorem ipsım dolor yazılar  yazılar yazılar deneme</h6>
-                            <a href="ekip.php" class="read-more" style="background-color:#10464e; line-height: initial; color: #fff; text-transform: uppercase; font-weight: 500; padding: 12px 36px; display: inline-block; font-size: 18px;">Daha Fazlası</a>
-                        </div>
-                      
+      <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
+        <!-- MAIN IMAGE -->
+        <img src="images/slides/healthslider.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+        <!-- LAYERS -->
 
-                    </li>
-                </ul>
-                <div class="tp-bannertimer"></div>
-            </div>
+        <div class="tp-caption black_thin_34 black_thin_34_bold customin tp-resizeme rs-parallaxlevel-0" data-x="0" data-y="250" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-speed="500" data-start="1400" data-easing="Back.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap; font-size: 52px;">Tanışalım
+          <br>
+          <h6 data-easing="Back.easeOut">Lorem ipsım dolor yazılar yazılar yazılar deneme</h6>
+          <a href="ekip.php" class="read-more" style="background-color:#10464e; line-height: initial; color: #fff; text-transform: uppercase; font-weight: 500; padding: 12px 36px; display: inline-block; font-size: 18px;">Daha Fazlası</a>
         </div>
+
+
+      </li>
+    </ul>
+    <div class="tp-bannertimer"></div>
+  </div>
+</div>
 
 <!--End Banner-->
 
@@ -294,10 +293,10 @@ require_once 'utility/api/get-homepage-translations.php';
         </ul>
 
         <div>
-          <div>
-            <div class="row">
-              <?php foreach ($treatmentsResult as $singleTreatment) { ?>
 
+          <?php foreach ($treatmentsResult as $singleTreatment) { ?>
+            <div>
+              <div class="row">
                 <div class="col-md-6">
                   <div class="welcome-serv-img">
                     <img style="width: 576px; height:504px;" src="<?= $singleTreatment->treatment_main_img ?>" alt="" />
@@ -311,75 +310,14 @@ require_once 'utility/api/get-homepage-translations.php';
                     <a href="tedavi-detay.php?url=<?= $singleTreatment->url ?>">DEVAMINI OKU</a>
                   </div>
                 </div>
-              <?php  } ?>
 
-
-            </div>
-          </div>
-
-          <div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="welcome-serv-img">
-                  <img src="images/cancer-img.jpg" alt="" />
-                </div>
-              </div>
-
-              <div class="col-md-6">
-                <div class="detail" style="padding-top: 30px">
-                  <h4>Lorem Ipsum Dolor</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing
-                    elit. Modi facere accusantium asperiores nam assumenda
-                    labore animi unde, veniam praesentium non!
-                  </p>
-                  <a href="#">Lorem İpsum</a>
-                </div>
               </div>
             </div>
-          </div>
+          <?php  } ?>
 
-          <div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="welcome-serv-img">
-                  <img src="images/cancer-img.jpg" alt="" />
-                </div>
-              </div>
 
-              <div class="col-md-6">
-                <div class="detail" style="padding-top: 30px">
-                  <h4>Lorem Ipsum</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Explicabo, architecto alias! Nemo dolorem aliquam fugiat
-                  </p>
-                  <a href="#">Lorem İpsum</a>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div>
-            <div class="row">
-              <div class="col-md-6">
-                <div class="welcome-serv-img">
-                  <img src="images/cancer-img.jpg" alt="" />
-                </div>
-              </div>
 
-              <div class="col-md-6">
-                <div class="detail" style="padding-top: 30px">
-                  <h4>Lorem Ipsum</h4>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                    Explicabo, architecto alias! Nemo dolorem aliquam fugiat
-                  </p>
-                  <a href="#">Lorem İpsum</a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>

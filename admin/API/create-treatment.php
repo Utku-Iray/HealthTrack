@@ -15,8 +15,11 @@ $efilename = explode('.', $filename);
 $uzanti = $efilename[count($efilename) - 1];
 $location  = "";
 
+
+$marks = array("(", ")", "?", ",", ":", "/", "+");
 $treatmentNameLower = strtolower($treatmentName);
-$url = str_replace(" ", "-", $treatmentNameLower);
+$spaceRemove =  str_replace(" ", "-", $treatmentNameLower);
+$url =  str_replace($marks, "", $spaceRemove);
 
 if (
     empty($treatmentName) ||   empty($treatmentDescription) || empty($treatmentShortDescription) ||  empty($filename)
