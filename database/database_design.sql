@@ -199,6 +199,45 @@ CREATE TABLE `users` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 
+CREATE TABLE `slider` (
+  `slider_id` int(11) NOT NULL,
+  `slider_link` text NOT NULL,
+  `slider_image` mediumtext NOT NULL,
+  `slider_sort` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+INSERT INTO `slider` (`slider_id`, `slider_link`, `slider_image`, `slider_sort`, `created_at`) VALUES
+(7, 'ekip.php', 'attachments/slider/slider-2.jpg', 1, '2023-02-09 18:49:23'),
+(6, 'ekip.php', 'attachments/slider/onemsiz-cusg-imdg-2.jpg', 0, '2023-02-10 02:17:29');
+
+
+CREATE TABLE `slider_translations` (
+  `id` int(11) NOT NULL,
+  `title` text NOT NULL,
+  `content` text NOT NULL,
+  `slider_id` int(11) NOT NULL,
+  `language_code` char(2) NOT NULL DEFAULT '0'
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+
+
+INSERT INTO `slider_translations` (`id`, `title`, `content`, `slider_id`, `language_code`) VALUES
+(7, 'Slider 2', 'Lorem ipsum dolor sit amet.', 7, 'tr'),
+(6, 'Slider 1', '1123 123123 123 123\r\n,123', 6, 'tr');
+
+
+ALTER TABLE `slider`
+  ADD PRIMARY KEY (`slider_id`);
+
+    ALTER TABLE `slider_translations`
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `translation_id` (`slider_id`),
+  ADD KEY `language_code` (`language_code`);
+
+  ALTER TABLE `slider_translations`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`contact_id`);
 
@@ -211,6 +250,8 @@ ALTER TABLE `general_translations`
   ADD PRIMARY KEY (`id`),
   ADD KEY `translation_id` (`general_id`),
   ADD KEY `language_code` (`language_code`);
+
+
 
 
 ALTER TABLE `language`
@@ -287,3 +328,7 @@ ALTER TABLE `treatments_translation`
 
 ALTER TABLE `users`
   MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+
+
+ALTER TABLE `slider`
+  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
