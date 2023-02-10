@@ -154,7 +154,7 @@ include 'utility/api/get-treatments.php';
                 <li class="item-select parent"><a href="index.php">Anasayfa</a></li>
 
                 <li class="parent">
-                  <a href="neden-biz.php">Neden Biz?</a>
+                  <a href="#">Neden Biz?</a>
                   <ul class="submenu">
                     <!-- <li class="parent">
                         <a href="misyon-vizyon.php">Misyonumuz ve Vizyonumuz</a>

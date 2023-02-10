@@ -139,7 +139,7 @@ require_once 'utility/api/get-slider.php';
         <div class="step">
           <div class="step__image">
             <a href="hizmetler.php">
-              <img src="images/icon1.png" alt="">
+              <img src="images/dinliyoruz.png" alt="">
             </a>
 
           </div>
@@ -155,7 +155,7 @@ require_once 'utility/api/get-slider.php';
         <div class="step">
           <div class="step__image">
             <a href="hizmetler.php">
-              <img src="images/icon2.png" alt="">
+              <img src="images/inceliyoruz.png" alt="">
             </a>
           </div>
           <div class="step__title">
@@ -170,7 +170,7 @@ require_once 'utility/api/get-slider.php';
         <div class="step">
           <div class="step__image">
             <a href="hizmetler.php">
-              <img src="images/icon3.png" alt="">
+              <img src="images/planliyoruz.png" alt="">
             </a>
           </div>
           <div class="step__title">
@@ -185,7 +185,7 @@ require_once 'utility/api/get-slider.php';
         <div class="step">
           <div class="step__image">
             <a href="hizmetler.php">
-              <img src="images/icon4.png" alt="">
+              <img src="images/izliyoruz.png" alt="">
             </a>
           </div>
           <div class="step__title">
@@ -256,7 +256,7 @@ require_once 'utility/api/get-slider.php';
             <div class="span12">
               <div id="services-slide" class="owl-carousel">
                 <div class="item">
-                  <img src="images/health.jpg" alt="" />
+                  <img src="images/health.png" alt="" />
                 </div>
                 <!-- <div class="item">
                   <img src="images/iv-terapi-2.jpg" alt="" />
