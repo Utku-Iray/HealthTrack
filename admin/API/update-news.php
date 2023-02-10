@@ -7,21 +7,9 @@ $selectedID = trim(filter_input(INPUT_POST, 'idHolderInput'));
 $newsTitle = trim(filter_input(INPUT_POST, 'newsTitle-' . $selectedLanguage));
 $newsShortContent = trim(filter_input(INPUT_POST, 'newsShortContent-' . $selectedLanguage));
 $newsContent = $_POST['newsContent'];
-$image = 'newsImage-' . $selectedLanguage;
 
-// $tmpFilePath = $_FILES[$image]['tmp_name'];
-// $filename = $_FILES[$image]["name"];
-// $efilename = explode('.', $filename);
-// $uzanti = $efilename[count($efilename) - 1];
-// $location  = "";
+$url = replace_tr($newsTitle);
 
-
-$marks = array("(", ")", "?", ",", ":", "/");
-$newsTitleLower = strtolower($newsTitle);
-$spaceRemovedTitle = str_replace(" ", "-", $newsTitleLower);
-$url = str_replace($marks, "", $spaceRemovedTitle);
-
-//  empty($filename) Resim eklenecek
 if (
     empty($newsTitle) ||   empty($newsShortContent) ||   empty($newsContent)
 ) {
@@ -91,3 +79,20 @@ echo json_encode($form_data);
 
 die();
 $vt = null;
+
+function replace_tr($text)
+{
+    $stext = trim(strtolower($text));
+
+
+    $marks = array("(", ")", "?", ",", ":", "/", "+");
+    $search = array('Ç', 'ç', 'Ğ', 'ğ', 'ı', 'İ', 'Ö', 'ö', 'Ş', 'ş', 'Ü', 'ü', ' ');
+    $replace = array('c', 'c', 'g', 'g', 'i', 'i', 'o', 'o', 's', 's', 'u', 'u', '-');
+
+
+
+    $new_text = str_replace($search, $replace, $stext);
+
+    $new_text2 = str_replace($marks, "", $new_text);
+    return $new_text2;
+}

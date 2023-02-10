@@ -66,3 +66,32 @@ if (isset($_GET["url"])) {
 
 
     <?php include 'utility/footer.php' ?>
+
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var interval = 0;
+            const nid = "<?= $selectedNewsResult["news_id"] ?>";
+
+            setInterval(function() {
+                interval++;
+                postFunction();
+            }, 20000);
+
+            function postFunction() {
+                if (interval == 1) {
+                    $.ajax({
+                        url: "utility/api/update-news-click-count.php",
+                        type: "POST",
+                        dataType: "json",
+                        data: {
+                            click_count: "plus",
+                            nid: nid
+                        },
+                        success: function() {}
+                    });
+                }
+            }
+
+        });
+    </script>

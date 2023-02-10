@@ -31,7 +31,7 @@ if (!empty($errors)) {
     $form_data['errors'] = $errors;
 } else {
 
-    $spaceRemovedName = strtolower(str_replace(" ", "-", $memberName));
+    $spaceRemovedName = replace_tr($memberName);
     $nameWithURL = $spaceRemovedName . "." . $uzanti;
 
 
@@ -78,3 +78,14 @@ echo json_encode($form_data);
 
 die();
 $vt = null;
+
+function replace_tr($text)
+{
+    $stext = trim(strtolower($text));
+    $marks = array("(", ")", "?", ",", ":", "/", "+");
+    $search = array('Ç', 'ç', 'Ğ', 'ğ', 'ı', 'İ', 'Ö', 'ö', 'Ş', 'ş', 'Ü', 'ü', ' ');
+    $replace = array('c', 'c', 'g', 'g', 'i', 'i', 'o', 'o', 's', 's', 'u', 'u', '-');
+    $new_text = str_replace($search, $replace, $stext);
+    $new_text2 = str_replace($marks, "", $new_text);
+    return $new_text2;
+}

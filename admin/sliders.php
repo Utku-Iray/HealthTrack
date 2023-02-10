@@ -50,7 +50,7 @@ include "API/get-sliders.php";
                                             <tr class="slider-<?= $singleSlider->slider_id ?>">
                                                 <td><?= $singleSlider->title ?></td>
                                                 <td><a href="<?= $singleSlider->slider_link ?>" target = "_blank"><?= $singleSlider->slider_link ?></a></td>
-                                                <td class="text-center"><a href="slider-details.php?nid=<?= $singleSlider->slider_id ?>" class="btn btn-info">DÜZENLE</a></td>
+                                                <td class="text-center"><a href="slider-details.php?sid=<?= $singleSlider->slider_id ?>" class="btn btn-info">DÜZENLE</a></td>
                                                 <td class="text-center"><button class="btn btn-danger sliderDeleteBtn" slider-id="<?= $singleSlider->slider_id ?>">SİL</button></td>
                                             </tr>
                                         <?php }

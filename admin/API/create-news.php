@@ -15,10 +15,7 @@ $uzanti = $efilename[count($efilename) - 1];
 $location  = "";
 
 
-$marks = array("(", ")", "?", ",", ":", "/");
-$newsTitleLower = strtolower($newsTitle);
-$spaceRemovedTitle = str_replace(" ", "-", $newsTitleLower);
-$url = str_replace($marks, "", $spaceRemovedTitle);
+$url = replace_tr($newsTitle);
 
 if (
     empty($newsTitle) ||   empty($newsShortContent) ||   empty($newsContent) ||   empty($filename)
@@ -80,3 +77,14 @@ echo json_encode($form_data);
 
 die();
 $vt = null;
+
+function replace_tr($text)
+{
+    $stext = trim(strtolower($text));
+    $marks = array("(", ")", "?", ",", ":", "/", "+");
+    $search = array('Ç', 'ç', 'Ğ', 'ğ', 'ı', 'İ', 'Ö', 'ö', 'Ş', 'ş', 'Ü', 'ü', ' ');
+    $replace = array('c', 'c', 'g', 'g', 'i', 'i', 'o', 'o', 's', 's', 'u', 'u', '-');
+    $new_text = str_replace($search, $replace, $stext);
+    $new_text2 = str_replace($marks, "", $new_text);
+    return $new_text2;
+}

@@ -78,12 +78,6 @@ if (isset($_GET["tid"])) {
                                                         <textarea type="text" id="ckEditorTreatmentDescription-<?= $singleLangResult->main_code ?>" name="ckEditorTreatmentDescription-<?= $singleLangResult->main_code ?>"><?= $treatmentsResult[$i]->content ?></textarea>
                                                     </div>
 
-                                                    <!-- Treatment Image -->
-                                                    <label for="treatmentImage-<?= $singleLangResult->main_code ?>" class="mb-1">Fotoğraf</label>
-                                                    <div class="form-group mb-2">
-                                                        <input type="file" class="form-control-file" id="treatmentImage-<?= $singleLangResult->main_code ?>" name="treatmentImage-<?= $singleLangResult->main_code ?>" accept="image/png, image/jpeg" aria-describedby="fileHelp">
-                                                        <small for="fileHelp">Fotoğraf türü JPG veya PNG olmalıdır. Güncellenmesini istemiyorsanız lütfen fotoğraf seçmeyiniz.</small>
-                                                    </div>
                                                 <?php
 
                                                     break;
@@ -106,12 +100,6 @@ if (isset($_GET["tid"])) {
                                                     <textarea type="text" id="ckEditorTreatmentDescription-<?= $singleLangResult->main_code ?>" name="ckEditorTreatmentDescription-<?= $singleLangResult->main_code ?>"></textarea>
                                                 </div>
 
-                                                <!-- Treatment Image -->
-                                                <label for="treatmentImage-<?= $singleLangResult->main_code ?>" class="mb-1">Fotoğraf</label>
-                                                <div class="form-group mb-2">
-                                                    <input type="file" class="form-control-file" id="treatmentImage-<?= $singleLangResult->main_code ?>" name="treatmentImage-<?= $singleLangResult->main_code ?>" accept="image/png, image/jpeg" aria-describedby="fileHelp">
-                                                    <small for="fileHelp">Fotoğraf türü JPG veya PNG olmalıdır. Güncellenmesini istemiyorsanız lütfen fotoğraf seçmeyiniz.</small>
-                                                </div>
                                         <?php
                                                 break;
                                             }

@@ -8,7 +8,7 @@ $selectedID = trim(filter_input(INPUT_POST, 'idHolderInput'));
 $memberName = trim(filter_input(INPUT_POST, 'memberName-' . $selectedLanguage));
 $memberTitle = trim(filter_input(INPUT_POST, 'memberTitle-' . $selectedLanguage));
 $memberDescription = trim(filter_input(INPUT_POST, 'memberDescription-' . $selectedLanguage));
-$image = 'memberImage-' . $selectedLanguage;
+
 
 if (
     empty($memberName) ||   empty($memberTitle) ||   empty($memberDescription)
@@ -32,6 +32,12 @@ if (!empty($errors)) {
     $memberResultCount = count($membersResult);
 
     if ($memberResultCount > 0) {
+        # Single Update
+        if ($memberName != $membersResult[0]->member_name) {
+            $updateQuery1 = $vt->prepare("UPDATE team_members SET member_name = :member_name WHERE member_id = '$selectedID'");
+            $updateQuery1->execute([':member_name' => $memberName]);
+        }
+
         # UPDATE
         $updateQuery = $vt->prepare("UPDATE team_members_translation 
                                      SET title = :title, 
@@ -73,3 +79,22 @@ echo json_encode($form_data);
 
 die();
 $vt = null;
+
+
+
+function replace_tr($text)
+{
+    $stext = trim(strtolower($text));
+
+
+    $marks = array("(", ")", "?", ",", ":", "/", "+");
+    $search = array('Ç', 'ç', 'Ğ', 'ğ', 'ı', 'İ', 'Ö', 'ö', 'Ş', 'ş', 'Ü', 'ü', ' ');
+    $replace = array('c', 'c', 'g', 'g', 'i', 'i', 'o', 'o', 's', 's', 'u', 'u', '-');
+
+
+
+    $new_text = str_replace($search, $replace, $stext);
+
+    $new_text2 = str_replace($marks, "", $new_text);
+    return $new_text2;
+}

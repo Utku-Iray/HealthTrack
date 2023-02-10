@@ -3,6 +3,7 @@ include 'utility/header.php';
 
 require_once 'utility/api/get-news.php';
 require_once 'utility/api/get-homepage-translations.php';
+require_once 'utility/api/get-slider.php';
 
 
 ?>
@@ -43,20 +44,23 @@ require_once 'utility/api/get-homepage-translations.php';
       <!-- SLIDE  -->
 
 
+      <?php foreach ($sliderResult as $singleSlider) { ?>
 
-      <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
-        <!-- MAIN IMAGE -->
-        <img src="images/slides/healthslider.jpg" alt="" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-        <!-- LAYERS -->
+        <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
+          <!-- MAIN IMAGE -->
+          <img src="<?= $singleSlider->slider_image ?>" alt="<?= $singleSlider->title ?>" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+          <!-- LAYERS -->
 
-        <div class="tp-caption black_thin_34 black_thin_34_bold customin tp-resizeme rs-parallaxlevel-0" data-x="0" data-y="250" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-speed="500" data-start="1400" data-easing="Back.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap; font-size: 52px;">Tanışalım
-          <br>
-          <h6 data-easing="Back.easeOut">Lorem ipsım dolor yazılar yazılar yazılar deneme</h6>
-          <a href="ekip.php" class="read-more" style="background-color:#10464e; line-height: initial; color: #fff; text-transform: uppercase; font-weight: 500; padding: 12px 36px; display: inline-block; font-size: 18px;">Daha Fazlası</a>
-        </div>
+          <div class="tp-caption black_thin_34 black_thin_34_bold customin tp-resizeme rs-parallaxlevel-0" data-x="0" data-y="250" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-speed="500" data-start="1400" data-easing="Back.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap; font-size: 52px;">
+            <?= $singleSlider->title ?>
+            <br>
+            <h6 data-easing="Back.easeOut"><?= $singleSlider->content ?></h6>
+            <a href="<?= $singleSlider->slider_link ?>" class="read-more" style="background-color:#10464e; line-height: initial; color: #fff; text-transform: uppercase; font-weight: 500; padding: 12px 36px; display: inline-block; font-size: 18px;">Daha Fazlası</a>
+          </div>
 
 
-      </li>
+        </li>
+      <?php  } ?>
     </ul>
     <div class="tp-bannertimer"></div>
   </div>
@@ -285,8 +289,8 @@ require_once 'utility/api/get-homepage-translations.php';
 
       <div id="tabbed-nav">
         <ul>
-          <?php foreach ($treatmentsResult as $singleTreatment) { ?>
-            <li><a><?= $singleTreatment->name ?></a></li>
+          <?php foreach ($treatmentsResultForHome as $singleTreatmentForHome) { ?>
+            <li><a><?= $singleTreatmentForHome->name ?></a></li>
           <?php  } ?>
 
 
@@ -294,20 +298,20 @@ require_once 'utility/api/get-homepage-translations.php';
 
         <div>
 
-          <?php foreach ($treatmentsResult as $singleTreatment) { ?>
+          <?php foreach ($treatmentsResultForHome as $singleTreatmentForHome) { ?>
             <div>
               <div class="row">
                 <div class="col-md-6">
                   <div class="welcome-serv-img">
-                    <img style="width: 576px; height:504px;" src="<?= $singleTreatment->treatment_main_img ?>" alt="" />
+                    <img style="width: 576px; height:504px;" src="<?= $singleTreatmentForHome->treatment_main_img ?>" alt="" />
                   </div>
                 </div>
 
                 <div class="col-md-6">
                   <div class="detail" style="padding-top: 30px">
-                    <h4><?= $singleTreatment->name ?></h4>
-                    <p> <?= $singleTreatment->short_content ?></p>
-                    <a href="tedavi-detay.php?url=<?= $singleTreatment->url ?>">DEVAMINI OKU</a>
+                    <h4><?= $singleTreatmentForHome->name ?></h4>
+                    <p> <?= $singleTreatmentForHome->short_content ?></p>
+                    <a href="tedavi-detay.php?url=<?= $singleTreatmentForHome->url ?>">DEVAMINI OKU</a>
                   </div>
                 </div>
 

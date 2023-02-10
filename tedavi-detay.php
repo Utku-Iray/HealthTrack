@@ -176,3 +176,30 @@ if (isset($_GET["url"])) {
 
 
 	<?php include 'utility/footer.php'; ?>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var interval = 0;
+			const tid = "<?= $selectedTreatmentResult["treatment_id"] ?>";
+
+			setInterval(function() {
+				interval++;
+				postFunction();
+			}, 15000);
+
+			function postFunction() {
+				if (interval == 1) {
+					$.ajax({
+						url: "utility/api/update-treatment-click-count.php",
+						type: "POST",
+						dataType: "json",
+						data: {
+							click_count: "plus",
+							tid: tid
+						},
+						success: function() {}
+					});
+				}
+			}
+		});
+	</script>

@@ -58,10 +58,7 @@ if (isset($_GET["mid"])) {
                                         $membersResultCount = count($membersResult);
                                         for ($i = 0; $i < $membersResultCount; $i++) {
                                             if (in_array($singleLangResult->main_code, $filteredMemberLangCodeArray)) {
-                                                if ($membersResult[$i]->language_code == $singleLangResult->main_code) {
-                                                    # code...
-
-                                        ?>
+                                                if ($membersResult[$i]->language_code == $singleLangResult->main_code) { ?>
 
                                                     <!-- Member Name -->
                                                     <label for="memberName-<?= $singleLangResult->main_code ?>" class="mb-1">Ad, Soyad <span class="text-danger">(*)</span></label>
@@ -81,12 +78,7 @@ if (isset($_GET["mid"])) {
                                                         <textarea type="text" id="memberDescription-<?= $singleLangResult->main_code ?>" name="memberDescription-<?= $singleLangResult->main_code ?>" class="form-control" rows="4" placeholder="Açıklama (Hakkında bilgiler, çalışma geçmişi vb.)"><?= $membersResult[$i]->description ?></textarea>
                                                     </div>
 
-                                                    <!-- Member Image -->
-                                                    <label for="memberImage-<?= $singleLangResult->main_code ?>" class="mb-1">Fotoğraf</label>
-                                                    <div class="form-group mb-2">
-                                                        <input type="file" class="form-control-file" id="memberImage-<?= $singleLangResult->main_code ?>" name="memberImage-<?= $singleLangResult->main_code ?>" accept="image/png, image/jpeg" aria-describedby="fileHelp">
-                                                        <small for="fileHelp">Fotoğraf türü JPG veya PNG olmalıdır. Güncellenmesini istemiyorsanız lütfen fotoğraf seçmeyiniz.</small>
-                                                    </div>
+
                                                 <?php
                                                     // array_splice($membersResult, $i, 1);
                                                     break;
@@ -95,7 +87,8 @@ if (isset($_GET["mid"])) {
                                                 <!-- Member Name -->
                                                 <label for="memberName-<?= $singleLangResult->main_code ?>" class="mb-1">Ad, Soyad <span class="text-danger">(*)</span></label>
                                                 <div class="form-group mb-3">
-                                                    <input type="text" id="memberName-<?= $singleLangResult->main_code ?>" name="memberName-<?= $singleLangResult->main_code ?>" class="form-control" placeholder="Ad, Soyad">
+                                                    <input type="text" id="memberName-<?= $singleLangResult->main_code ?>" name="memberName-<?= $singleLangResult->main_code ?>" class="form-control" placeholder="Ad, Soyad" value="<?= $membersResult[0]->member_name ?>">
+
                                                 </div>
 
                                                 <!-- Member Title -->
@@ -111,11 +104,11 @@ if (isset($_GET["mid"])) {
                                                 </div>
 
                                                 <!-- Member Image -->
-                                                <label for="memberImage-<?= $singleLangResult->main_code ?>" class="mb-1">Fotoğraf</label>
+                                                <!-- <label for="memberImage-" class="mb-1">Fotoğraf</label>
                                                 <div class="form-group mb-2">
-                                                    <input type="file" class="form-control-file" id="memberImage-<?= $singleLangResult->main_code ?>" name="memberImage-<?= $singleLangResult->main_code ?>" accept="image/png, image/jpeg" aria-describedby="fileHelp">
+                                                    <input type="file" class="form-control-file" id="memberImage-" name="memberImage-" accept="image/png, image/jpeg" aria-describedby="fileHelp">
                                                     <small for="fileHelp">Fotoğraf türü JPG veya PNG olmalıdır. Güncellenmesini istemiyorsanız lütfen fotoğraf seçmeyiniz.</small>
-                                                </div>
+                                                </div> -->
                                         <?php
                                                 break;
                                             }

@@ -2,22 +2,24 @@
 require "../database/connection.php";
 require "controller.php";
 
-
-
-if (isset($_GET["nid"])) {
-    $urlNewsID = $_GET["nid"];
-    include "API/get-news-with-id.php";
+if (isset($_GET["sid"])) {
+    $urlSliderID = $_GET["sid"];
+    include "API/get-slider-with-id.php";
 } else {
-    header("Location: news.php");
+    header("Location: sliders.php");
 }
 
+
+
+// $filteredSliderLangCodeArray
 ?>
+
 <!doctype html>
 <html class="no-js " lang="en">
 
 <head>
     <?php include "utility/head.php" ?>
-    <title>Healthtrack Admin | Haber Düzenle</title>
+    <title>Healthtrack Admin | Slider Düzenle</title>
 </head>
 
 <body data-alpino="theme-cyan">
@@ -31,7 +33,7 @@ if (isset($_GET["nid"])) {
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="header">
-                            <h2><strong>Healthtrack Admin | </strong>Haber Düzenle</h2>
+                            <h2><strong>Healthtrack Admin | </strong>Slider Düzenle</h2>
                         </div>
                         <ul class="nav nav-tabs">
                             <?php
@@ -48,58 +50,59 @@ if (isset($_GET["nid"])) {
 
 
 
-                        <form id="updateNewsForm" name="updateNewsForm" method="POST" enctype="multipart/form-data">
+                        <form id="updateSliderForm" name="updateSliderForm" method="POST" enctype="multipart/form-data">
                             <div class="tab-content">
                                 <?php foreach ($allLangResult as $singleLangResult) { ?>
                                     <div role="tabpanel" class="body tab-pane <?php if ($singleLangResult === reset($allLangResult)) echo "in active"; ?>" id="lang-<?= $singleLangResult->main_code ?>">
 
                                         <?php
-                                        $newsResultCount = count($newsIDQueryResult);
-                                        for ($i = 0; $i < $newsResultCount; $i++) {
-                                            if (in_array($singleLangResult->main_code, $filteredNewsLangCodeArray)) {
-                                                if ($newsIDQueryResult[$i]->language_code == $singleLangResult->main_code) {
+                                        $sliderResultCount = count($sliderIDQueryResult);
+                                        for ($i = 0; $i < $sliderResultCount; $i++) {
+                                            if (in_array($singleLangResult->main_code, $filteredSliderLangCodeArray)) {
+                                                if ($sliderIDQueryResult[$i]->language_code == $singleLangResult->main_code) {
                                                     # code...
 
                                         ?>
 
-                                                    <!-- News Title -->
-                                                    <label for="newsTitle-<?= $singleLangResult->main_code ?>" class="mb-1">Başlık <span class="text-danger">(*)</span></label>
+                                                    <!-- Slider Title -->
+                                                    <label for="sliderTitle-<?= $singleLangResult->main_code ?>" class="mb-1">Başlık <span class="text-danger">(*)</span></label>
                                                     <div class="form-group mb-3">
-                                                        <input type="text" id="newsTitle-<?= $singleLangResult->main_code ?>" name="newsTitle-<?= $singleLangResult->main_code ?>" class="form-control" placeholder="Başlık" value="<?= $newsIDQueryResult[$i]->title ?>">
+                                                        <input type="text" id="sliderTitle-<?= $singleLangResult->main_code ?>" name="sliderTitle-<?= $singleLangResult->main_code ?>" class="form-control" placeholder="Başlık" value="<?= $sliderIDQueryResult[$i]->title ?>">
                                                     </div>
 
-                                                    <!-- News Short Content -->
-                                                    <label for="newsShortContent-<?= $singleLangResult->main_code ?>" class="mb-1">Kısa İçerik <span class="text-danger">(*)</span></label>
+                                                    <!-- Slider Short Content -->
+                                                    <label for="sliderShortContent-<?= $singleLangResult->main_code ?>" class="mb-1">Kısa Açıklama <span class="text-danger">(*)</span></label>
                                                     <div class="form-group mb-3">
-                                                        <textarea type="text" id="newsShortContent-<?= $singleLangResult->main_code ?>" name="newsShortContent-<?= $singleLangResult->main_code ?>" class="form-control" rows="3" placeholder="Kısa İçerik (İçeriği anlatan cümleler veya içerikten bir kısım)"><?= $newsIDQueryResult[$i]->short_content ?></textarea>
+                                                        <textarea type="text" id="sliderShortContent-<?= $singleLangResult->main_code ?>" name="sliderShortContent-<?= $singleLangResult->main_code ?>" class="form-control" rows="3" placeholder="Kısa İçerik (İçeriği anlatan cümleler)"><?= $sliderIDQueryResult[$i]->content ?></textarea>
                                                     </div>
 
-                                                    <!-- News Content -->
-                                                    <label for="ckeditorNewsContent-<?= $singleLangResult->main_code ?>" class="mb-1">İçerik <span class="text-danger">(*)</span></label>
+                                                    <!-- Slider Link -->
+                                                    <label for="sliderLink-<?= $singleLangResult->main_code ?>" class="mb-1">Yönlendirilecek Link <span class="text-danger">(*)</span></label>
                                                     <div class="form-group mb-3">
-                                                        <textarea id="ckeditorNewsContent-<?= $singleLangResult->main_code ?>" name="ckeditorNewsContent-<?= $singleLangResult->main_code ?>"><?= $newsIDQueryResult[$i]->content ?></textarea>
+                                                        <input type="text" id="sliderLink-<?= $singleLangResult->main_code ?>" name="sliderLink-<?= $singleLangResult->main_code ?>" class="form-control" placeholder="Link" aria-describedby="linkHelp" value="<?= $sliderIDQueryResult[$i]->slider_link ?>">
+                                                        <small for="linkHelp">* Yönlendirilecek Link bütün diller için ortaktır.</small>
                                                     </div>
-
                                                 <?php
                                                     break;
                                                 }
                                             } else {   ?>
-                                                <!-- News Title -->
-                                                <label for="newsTitle-<?= $singleLangResult->main_code ?>" class="mb-1">Başlık <span class="text-danger">(*)</span></label>
+                                                <!-- Slider Title -->
+                                                <label for="sliderTitle-<?= $singleLangResult->main_code ?>" class="mb-1">Başlık <span class="text-danger">(*)</span></label>
                                                 <div class="form-group mb-3">
-                                                    <input type="text" id="newsTitle-<?= $singleLangResult->main_code ?>" name="newsTitle-<?= $singleLangResult->main_code ?>" class="form-control" placeholder="Başlık">
+                                                    <input type="text" id="sliderTitle-<?= $singleLangResult->main_code ?>" name="sliderTitle-<?= $singleLangResult->main_code ?>" class="form-control" placeholder="Başlık">
                                                 </div>
 
-                                                <!-- News Short Content -->
-                                                <label for="newsShortContent-<?= $singleLangResult->main_code ?>" class="mb-1">Kısa İçerik <span class="text-danger">(*)</span></label>
+                                                <!-- Slider Short Content -->
+                                                <label for="sliderShortContent-<?= $singleLangResult->main_code ?>" class="mb-1">Kısa Açıklama <span class="text-danger">(*)</span></label>
                                                 <div class="form-group mb-3">
-                                                    <textarea type="text" id="newsShortContent-<?= $singleLangResult->main_code ?>" name="newsShortContent-<?= $singleLangResult->main_code ?>" class="form-control" rows="3" placeholder="Kısa İçerik (İçeriği anlatan cümleler veya içerikten bir kısım)"></textarea>
+                                                    <textarea type="text" id="sliderShortContent-<?= $singleLangResult->main_code ?>" name="sliderShortContent-<?= $singleLangResult->main_code ?>" class="form-control" rows="3" placeholder="Kısa İçerik (İçeriği anlatan cümleler)"></textarea>
                                                 </div>
 
-                                                <!-- News Content -->
-                                                <label for="ckeditorNewsContent-<?= $singleLangResult->main_code ?>" class="mb-1">İçerik <span class="text-danger">(*)</span></label>
+                                                <!-- Slider Link -->
+                                                <label for="sliderLink-<?= $singleLangResult->main_code ?>" class="mb-1">Yönlendirilecek Link <span class="text-danger">(*)</span></label>
                                                 <div class="form-group mb-3">
-                                                    <textarea id="ckeditorNewsContent-<?= $singleLangResult->main_code ?>" name="ckeditorNewsContent-<?= $singleLangResult->main_code ?>"></textarea>
+                                                    <input type="text" id="sliderLink-<?= $singleLangResult->main_code ?>" name="sliderLink-<?= $singleLangResult->main_code ?>" class="form-control" placeholder="Link" aria-describedby="linkHelp" value="<?= $sliderIDQueryResult[0]->slider_link ?>">
+                                                    <small for="linkHelp">* Yönlendirilecek Link bütün diller için ortaktır.</small>
                                                 </div>
 
                                         <?php
@@ -107,6 +110,12 @@ if (isset($_GET["nid"])) {
                                             }
                                         }
                                         ?>
+                                        <!-- Slider Image -->
+                                        <!-- <label for="sliderImage" class="mb-1">Slider Fotoğrafı <span class="text-danger">(*)</span></label>
+                                        <div class="form-group mb-2">
+                                            <input type="file" class="form-control-file" id="sliderImage" name="sliderImage" accept="image/png, image/jpeg" aria-describedby="fileHelp">
+                                            <small for="fileHelp">Fotoğraf türü JPG veya PNG olmalıdır. Güncellenmesini istemiyorsanız lütfen fotoğraf seçmeyiniz.</small>
+                                        </div> -->
 
                                         <div style="text-align: right !important">
 
@@ -115,11 +124,8 @@ if (isset($_GET["nid"])) {
                                     </div>
                                 <?php } ?>
                             </div>
-                            <input type="text" class="d-none" id="idHolderInput" name="idHolderInput" value="<?= $urlNewsID ?>" readonly>
+                            <input type="text" class="d-none" id="idHolderInput" name="idHolderInput" value="<?= $urlSliderID ?>" readonly>
                         </form>
-
-
-
 
                     </div>
                 </div>
@@ -129,33 +135,20 @@ if (isset($_GET["nid"])) {
 
     <?php include "utility/script.php"; ?>
 
-    <script>
-        $(function() {
-            // CK Editor 
-            <?php foreach ($allLangResult as $singleLangResult) { ?>
-                CKEDITOR.replace('ckeditorNewsContent-<?= $singleLangResult->main_code ?>');
-            <?php } ?>
-            CKEDITOR.config.height = 450;
-        });
-    </script>
 
-    <!-- Update News -->
+    <!-- Update Slider -->
     <script>
         var langDataHolder = "<?= $defaultLangResult[0]->code ?>";
         $(".nav-tab-lang").on('click', function() {
             langDataHolder = $(this).attr("lang-data")
         });
 
-        $('#updateNewsForm').submit(function() {
+        $('#updateSliderForm').submit(function() {
             event.preventDefault()
             var $data = new FormData(this);
 
-            var selectedLangCKEditor = 'ckeditorNewsContent-' + langDataHolder;
-            var ckeditorNewsContent = CKEDITOR.instances[selectedLangCKEditor].getData();
-            $data.append("newsContent", ckeditorNewsContent)
-
             Swal.fire({
-                title: 'Haberi güncellemek istediğinize emin misiniz?',
+                title: "Slider'ı güncellemek istediğinize emin misiniz?",
                 icon: 'warning',
                 showCancelButton: true,
                 confirmButtonText: 'Evet, eminim.',
@@ -165,7 +158,7 @@ if (isset($_GET["nid"])) {
                 if (result.isConfirmed) {
                     $data.append("langDataHolder", langDataHolder);
                     $.ajax({
-                        url: "API/update-news.php",
+                        url: "API/update-slider.php",
                         type: "POST",
                         contentType: false,
                         processData: false,
