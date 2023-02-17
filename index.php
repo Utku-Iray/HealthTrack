@@ -279,9 +279,7 @@ require_once 'utility/api/get-slider.php';
           <div class="main-title">
             <h2 style="font-size: 39px; padding-bottom:10px;">Optimal Sağlığı Korumak için <span> Temel Bakım</span></h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Repudiandae, soluta maxime! Quaerat modi doloremque
-              cupiditate mollitia officia officiis pariatur repellendus.
+            İyi olma süreciniz için karar vermenizle birlikte temel hedeflerinizi belirlemeniz önemli. Bu hedefler kısa vadeli ve ulaşılabilir olmalı. Ancak bu hedeflere ulaşmanız ve daha büyük hedeflere ilerlemeniz için vücudunuz hazır mı?
             </p>
           </div>
         </div>
