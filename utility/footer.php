@@ -189,6 +189,10 @@
  <!-- Date Picker and input hover -->
  <script type="text/javascript" src="js/classie.js"></script>
  <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>
+ 
+<!-- Date Picker and input hover -->
+<script type="text/javascript" src="js/jquery.fancybox.js"></script> 
+<script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
 
  <!-- Fun Facts Counter -->
  <script type="text/javascript" src="js/counter.js"></script>

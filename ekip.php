@@ -32,17 +32,22 @@ require_once 'utility/api/get-team-member.php';
             <p>
                 <?= $generalInfoTeamMember["description"] ?>
             </p>
-           
+
             <hr>
 
             <?php foreach ($membersResult as $singleMember) { ?>
-                <div class=" col-md-4 col-sm-6">
-                    <img src="<?= $singleMember->member_photo ?>" alt="<?= $singleMember->member_name ?> Photo">
-                    <h6><?= $singleMember->member_name ?></h6>
-                    <span style="margin-top: 10px;"><?= $singleMember->title ?></span> <br><br>
-                    <p style="text-align: justify; line-height:25px"><?= $singleMember->description ?></p>
+
+                <div class="row" style="margin-bottom: 20px; padding:15px">
+                    <div class="col-md-4"> <img src="<?= $singleMember->member_photo ?>" alt="<?= $singleMember->member_name ?> Photo"></div>
+                    <div class="col-md-8" >
+                        <h6><?= $singleMember->member_name ?></h6>
+                        <span style="margin-top: 10px;"><?= $singleMember->title ?></span> <br><br>
+                        <p style="text-align: justify; line-height:25px"><?= $singleMember->description ?></p>
+                    </div>
+
 
                 </div>
+
             <?php  } ?>
         </div>
     </div>

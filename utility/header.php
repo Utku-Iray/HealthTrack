@@ -49,6 +49,8 @@ include 'utility/api/get-treatments.php';
   <!--Owl Carousel-->
   <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="css/cubeportfolio.min.css">
+  	<!--FancyBox-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
 
   <!-- Mobile Menu -->
   <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
@@ -160,7 +162,11 @@ include 'utility/api/get-treatments.php';
                         <a href="misyon-vizyon.php">Misyonumuz ve Vizyonumuz</a>
                       </li> -->
 
-                    <li class="parent"><a href="ekip.php">Ekibimiz</a></li>
+                    <li class="parent"><a href="#">Değerlerimiz</a>
+                    <ul class="submenu">
+                        <li> <a href="ekip.php">Ekibinmiz</a> </li>
+
+                      </ul></li>
 
                     <li class="parent"><a href="misyon-vizyon.php">Misyon Vizyon & Temel Değerler</a></li>
                   </ul>
@@ -179,7 +185,8 @@ include 'utility/api/get-treatments.php';
                   </ul>
                 </li>
 
-
+                <li class="parent"><a href="video-gallery.php">Videolar</a>
+                </li>
 
                 <li class="parent"><a href="saglikli-haber.php">Sağlıklı Haber</a></li>
 
@@ -223,7 +230,11 @@ include 'utility/api/get-treatments.php';
                         <a href="misyon-vizyon.php">Misyonumuz ve Vizyonumuz</a>
                       </li> -->
 
-                <li class="parent"><a href="ekip.php">Ekibimiz</a></li>
+                      <li class="parent"><a href="#">Değerlerimiz</a>
+                    <ul class="submenu">
+                        <li> <a href="ekip.php">Ekibinmiz</a> </li>
+
+                      </ul></li>
 
                 <li class="parent"><a href="misyon-vizyon.php">Misyon Vizyon & Temel Değerler</a></li>
               </ul>

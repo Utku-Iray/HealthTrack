@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include 'utility/header.php';
 
 require_once 'utility/api/get-news.php';
@@ -326,6 +326,55 @@ require_once 'utility/api/get-slider.php';
       </div>
     </div>
   </div>
+  <div class="patients-testi dark-back dr-quote">
+    <div class="container">
+
+
+      <div id="testimonials ">
+        <div class="container">
+          <div class="row">
+
+            <div class="col-md-12">
+              <div class="span12">
+
+                <div id="owl-demo2" class="owl-carousel">
+
+                  <div class="testi-sec">
+                    <div class="height30"></div>
+                    <h5 style="line-height: 30px;color:white"><?= $generalInfoBanner1["description"] ?></h5>
+                    <div class="height20"></div>
+
+                    <span class="name" style="color: white;"><?= $generalInfoBanner1["title"] ?></span>
+
+                    <div class="height35"></div>
+
+
+                  </div>
+                  <div class="testi-sec">
+                    <div class="height30"></div>
+                    <h4 style="line-height: 30px;color:white"><?= $generalInfoBanner2["description"] ?></h4>
+                    <div class="height20"></div>
+
+                    <span class="name" style="color: white;"><?= $generalInfoBanner2["title"] ?></span>
+
+                    <div class="height35"></div>
+
+
+                  </div>
+
+
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
   <!--End Welcome-->
   <!-- <section class="vitamin-bag container text-center">
     <h2 class="home-title mb-0 baslik">KİŞİYE ÖZEL TEDAVİ PAKETLERİ</h2>
@@ -485,17 +534,7 @@ require_once 'utility/api/get-slider.php';
   </section> -->
 
   <!--Start Doctor Quote-->
-  <div class="dr-quote">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <span class="quote"> <?= $generalInfoBanner1["description"] ?>
-          </span>
-          <span class="name"> <?= $generalInfoBanner1["title"] ?></span>
-        </div>
-      </div>
-    </div>
-  </div>
+  
   <!--End Doctor Quote-->
   <!-- <div class="meet-specialists">
     <div class="container">
@@ -743,14 +782,7 @@ require_once 'utility/api/get-slider.php';
   <!--Start Testimonials-->
   <div class="patients-testi dark-testi">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="main-title main-title2">
-            <h2><span><?= $generalInfoBanner2["description"] ?> <br>
-              </span><?= $generalInfoBanner2["title"] ?></h2>
-          </div>
-        </div>
-      </div>
+     
 
       <div id="testimonials">
         <div class="container">
