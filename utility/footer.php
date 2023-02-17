@@ -70,6 +70,7 @@
                  <li><a href="iletisim.php">İletişim</a></li>
                  <li><a href="uye-ol.php">Kayıt Ol</a></li>
                  <li><a href="randevu.php">Randevu</a></li>
+                 <li><a href="video-gallery.php">Videolar</a></li>
                </ul>
              </div>
            </div>
@@ -98,10 +99,10 @@
              </div>
 
              <div class="detail">
-               <div class="signup-text">
+               <!-- <div class="signup-text">
                  <i class="icon-dollar"></i>
                  <span></span>
-               </div>
+               </div> -->
 
                <div class="form">
                  <p class="subscribe_success" id="subscribe_success" style="display: none"></p>
@@ -128,7 +129,7 @@
                  <span class="text"></span>
 
                  <ul>
-                   <li>
+                   <li style="display: flex;">
                      <i class="icon-location"></i>
                      <p style="color: white; line-height:18px;"><?= $contactMainAddress["contact_content"] ?>
                      </p>

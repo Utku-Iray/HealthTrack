@@ -185,8 +185,7 @@ include 'utility/api/get-treatments.php';
                   </ul>
                 </li>
 
-                <li class="parent"><a href="video-gallery.php">Videolar</a>
-                </li>
+           
 
                 <li class="parent"><a href="saglikli-haber.php">Sağlıklı Haber</a></li>
 
