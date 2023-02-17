@@ -164,7 +164,7 @@ include 'utility/api/get-treatments.php';
 
                     <li class="parent"><a href="#">Değerlerimiz</a>
                     <ul class="submenu">
-                        <li> <a href="ekip.php">Ekibinmiz</a> </li>
+                        <li> <a href="ekip.php">Ekibimiz</a> </li>
 
                       </ul></li>
 
@@ -232,7 +232,7 @@ include 'utility/api/get-treatments.php';
 
                       <li class="parent"><a href="#">Değerlerimiz</a>
                     <ul class="submenu">
-                        <li> <a href="ekip.php">Ekibinmiz</a> </li>
+                        <li> <a href="ekip.php">Ekibimiz</a> </li>
 
                       </ul></li>
 
