@@ -79,8 +79,14 @@ if (isset($_GET["nid"])) {
                                                     <div class="form-group mb-3">
                                                         <textarea id="ckeditorNewsContent-<?= $singleLangResult->main_code ?>" name="ckeditorNewsContent-<?= $singleLangResult->main_code ?>"><?= $newsIDQueryResult[$i]->content ?></textarea>
                                                     </div>
-
-                                                <?php
+                                                    <!-- News Image -->
+                                                    <?php if ($i == 0) { ?>
+                                                        <label for="newsImage" class="mb-1">Fotoğraf</label>
+                                                        <div class="form-group mb-2">
+                                                            <input type="file" class="form-control-file" id="newsImage" name="newsImage" accept="image/png, image/jpeg" aria-describedby="fileHelp">
+                                                            <small for="fileHelp">Fotoğraf türü JPG veya PNG olmalıdır. Güncellenmesini istemiyorsanız lütfen fotoğraf seçmeyiniz.</small>
+                                                        </div>
+                                                <?php }
                                                     break;
                                                 }
                                             } else {   ?>

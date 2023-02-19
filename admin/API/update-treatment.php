@@ -7,8 +7,25 @@ $selectedID = trim(filter_input(INPUT_POST, 'idHolderInput'));
 $treatmentName = trim(filter_input(INPUT_POST, 'treatmentName-' . $selectedLanguage));
 $treatmentShortDescription = trim(filter_input(INPUT_POST, 'treatmentShortDescription-' . $selectedLanguage));
 $treatmentDescription = $_POST['treatmentDescription'];
+$image = "treatmentImage";
+
+
+$tmpFilePath = $_FILES[$image]['tmp_name'];
+if (!empty($tmpFilePath)) {
+    $filename = $_FILES[$image]["name"];
+    $efilename = explode('.', $filename);
+    $uzanti = $efilename[count($efilename) - 1];
+    if ($uzanti != 'png' && $uzanti != 'jpg' && $uzanti != 'jpeg') {
+        $errors['error'] = 'Fotoğraf türü JPG veya PNG olmalıdır.';
+    }
+}
+
+
 
 $url = replace_tr($treatmentName);
+
+
+
 
 if (
     empty($treatmentName) ||   empty($treatmentDescription) || empty($treatmentShortDescription)
@@ -30,7 +47,27 @@ if (!empty($errors)) {
     $treatmentSelectQueryResult = $treatmentSelectQuery->fetchAll(PDO::FETCH_OBJ);
     $treatmentSelectQueryResultCount = count($treatmentSelectQueryResult);
 
+    $treatmentImageVal = $treatmentSelectQueryResult[0]->treatment_main_img;
+
     if ($treatmentSelectQueryResultCount > 0) {
+
+        if (!empty($tmpFilePath)) {
+            $removePathArray = array("attachments/", ".jpg", ".png", "treatments/");
+            $imageReplacedValue = str_replace($removePathArray, "", $treatmentImageVal);
+            if (file_exists('../../' . $treatmentImageVal)) {
+                unlink('../../' . $treatmentImageVal);
+            }
+            if ($imageReplacedValue == $url) {
+                move_uploaded_file($_FILES[$image]['tmp_name'], "../../" . $treatmentImageVal);
+            } else if ($imageReplacedValue != $url) {
+                $newLocation = "attachments/treatments/" . $url . "." . $uzanti;
+                move_uploaded_file($_FILES[$image]['tmp_name'], "../../" . $newLocation);
+
+                $updateImagePathQuery = $vt->prepare("UPDATE treatments SET treatment_main_img = '$newLocation' WHERE treatment_id = '$selectedID'");
+                $updateImagePathQuery->execute();
+            }
+        }
+
         # UPDATE
         $updateQuery = $vt->prepare("UPDATE treatments_translation 
                                      SET name = :name, 
@@ -46,6 +83,10 @@ if (!empty($errors)) {
                 ':content' => $treatmentDescription,
                 ':url' => $url,
             ]);
+
+
+
+
             if ($updateResult) {
                 $form_data['status'] = true;
                 $form_data['success'] = 'Tedavi başarıyla güncellendi.';

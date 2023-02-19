@@ -78,8 +78,17 @@ if (isset($_GET["tid"])) {
                                                         <textarea type="text" id="ckEditorTreatmentDescription-<?= $singleLangResult->main_code ?>" name="ckEditorTreatmentDescription-<?= $singleLangResult->main_code ?>"><?= $treatmentsResult[$i]->content ?></textarea>
                                                     </div>
 
-                                                <?php
+                                                    <!-- Treatment Image -->
+                                                    <?php if ($i == 0) { ?>
+                                                        <label for="treatmentImage" class="mb-1">Fotoğraf</label>
+                                                        <div class="form-group mb-2">
+                                                            <input type="file" class="form-control-file" id="treatmentImage" name="treatmentImage" accept="image/png, image/jpeg" aria-describedby="fileHelp">
+                                                            <small for="fileHelp">Fotoğraf türü JPG veya PNG olmalıdır. Güncellenmesini istemiyorsanız lütfen fotoğraf seçmeyiniz.</small>
+                                                        </div>
+                                                    <?php } ?>
 
+
+                                                <?php
                                                     break;
                                                 }
                                             } else {   ?>

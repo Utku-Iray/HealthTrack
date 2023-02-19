@@ -9,6 +9,18 @@ $selectedID = trim(filter_input(INPUT_POST, 'idHolderInput'));
 $sliderTitle = trim(filter_input(INPUT_POST, 'sliderTitle-' . $selectedLanguage));
 $sliderShortContent = trim(filter_input(INPUT_POST, 'sliderShortContent-' . $selectedLanguage));
 $sliderLink = trim(filter_input(INPUT_POST, 'sliderLink-' . $selectedLanguage));
+$image = "sliderImage";
+
+$tmpFilePath = $_FILES[$image]['tmp_name'];
+if (!empty($tmpFilePath)) {
+    $filename = $_FILES[$image]["name"];
+    $efilename = explode('.', $filename);
+    $uzanti = $efilename[count($efilename) - 1];
+    if ($uzanti != 'png' && $uzanti != 'jpg' && $uzanti != 'jpeg') {
+        $errors['error'] = 'Fotoğraf türü JPG veya PNG olmalıdır.';
+    }
+}
+
 
 $url = replace_tr($sliderTitle);
 
@@ -32,7 +44,29 @@ if (!empty($errors)) {
     $sliderSelectQueryResult = $sliderSelectQuery->fetchAll(PDO::FETCH_OBJ);
     $sliderSelectQueryResultCount = count($sliderSelectQueryResult);
 
+    $sliderImageVal = $sliderSelectQueryResult[0]->slider_image;
+
     if ($sliderSelectQueryResultCount > 0) {
+
+        if (!empty($tmpFilePath)) {
+            $removePathArray = array("attachments/", ".jpg", ".png", "slider/");
+            $imageReplacedValue = str_replace($removePathArray, "", $sliderImageVal);
+            if (file_exists('../../' . $sliderImageVal)) {
+                unlink('../../' . $sliderImageVal);
+            }
+            if ($imageReplacedValue == $url) {
+                move_uploaded_file($_FILES[$image]['tmp_name'], "../../" . $sliderImageVal);
+            } else if ($imageReplacedValue != $url) {
+                $newLocation = "attachments/slider/" . $url . "." . $uzanti;
+                move_uploaded_file($_FILES[$image]['tmp_name'], "../../" . $newLocation);
+
+                $updateImagePathQuery = $vt->prepare("UPDATE slider SET slider_image = '$newLocation' WHERE slider_id = '$selectedID'");
+                $updateImagePathQuery->execute();
+            }
+        }
+
+
+
         # Single Update
         if ($sliderLink != $sliderSelectQueryResult[0]->slider_link) {
             $updateQuery1 = $vt->prepare("UPDATE slider SET slider_link = :slider_link WHERE slider_id = '$selectedID'");

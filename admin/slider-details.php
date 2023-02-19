@@ -82,7 +82,15 @@ if (isset($_GET["sid"])) {
                                                         <input type="text" id="sliderLink-<?= $singleLangResult->main_code ?>" name="sliderLink-<?= $singleLangResult->main_code ?>" class="form-control" placeholder="Link" aria-describedby="linkHelp" value="<?= $sliderIDQueryResult[$i]->slider_link ?>">
                                                         <small for="linkHelp">* Yönlendirilecek Link bütün diller için ortaktır.</small>
                                                     </div>
-                                                <?php
+
+                                                    <!-- Slider Image -->
+                                                    <?php if ($i == 0) { ?>
+                                                        <label for="sliderImage" class="mb-1">Fotoğraf</label>
+                                                        <div class="form-group mb-2">
+                                                            <input type="file" class="form-control-file" id="sliderImage" name="sliderImage" accept="image/png, image/jpeg" aria-describedby="fileHelp">
+                                                            <small for="fileHelp">Fotoğraf türü JPG veya PNG olmalıdır. Güncellenmesini istemiyorsanız lütfen fotoğraf seçmeyiniz.</small>
+                                                        </div>
+                                                <?php }
                                                     break;
                                                 }
                                             } else {   ?>

@@ -7,6 +7,18 @@ $selectedID = trim(filter_input(INPUT_POST, 'idHolderInput'));
 $newsTitle = trim(filter_input(INPUT_POST, 'newsTitle-' . $selectedLanguage));
 $newsShortContent = trim(filter_input(INPUT_POST, 'newsShortContent-' . $selectedLanguage));
 $newsContent = $_POST['newsContent'];
+$image = "newsImage";
+
+
+$tmpFilePath = $_FILES[$image]['tmp_name'];
+if (!empty($tmpFilePath)) {
+    $filename = $_FILES[$image]["name"];
+    $efilename = explode('.', $filename);
+    $uzanti = $efilename[count($efilename) - 1];
+    if ($uzanti != 'png' && $uzanti != 'jpg' && $uzanti != 'jpeg') {
+        $errors['error'] = 'Fotoğraf türü JPG veya PNG olmalıdır.';
+    }
+}
 
 $url = replace_tr($newsTitle);
 
@@ -31,7 +43,27 @@ if (!empty($errors)) {
     $newsSelectQueryResult = $newsSelectQuery->fetchAll(PDO::FETCH_OBJ);
     $newsSelectQueryResultCount = count($newsSelectQueryResult);
 
+    $newsImageVal = $newsSelectQueryResult[0]->news_image;
+
     if ($newsSelectQueryResultCount > 0) {
+
+        if (!empty($tmpFilePath)) {
+            $removePathArray = array("attachments/", ".jpg", ".png", "news/");
+            $imageReplacedValue = str_replace($removePathArray, "", $newsImageVal);
+            if (file_exists('../../' . $newsImageVal)) {
+                unlink('../../' . $newsImageVal);
+            }
+            if ($imageReplacedValue == $url) {
+                move_uploaded_file($_FILES[$image]['tmp_name'], "../../" . $newsImageVal);
+            } else if ($imageReplacedValue != $url) {
+                $newLocation = "attachments/news/" . $url . "." . $uzanti;
+                move_uploaded_file($_FILES[$image]['tmp_name'], "../../" . $newLocation);
+
+                $updateImagePathQuery = $vt->prepare("UPDATE news SET news_image = '$newLocation' WHERE news_id = '$selectedID'");
+                $updateImagePathQuery->execute();
+            }
+        }
+
         # UPDATE
         $updateQuery = $vt->prepare("UPDATE news_translation 
                                      SET title = :title, 

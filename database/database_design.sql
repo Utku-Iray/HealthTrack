@@ -198,6 +198,9 @@ CREATE TABLE `users` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+INSERT INTO `users` (`user_id`, `user_mail`, `user_name`, `user_pwd`, `user_role`, `user_status`, `user_photo`, `created_at`) VALUES
+(1, 'admin@healthtrack.com', 'HT Admin', '$2y$10$SqXLk5Sw7UMiuYlCr.TZj.8/KwY2mTUwUbs.j0Zdxv9cFOQt601Zy', 'admin', 1, '', '2023-02-28 20:40:46'),
+(2, 'editor@healthtrack.com', 'HT Editor', '$2y$10$SqXLk5Sw7UMiuYlCr.TZj.8/KwY2mTUwUbs.j0Zdxv9cFOQt601Zy', 'editor', 1, '', '2023-02-19 20:40:46');
 
 CREATE TABLE `slider` (
   `slider_id` int(11) NOT NULL,

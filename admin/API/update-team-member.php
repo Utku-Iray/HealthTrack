@@ -8,7 +8,19 @@ $selectedID = trim(filter_input(INPUT_POST, 'idHolderInput'));
 $memberName = trim(filter_input(INPUT_POST, 'memberName-' . $selectedLanguage));
 $memberTitle = trim(filter_input(INPUT_POST, 'memberTitle-' . $selectedLanguage));
 $memberDescription = trim(filter_input(INPUT_POST, 'memberDescription-' . $selectedLanguage));
+$image = "memberImage";
 
+$tmpFilePath = $_FILES[$image]['tmp_name'];
+if (!empty($tmpFilePath)) {
+    $filename = $_FILES[$image]["name"];
+    $efilename = explode('.', $filename);
+    $uzanti = $efilename[count($efilename) - 1];
+    if ($uzanti != 'png' && $uzanti != 'jpg' && $uzanti != 'jpeg') {
+        $errors['error'] = 'Fotoğraf türü JPG veya PNG olmalıdır.';
+    }
+}
+
+$url = replace_tr($memberName);
 
 if (
     empty($memberName) ||   empty($memberTitle) ||   empty($memberDescription)
@@ -31,7 +43,27 @@ if (!empty($errors)) {
     $membersResult = $membersQuery->fetchAll(PDO::FETCH_OBJ);
     $memberResultCount = count($membersResult);
 
+    $memberImageVal = $membersResult[0]->member_photo;
+
     if ($memberResultCount > 0) {
+
+        if (!empty($tmpFilePath)) {
+            $removePathArray = array("attachments/", ".jpg", ".png", "team/");
+            $imageReplacedValue = str_replace($removePathArray, "", $memberImageVal);
+            if (file_exists('../../' . $memberImageVal)) {
+                unlink('../../' . $memberImageVal);
+            }
+            if ($imageReplacedValue == $url) {
+                move_uploaded_file($_FILES[$image]['tmp_name'], "../../" . $memberImageVal);
+            } else if ($imageReplacedValue != $url) {
+                $newLocation = "attachments/team/" . $url . "." . $uzanti;
+                move_uploaded_file($_FILES[$image]['tmp_name'], "../../" . $newLocation);
+
+                $updateImagePathQuery = $vt->prepare("UPDATE team_members SET member_photo = '$newLocation' WHERE member_id = '$selectedID'");
+                $updateImagePathQuery->execute();
+            }
+        }
+
         # Single Update
         if ($memberName != $membersResult[0]->member_name) {
             $updateQuery1 = $vt->prepare("UPDATE team_members SET member_name = :member_name WHERE member_id = '$selectedID'");
