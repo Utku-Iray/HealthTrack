@@ -778,7 +778,7 @@ require_once 'utility/api/get-slider.php';
   <!--End Latest News-->
 
   <!--Start Testimonials-->
-  <div class="patients-testi dark-testi">
+  <!-- <div class="patients-testi dark-testi">
     <div class="container">
      
 
@@ -791,7 +791,7 @@ require_once 'utility/api/get-slider.php';
                   <div class="testi-sec">
                     <img src="images/blog-7.png" alt="" />
                     <div class="height10"></div>
-                    <!-- <span class="name">Aytekin Işıklı</span>
+                    <span class="name">Aytekin Işıklı</span>
                           <span class="patient">Yazılım Mühendisi</span>
                           <div class="height30"></div>
                           <p>
@@ -799,10 +799,10 @@ require_once 'utility/api/get-slider.php';
                             değerlerime bakıldıktan sonra başlanılan tedavi ile
                             şu an mükemmel durumdayım teşekkürler Health Track
                             ailesi.
-                          </p> -->
-                    <!-- <div class="height35"></div> -->
+                          </p>
+                    <div class="height35"></div>
                   </div>
-                  <!-- <div class="testi-sec">
+                  <div class="testi-sec">
                           <img src="images/yorumlar-asil-logo.jpg" alt="" />
                           <div class="height10"></div>
                           <span class="name">İlker Sakallı</span>
@@ -830,7 +830,7 @@ require_once 'utility/api/get-slider.php';
                             hissediyordum
                           </p>
                           <div class="height35"></div>
-                        </div> -->
+                        </div>
                 </div>
               </div>
             </div>
@@ -838,7 +838,7 @@ require_once 'utility/api/get-slider.php';
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!--End Testimonials-->
 </div>

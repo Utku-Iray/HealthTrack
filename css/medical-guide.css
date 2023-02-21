@@ -599,7 +599,7 @@ img:hover {
 /*..... LATEST NEWS ......*/
 
 .latest-news {
-    padding: 90px 0;
+    padding: 28px 0;
 }
 
 .latest-news .post {}
@@ -608,6 +608,7 @@ img:hover {
     background: #fff;
     padding: 20px;
     position: relative;
+    height: 330px;
 }
 
 .latest-news .post .detail img {
