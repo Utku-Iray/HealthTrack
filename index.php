@@ -754,7 +754,7 @@ require_once 'utility/api/get-slider.php';
                     <a href="saglikli-haber-detay.php?url=<?= $singleNews->url ?>">
                       <img class="lazyOwl" style="object-fit:contain !important;" src="<?= $singleNews->news_image ?>" alt="" />
                       <div class="detail">
-                        <img src="images/bloglar-ana-kapak.jpg" alt="" />
+                        <!-- <img src="images/bloglar-ana-kapak.jpg" alt="" /> -->
                         <h4 style="font-weight: 500; padding-bottom:10px;"><?= $singleNews->title ?></h4>
                         <p>
                           <?= $singleNews->short_content ?>
