@@ -162,13 +162,10 @@ include 'utility/api/get-treatments.php';
                         <a href="misyon-vizyon.php">Misyonumuz ve Vizyonumuz</a>
                       </li> -->
 
-                    <li class="parent"><a href="#">Değerlerimiz</a>
-                    <ul class="submenu">
-                        <li> <a href="ekip.php">Ekibimiz</a> </li>
+                    <li class="parent"><a href="ekip.php">Ekibimiz</a> </li>
+                   </li>
 
-                      </ul></li>
-
-                    <li class="parent"><a href="misyon-vizyon.php">Misyon Vizyon & Temel Değerler</a></li>
+                    <li class="parent"><a href="misyon-vizyon.php">Temel Değerlerimiz</a></li>
                   </ul>
                 </li>
 
