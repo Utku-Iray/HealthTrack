@@ -305,7 +305,7 @@ img:hover {
     color: #333;
     font-family: "Josefin Sans", sans-serif;
     font-size: 16px;
-    padding: 12px 24px !important;
+    padding: 12px 12px !important;
 }
 
 .header .nav li.parent:hover a {

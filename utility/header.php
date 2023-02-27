@@ -185,7 +185,10 @@ include 'utility/api/get-treatments.php';
            
 
                 <li class="parent"><a href="saglikli-haber.php">Sağlıklı Haber</a></li>
+                <li class="parent" >
+              <a href="tedavi-detay.php?url=mobil-hizmetler">Mobil Hizmetler</a>
 
+            </li>
                 <li class="parent"><a href="#">Randevu Al</a></li>
                 <li><a href="iletisim.php">İletişim</a></li>
 
