@@ -50,7 +50,7 @@ if (isset($_GET["url"])) {
 		<div class="container">
 
 			<div class="row">
-				<div class="col-md-4">
+				<!-- <div class="col-md-4">
 					<div class="procedures-links">
 						<span class="title">Tedaviler</span>
 						<ul id="procedures-links" class="accordion">
@@ -64,8 +64,8 @@ if (isset($_GET["url"])) {
 								</ul>
 							</li>
 					</div>
-				</div>
-				<div class="col-md-8">
+				</div> -->
+				<div class="col-md-12">
 					<div class="main-title">
 						<h2><?= $selectedTreatmentResult["name"] ?></h2>
 					</div>
@@ -130,10 +130,10 @@ if (isset($_GET["url"])) {
 					<div class="col-md-12">
 						<div class="main-title">
 							<h2><span>Sağlıklı</span> Haber</h2>
-							<p>
+							<!-- <p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 								Similique aut rerum atque molestiae, quos sequi.
-							</p>
+							</p> -->
 						</div>
 					</div>
 				</div>
