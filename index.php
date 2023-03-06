@@ -198,183 +198,216 @@ require_once 'utility/api/get-slider.php';
       </div>
     </div>
   </div>
-
-  <!--Start Services-->
-  <div class="services-two">
+  <div class="latest-news dark-yeni">
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <div class="service-sec">
-            <div class="icon" style="background-color: #f4911c;">
-              <img src="images/deneme.jpg" alt="">
-              <!-- <img
+        <div class="col-md-2"></div>
+        <div class="col-md-4 ilac">
+          <img src="images/empower.png" alt="">
+          <div class="ilac-detail">
+            <h4>Sağlıklı Olmanın Ötesinde Size Özel Bir Deneyim</h4>
+            <ul>
+              <li>Lorem ipsum dolor sit amet consectetur,</li>
+              <li style="margin-top: 10px;">Lorem ipsum dolor sit amet consectetur,</li>
+              <li style="margin-top: 10px;">Lorem ipsum dolor sit amet consectetur,</li>
+            </ul>
+            <div style="padding-top: 18px;">
+              <a href="#" class="btn" style="background-color: #3B919E; color:white;">Devamını Okuyun</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 ilac">
+          <img src="images/peptide.png" alt="">
+          <div class="ilac-detail">
+            <h4>Enerjinin Kaynağı Artık Tek Bir Elde!</h4>
+            <ul>
+              <li>DLorem ipsum dolor sit amet consectetur,</li>
+              <li style="margin-top: 10px;">Lorem ipsum dolor sit amet consectetur,</li>
+              <li style="margin-top: 10px;">Lorem ipsum dolor sit amet consectetur,</li>
+            </ul>
+            <div style="padding-top: 18px;">
+              <a href="#" class="btn" style="background-color: #3B919E; color:white;">Devamını Okuyun</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Start Services-->
+    <div class="services-two">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="service-sec">
+              <div class="icon" style="background-color: #f4911c;">
+                <img src="images/deneme.jpg" alt="">
+                <!-- <img
                       style="width: 70%; padding-top: 12px; background-color:#02adc6;"
                       src="images/icon-1.png"
                       alt=""
                     /> -->
-            </div>
+              </div>
 
-            <div class="detail">
-              <h5> <?= $generalInfoPrinciple1["title"] ?></h5>
-              <?= $generalInfoPrinciple1["description"] ?>
+              <div class="detail">
+                <h5> <?= $generalInfoPrinciple1["title"] ?></h5>
+                <?= $generalInfoPrinciple1["description"] ?>
+              </div>
             </div>
-          </div>
-          <div class="service-sec">
-            <div class="icon" style="background-color: #c2185f;">
-              <img src="images/deneme-2.jpg" alt="">
-              <!-- <img
+            <div class="service-sec">
+              <div class="icon" style="background-color: #c2185f;">
+                <img src="images/deneme-2.jpg" alt="">
+                <!-- <img
                       style="width: 70%; padding-top: 12px"
                       src="images/icon-2.png"
                       alt=""
                     /> -->
-            </div>
+              </div>
 
-            <div class="detail">
-              <h5><?= $generalInfoPrinciple2["title"] ?></h5>
-              <?= $generalInfoPrinciple2["description"] ?>
+              <div class="detail">
+                <h5><?= $generalInfoPrinciple2["title"] ?></h5>
+                <?= $generalInfoPrinciple2["description"] ?>
+              </div>
             </div>
-          </div>
-          <div class="service-sec">
-            <div class="icon" style="background-color: #39919d;">
-              <img src="images/deneme-3.jpg" alt="">
-              <!-- <img
+            <div class="service-sec">
+              <div class="icon" style="background-color: #39919d;">
+                <img src="images/deneme-3.jpg" alt="">
+                <!-- <img
                       style="width: 70%; padding-top: 12px"
                       src="images/icon-3.png"
                       alt=""
                     /> -->
-            </div>
+              </div>
 
-            <div class="detail">
-              <h5><?= $generalInfoPrinciple3["title"] ?></h5>
-              <?= $generalInfoPrinciple3["description"] ?>
+              <div class="detail">
+                <h5><?= $generalInfoPrinciple3["title"] ?></h5>
+                <?= $generalInfoPrinciple3["description"] ?>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="col-md-6">
-          <div id="demo">
-            <div class="span12">
-              <div id="services-slide" class="owl-carousel">
-                <div class="item">
-                  <img src="images/health.png" alt="" />
-                </div>
-                <!-- <div class="item">
+          <div class="col-md-6">
+            <div id="demo">
+              <div class="span12">
+                <div id="services-slide" class="owl-carousel">
+                  <div class="item">
+                    <img src="images/health.png" alt="" />
+                  </div>
+                  <!-- <div class="item">
                   <img src="images/iv-terapi-2.jpg" alt="" />
                 </div> -->
-                <!-- <div class="item"><img src="images/service-two-img3.jpg" alt=""></div> -->
+                  <!-- <div class="item"><img src="images/service-two-img3.jpg" alt=""></div> -->
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!--End Services-->
+    <!--End Services-->
 
-  <!--Start Welcome-->
-  <div class="welcome dark-backk">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="main-title">
-            <h2 style="font-size: 39px; padding-bottom:10px;">Optimal Sağlığı Korumak için <span> Temel Bakım</span></h2>
-            <p>
-            İyi olma süreciniz için karar vermenizle birlikte temel hedeflerinizi belirlemeniz önemli. Bu hedefler kısa vadeli ve ulaşılabilir olmalı. Ancak bu hedeflere ulaşmanız ve daha büyük hedeflere ilerlemeniz için vücudunuz hazır mı?
-            </p>
+    <!--Start Welcome-->
+    <div class="welcome dark-backk">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="main-title">
+              <h2 style="font-size: 39px; padding-bottom:10px;">Optimal Sağlığı Korumak için <span> Temel Bakım</span></h2>
+              <p>
+                İyi olma süreciniz için karar vermenizle birlikte temel hedeflerinizi belirlemeniz önemli. Bu hedefler kısa vadeli ve ulaşılabilir olmalı. Ancak bu hedeflere ulaşmanız ve daha büyük hedeflere ilerlemeniz için vücudunuz hazır mı?
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="tabbed-nav">
-        <ul>
-          <?php foreach ($treatmentsResultForHome as $singleTreatmentForHome) { ?>
-            <li><a><?= $singleTreatmentForHome->name ?></a></li>
-          <?php  } ?>
+        <div id="tabbed-nav">
+          <ul>
+            <?php foreach ($treatmentsResultForHome as $singleTreatmentForHome) { ?>
+              <li><a><?= $singleTreatmentForHome->name ?></a></li>
+            <?php  } ?>
 
 
-        </ul>
+          </ul>
 
-        <div>
+          <div>
 
-          <?php foreach ($treatmentsResultForHome as $singleTreatmentForHome) { ?>
-            <div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="welcome-serv-img">
-                    <img style="width: 576px; height:504px;" src="<?= $singleTreatmentForHome->treatment_main_img ?>" alt="" />
+            <?php foreach ($treatmentsResultForHome as $singleTreatmentForHome) { ?>
+              <div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="welcome-serv-img">
+                      <img style="width: 576px; height:504px;" src="<?= $singleTreatmentForHome->treatment_main_img ?>" alt="" />
+                    </div>
                   </div>
-                </div>
 
-                <div class="col-md-6">
-                  <div class="detail" style="padding-top: 30px">
-                    <h4><?= $singleTreatmentForHome->name ?></h4>
-                    <p> <?= $singleTreatmentForHome->short_content ?></p>
-                    <a href="tedavi-detay.php?url=<?= $singleTreatmentForHome->url ?>">DEVAMINI OKU</a>
+                  <div class="col-md-6">
+                    <div class="detail" style="padding-top: 30px">
+                      <h4><?= $singleTreatmentForHome->name ?></h4>
+                      <p> <?= $singleTreatmentForHome->short_content ?></p>
+                      <a href="tedavi-detay.php?url=<?= $singleTreatmentForHome->url ?>">DEVAMINI OKU</a>
+                    </div>
                   </div>
-                </div>
 
+                </div>
               </div>
-            </div>
-          <?php  } ?>
+            <?php  } ?>
 
 
 
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="patients-testi dark-back dr-quote">
-    <div class="container">
-
-
-      <div id="testimonials ">
-        <div class="container">
-          <div class="row">
-
-            <div class="col-md-12">
-              <div class="span12">
-
-                <div id="owl-demo2" class="owl-carousel">
-
-                  <div class="testi-sec">
-                    <div class="height30"></div>
-                    <h5 style="line-height: 30px;color:white"><?= $generalInfoBanner1["description"] ?></h5>
-                    <div class="height20"></div>
-
-                    <span class="name" style="color: white;"><?= $generalInfoBanner1["title"] ?></span>
-
-                    <div class="height35"></div>
-
-
-                  </div>
-                  <div class="testi-sec">
-                    <div class="height30"></div>
-                    <h4 style="line-height: 30px;color:white"><?= $generalInfoBanner2["description"] ?></h4>
-                    <div class="height20"></div>
-
-                    <span class="name" style="color: white;"><?= $generalInfoBanner2["title"] ?></span>
-
-                    <div class="height35"></div>
-
-
-                  </div>
-
-
-                </div>
-
-              </div>
-            </div>
 
           </div>
         </div>
       </div>
-
     </div>
-  </div>
+    <div class="patients-testi dark-back dr-quote">
+      <div class="container">
 
-  <!--End Welcome-->
-  <!-- <section class="vitamin-bag container text-center">
+
+        <div id="testimonials ">
+          <div class="container">
+            <div class="row">
+
+              <div class="col-md-12">
+                <div class="span12">
+
+                  <div id="owl-demo2" class="owl-carousel">
+
+                    <div class="testi-sec">
+                      <div class="height30"></div>
+                      <h5 style="line-height: 30px;color:white"><?= $generalInfoBanner1["description"] ?></h5>
+                      <div class="height20"></div>
+
+                      <span class="name" style="color: white;"><?= $generalInfoBanner1["title"] ?></span>
+
+                      <div class="height35"></div>
+
+
+                    </div>
+                    <div class="testi-sec">
+                      <div class="height30"></div>
+                      <h4 style="line-height: 30px;color:white"><?= $generalInfoBanner2["description"] ?></h4>
+                      <div class="height20"></div>
+
+                      <span class="name" style="color: white;"><?= $generalInfoBanner2["title"] ?></span>
+
+                      <div class="height35"></div>
+
+
+                    </div>
+
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--End Welcome-->
+    <!-- <section class="vitamin-bag container text-center">
     <h2 class="home-title mb-0 baslik">KİŞİYE ÖZEL TEDAVİ PAKETLERİ</h2>
     <div class="row" style="display: flex;">
        <div class="col-lg-4 d-flex align-items-center">
@@ -531,10 +564,10 @@ require_once 'utility/api/get-slider.php';
     </div>
   </section> -->
 
-  <!--Start Doctor Quote-->
-  
-  <!--End Doctor Quote-->
-  <!-- <div class="meet-specialists">
+    <!--Start Doctor Quote-->
+
+    <!--End Doctor Quote-->
+    <!-- <div class="meet-specialists">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
@@ -729,56 +762,56 @@ require_once 'utility/api/get-slider.php';
     </div>
   </div> -->
 
-  <!--Start Latest News-->
-  <div class="latest-news dark-yeni">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="main-title">
-            <h2><span>Sağlıklı</span> Haber</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Similique aut rerum atque molestiae, quos sequi.
-            </p>
+    <!--Start Latest News-->
+    <div class="latest-news dark-yeni">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="main-title">
+              <h2><span>Sağlıklı</span> Haber</h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Similique aut rerum atque molestiae, quos sequi.
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div id="latest-news">
-        <div class="container">
-          <div class="row">
-            <div class="span12">
-              <div id="owl-demo" class="owl-carousel">
-                <?php foreach ($newsResult  as $singleNews) { ?>
-                  <div class="post item">
-                    <a href="saglikli-haber-detay.php?url=<?= $singleNews->url ?>">
-                      <img class="lazyOwl" style="object-fit:contain !important;" src="<?= $singleNews->news_image ?>" alt="" />
-                      <div class="detail">
-                        <!-- <img src="images/bloglar-ana-kapak.jpg" alt="" /> -->
-                        <h4 style="font-weight: 500; padding-bottom:10px;"><?= $singleNews->title ?></h4>
-                        <p>
-                          <?= $singleNews->short_content ?>
-                        </p>
-                        <div style="padding-top: 18px;">
-                          <a href="saglikli-haber-detay.php?url=<?= $singleNews->url ?>" class="btn" style="background-color: #3B919E; color:white;">Devamını Okuyun</a>
+        <div id="latest-news">
+          <div class="container">
+            <div class="row">
+              <div class="span12">
+                <div id="owl-demo" class="owl-carousel">
+                  <?php foreach ($newsResult  as $singleNews) { ?>
+                    <div class="post item">
+                      <a href="saglikli-haber-detay.php?url=<?= $singleNews->url ?>">
+                        <img class="lazyOwl" style="object-fit:contain !important;" src="<?= $singleNews->news_image ?>" alt="" />
+                        <div class="detail">
+                          <!-- <img src="images/bloglar-ana-kapak.jpg" alt="" /> -->
+                          <h4 style="font-weight: 500; padding-bottom:10px;"><?= $singleNews->title ?></h4>
+                          <p>
+                            <?= $singleNews->short_content ?>
+                          </p>
+                          <div style="padding-top: 18px;">
+                            <a href="saglikli-haber-detay.php?url=<?= $singleNews->url ?>" class="btn" style="background-color: #3B919E; color:white;">Devamını Okuyun</a>
+                          </div>
+                          <span><i class="icon-clock3"></i> <?= $singleNews->created_at ?></span>
+                          <!-- <span class="comment"><a href="#"><i class="icon-icons206"></i> 5 Comments</a></span> -->
                         </div>
-                        <span><i class="icon-clock3"></i> <?= $singleNews->created_at ?></span>
-                        <!-- <span class="comment"><a href="#"><i class="icon-icons206"></i> 5 Comments</a></span> -->
-                      </div>
-                    </a>
-                  </div>
-                <?php } ?>
+                      </a>
+                    </div>
+                  <?php } ?>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <!--End Latest News-->
+    <!--End Latest News-->
 
-  <!--Start Testimonials-->
-  <!-- <div class="patients-testi dark-testi">
+    <!--Start Testimonials-->
+    <!-- <div class="patients-testi dark-testi">
     <div class="container">
      
 
@@ -840,8 +873,8 @@ require_once 'utility/api/get-slider.php';
     </div>
   </div> -->
 
-  <!--End Testimonials-->
-</div>
-<!--End Content-->
+    <!--End Testimonials-->
+  </div>
+  <!--End Content-->
 
-<?php include 'utility/footer.php'; ?>
+  <?php include 'utility/footer.php'; ?>

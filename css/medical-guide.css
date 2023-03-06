@@ -605,6 +605,7 @@ img:hover {
 .latest-news .post {}
 
 .latest-news .post .detail {
+    margin-top: 10px;
     background: #fff;
     padding: 20px;
     position: relative;
