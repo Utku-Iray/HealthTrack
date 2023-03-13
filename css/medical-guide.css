@@ -534,6 +534,15 @@ img:hover {
     color: #10464e;
 }
 
+.main-title ul {
+    justify-content: center;
+    display: grid;
+}
+
+.main-title p {
+    text-align: center;
+}
+
 li p {
     color: black;
 }
