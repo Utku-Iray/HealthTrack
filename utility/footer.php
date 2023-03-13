@@ -68,8 +68,7 @@
                  <li><a href="index.php">Anasayfa</a></li>
                  <li><a href="hakkimizda.php">Hakkımızda</a></li>
                  <li><a href="iletisim.php">İletişim</a></li>
-                 <li><a href="uye-ol.php">Kayıt Ol</a></li>
-                 <li><a href="randevu.php">Randevu</a></li>
+                 <li><a href="#">Randevu</a></li>
                  <li><a href="video-gallery.php">Videolar</a></li>
                </ul>
              </div>
@@ -155,7 +154,7 @@
      <div class="container">
        <div class="row">
          <div class="col-md-6">
-           <span class="copyrights">Kopyalanamaz &copy; 2022 Digital Health Agency. Bütün Hakları Gizlidir.
+           <span class="copyrights">Copyright &copy; 2022 Fikirbuzz. Bütün Hakları Gizlidir.
              <div style="padding-top: 5px;"> <a href="#">Gizlilik Politikası</a> | <a href="#">Kullanım Şartları Sözleşmesi</a> | <a href="#">Tedavi Onayı</a> | <a href="#">İptal Politikası</a></div>
            </span>
          </div>
@@ -245,7 +244,7 @@
        dottedOverlay: "none",
        delay: 16000,
        startwidth: 1170,
-       startheight: 720,
+       startheight: 560,
        hideThumbs: 200,
 
        thumbWidth: 100,

@@ -89,7 +89,7 @@ require_once 'utility/api/get-contact-information.php';
 								<!-- <p>cursus lorem molestie vitae. Nulla vehicula, lacus ut suscipit fermentum, turpis felis ultricies.</p> -->
 							</div>
 
-							<div class="get-in-touch">
+							<div class="get-in-touch" style="margin-top: 60px;">
 								<div class="detail">
 									<span><b>Telefon Numarası:</b></span>
 									<?php foreach ($contactQueryResult as $singleResult) {
@@ -115,8 +115,9 @@ require_once 'utility/api/get-contact-information.php';
 								<div class="social-icons">
 									<a href="#." class="fb"><i class="icon-euro"></i></a>
 									<a href="#." class="tw"><i class="icon-yen"></i></a>
-									<a href="#." class="gp"><i class="icon-google-plus"></i></a>
-									<a href="#." class="vimeo"><i class="icon-vimeo4"></i></a>
+									<a href="#." class="gp"><i class="icon-instagram"></i></a>
+
+							
 								</div>
 							</div>
 						</div>

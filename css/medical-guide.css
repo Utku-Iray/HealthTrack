@@ -280,7 +280,7 @@ img:hover {
 /*..... HEADER ......*/
 
 .header {
-    padding: 28px 0;
+    padding: 7px 0;
     min-height: 98px;
 }
 
@@ -483,7 +483,7 @@ img:hover {
 /*..... SERVICES TWO ......*/
 
 .services-two {
-    padding: 90px 0 55px 0;
+    padding: 15px 0 55px 0;
 }
 
 .services-two .service-sec {
@@ -517,6 +517,8 @@ img:hover {
 /*..... MAIN TITLE ......*/
 
 .main-title {
+    text-align: center;
+    color: #10464e;
     margin: 0 0 50px 0;
 }
 
@@ -526,6 +528,10 @@ img:hover {
 
 .main-title h2 span {
     font-weight: 100;
+}
+
+.main-title h2 {
+    color: #10464e;
 }
 
 
@@ -569,8 +575,9 @@ img:hover {
 /*..... DR QUOTE ......*/
 
 .dr-quote {
-    background: url(../images/yorumlar.jpg) no-repeat fixed;
-    height: 500px;
+    /* background: url(../images/yorumlar.jpg) no-repeat fixed; */
+    background-color: #10464e;
+    height: 400px;
     width: 100%;
     text-align: center;
     background-size: 100%;
@@ -2007,7 +2014,7 @@ img:hover {
 }
 
 .contact-us .get-in-touch span {
-    font-size: 20px;
+    font-size: 15px;
     display: block;
     line-height: 34px;
 }

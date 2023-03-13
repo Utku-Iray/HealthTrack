@@ -165,7 +165,7 @@ include 'utility/api/get-treatments.php';
                     <li class="parent"><a href="ekip.php">Ekibimiz</a> </li>
                    </li>
 
-                    <li class="parent"><a href="misyon-vizyon.php">Temel Değerlerimiz</a></li>
+                    <li class="parent"><a href="misyon-vizyon.php">Değerlerimiz</a></li>
                   </ul>
                 </li>
 

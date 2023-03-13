@@ -66,9 +66,9 @@ if (isset($_GET["url"])) {
 					</div>
 				</div> -->
 				<div class="col-md-12">
-					<div class="main-title">
+					<!-- <div class="main-title">
 						<h2><?= $selectedTreatmentResult["name"] ?></h2>
-					</div>
+					</div> -->
 					<div class="procedure-text">
 						<div class="detail">
 							<?= $selectedTreatmentResult["content"] ?></a>
