@@ -9,7 +9,7 @@ include 'utility/api/get-treatments.php';
 <html>
 
 <head>
-  <title>Health Track</title>
+  <title>Healthtrack</title>
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />

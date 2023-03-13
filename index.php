@@ -305,7 +305,7 @@ require_once 'utility/api/get-slider.php';
     <!--End Services-->
 
     <!--Start Welcome-->
-    <div class="welcome dark-backk">
+    <div class="welcome ">
       <div class="container">
         <div class="row">
           <div class="col-md-12">

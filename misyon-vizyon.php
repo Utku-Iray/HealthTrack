@@ -43,7 +43,16 @@ require_once 'utility/api/get-mission-vision.php';
 	<!--Start Welcome-->
 	<div class="welcome-three">
 		<div class="container">
+		<div class="row">
+				<div class="col-md-12">
+					<div class="main-title ht-list-design">
+						<h4 style="text-align: center;"> <?= $generalInfoCoreValues["title"] ?></h4> <br><br>
+						<?= $generalInfoCoreValues["description"] ?>
+					</div>
 
+				</div>
+			</div>
+			<hr>
 			<div class="row">
 				<div class="col-md-12">
 					<div class="main-title">
@@ -62,16 +71,7 @@ require_once 'utility/api/get-mission-vision.php';
 				</div>
 			</div>
 			<hr>
-			<div class="row">
-				<div class="col-md-12">
-					<div class="main-title ht-list-design">
-						<h4 style="text-align: center;"> <?= $generalInfoCoreValues["title"] ?></h4> <br><br>
-						<?= $generalInfoCoreValues["description"] ?>
-					</div>
-
-				</div>
-			</div>
-			<hr>
+			
 			<div class="row">
 				<div class="col-md-12">
 					<div class="main-title ht-list-design">
