@@ -2774,7 +2774,21 @@ li p {
     font-family: 'Montserrat';
 }
 
-.procedures .procedure-text {}
+.procedures .procedure-text h2 {
+    color: #10464e;
+}
+
+.procedures .procedure-text h3 {
+    color: #10464e;
+}
+
+.procedures .procedure-text h4 {
+    color: #10464e;
+}
+
+.procedures .procedure-text h1 {
+    color: #10464e;
+}
 
 .procedures .procedure-text .detail {}
 
@@ -2798,7 +2812,7 @@ li p {
 
 .procedures .procedure-text .detail h4 {
     margin: 0 0 10px 0;
-    color: #222222;
+    color: #10464e;
     font-weight: 700;
 }
 

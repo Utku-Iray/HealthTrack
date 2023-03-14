@@ -22,7 +22,7 @@ if (isset($_GET["url"])) {
 	<div class="detail">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12" style="justify-content: center;display:flex">
 
 					<div class="paging">
 						<h2><?= $selectedTreatmentResult["name"] ?></h2>
