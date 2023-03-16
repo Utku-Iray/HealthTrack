@@ -189,7 +189,7 @@ include 'utility/api/get-treatments.php';
               <a href="tedavi-detay.php?url=mobil-hizmetler">Mobil Hizmetler</a>
 
             </li>
-                <li class="parent"><a href="#">Randevu Al</a></li>
+                <li class="parent"><a href="#">Randevu</a></li>
                 <li><a href="iletisim.php">İletişim</a></li>
 
                 <!-- <li class="parent">

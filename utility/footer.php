@@ -77,7 +77,7 @@
          <div class="col-md-3">
            <div class="useful-links">
              <div class="title">
-               <h5>Tedaviler</h5>
+               <h5>TEDAVİLER</h5>
              </div>
 
              <div class="detail">
