@@ -26,13 +26,13 @@
 // guzel
 
 try {
-    $servername = "ni-jungle.guzelhosting.com";
+    $servername = "premium6.guzelhosting.com";
 
-    $databasename = "ideapoln_proje_health";
+    $databasename = "bugssoft_healthtrack";
 
-    $username = "ideapoln_admin";
+    $username = "bugssoft_admin";
 
-    $password = "ideapol.123.123";
+    $password = "bugssoftware2023";
     
     $vt = new PDO("mysql:host=$servername;dbname=$databasename;charset=utf8", $username, $password);
     // set the PDO error mode to exception
