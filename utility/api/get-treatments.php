@@ -4,6 +4,7 @@ $treatmentsQuery = $vt->prepare("SELECT t.*, tt.name, tt.content, tt.url, tt.sho
                               FROM treatments t
                               INNER JOIN treatments_translation tt ON t.treatment_id = tt.treatment_id
                               WHERE tt.language_code = '$selectedLang'
+                              AND t.isVisible = 1
                               ORDER BY tt.name ASC
                               ");
 $treatmentsQuery->execute();

@@ -135,21 +135,23 @@ require_once 'utility/api/get-slider.php';
     </div>
 
     <div class="row">
-      <div class="col-md-3 col-sm-6">
-        <div class="step">
-          <div class="step__image">
-            <a>
-              <img src="images/dinliyoruz.png" alt="">
-            </a>
+      <div class="col-md-3 col-sm-6 ">
+        
+          <div class="step">
+            <div class="step__image">
+              <a>
+                <img src="images/dinliyoruz.png" alt="">
+              </a>
 
+            </div>
+            <div class="step__title">
+              <h5 style="font-weight: 400;">
+                <?= $generalInfoService1["title"] ?>
+              </h5>
+            </div>
+            <p class="step__text"> <?= $generalInfoService1["description"] ?></p>
           </div>
-          <div class="step__title">
-            <h5 style="font-weight: 400;">
-              <?= $generalInfoService1["title"] ?>
-            </h5>
-          </div>
-          <p class="step__text"> <?= $generalInfoService1["description"] ?></p>
-        </div>
+        
       </div>
       <div class="col-md-3 col-sm-6">
         <div class="step">

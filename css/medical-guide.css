@@ -1684,13 +1684,14 @@ li p {
     font-size: 18px;
     font-size: 18px;
     float: right;
-    width: 78%;
+    width: 100%;
 }
 
 .member-detail .team-detail ul li span.title {
     color: #353535;
     font-weight: 700;
-    width: 22%;
+    width: 100%;
+    margin-bottom: 20px;
     float: left;
 }
 

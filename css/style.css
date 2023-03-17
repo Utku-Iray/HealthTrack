@@ -62,3 +62,28 @@ website:   	http://www.themepunch.com
     padding: 25px;
     background-color: white;
 }
+
+.revealUp {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.anime {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}

@@ -81,7 +81,7 @@
              </div>
 
              <div class="detail">
-               <ul>
+               <ul style="display: grid;width:400px">
                  <?php foreach ($treatmentsResult as $singleTreatment) { ?>
                    <li>
                      <a href="tedavi-detay.php?url=<?= $singleTreatment->url ?>"><?= $singleTreatment->name ?></a>
@@ -189,16 +189,17 @@
  <!-- Date Picker and input hover -->
  <script type="text/javascript" src="js/classie.js"></script>
  <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>
- 
-<!-- Date Picker and input hover -->
-<script type="text/javascript" src="js/jquery.fancybox.js"></script> 
-<script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
+
+ <!-- Date Picker and input hover -->
+ <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+ <script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
 
  <!-- Fun Facts Counter -->
  <script type="text/javascript" src="js/counter.js"></script>
 
  <!-- Welcome Tabs -->
- <script type="text/javascript" src="js/tabs.js"></script>
+ <script type="text/javascript" src="js/tabs.js"></script> 
+
 
  <!-- All Carousel -->
  <script type="text/javascript" src="js/owl.carousel.js"></script>
@@ -237,6 +238,9 @@
    });
  </script>
  <!-- Revolution Slider -->
+ <script>
+  var height = $(window).height() ;
+ </script>
  <script type="text/javascript">
    jQuery(".tp-banner")
      .show()
@@ -244,7 +248,7 @@
        dottedOverlay: "none",
        delay: 16000,
        startwidth: 1170,
-       startheight: 560,
+       startheight: height-140,
        hideThumbs: 200,
 
        thumbWidth: 100,
