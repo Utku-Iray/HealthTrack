@@ -67,12 +67,14 @@ require_once 'utility/api/get-contact-information.php';
 							<div class="row">
 								<p class="success" id="success" style="display:none;"></p>
 								<p class="error" id="error" style="display:none;"></p>
-								<form name="contact_form" id="contact_form" method="post" action="#" onSubmit="return false">
-									<div class="col-md-4"><input type="text" data-delay="300" placeholder="İsim Soyisim" name="contact_name" id="contact_name" class="input"></div>
-									<div class="col-md-4"><input type="text" data-delay="300" placeholder="E-mail Adres" name="contact_email" id="contact_email" class="input"></div>
-									<div class="col-md-4"><input type="text" data-delay="300" placeholder="Konu" name="contact_subject" id="contact_subject" class="input"></div>
-									<div class="col-md-12"><textarea data-delay="500" class="required valid" placeholder="Mesaj" name="message" id="message"></textarea></div>
-									<div class="col-md-3"><input name=" " type="submit" value="Gönder" onClick="validateContact();"></div>
+								<form method="POST" action="mail/mail.php">
+									<div class="col-md-6"><input type="text" data-delay="300" placeholder="İsim Soyisim" name="name" class="input" required=""></div>
+									<div class="col-md-6"><input type="text" data-delay="300" placeholder="E-mail" name="email" class="input" required=""></div>
+									<div class="col-md-6"><input type="text" data-delay="300" placeholder="Telefon Numarası" name="phone" class="input" required=""></div>
+									<div class="col-md-6"><input type="text" data-delay="300" placeholder="Konu" name="subject" class="input" required=""></div>
+
+									<div class="col-md-12"><textarea data-delay="500" class="required valid" placeholder="Message" name="message" id="message" required=""></textarea></div>
+									<div class="col-md-3"><button style="background-color: #42717a;color: white;" class="btn btn--secondary">Formu İlet <i class="energia-arrow-right"></i></button></div>
 								</form>
 
 							</div>
@@ -113,11 +115,11 @@ require_once 'utility/api/get-contact-information.php';
 								</div>
 
 								<div class="social-icons">
-									<a href="#." class="fb"><i class="icon-euro"></i></a>
-									<a href="#." class="tw"><i class="icon-yen"></i></a>
-									<a href="#." class="gp"><i class="icon-instagram"></i></a>
+									<a href="https://www.facebook.com/healthtrackclinic" class="fb"><i class="icon-euro"></i></a>
+									<a href="https://www.linkedin.com/company/healthtrack-clinic/" class="tw"><i class="icon-linkedin3"></i></a>
+									<a href="https://www.instagram.com/healthtrackclinic/" class="gp"><i class="icon-instagram"></i></a>
 
-							
+
 								</div>
 							</div>
 						</div>

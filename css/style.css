@@ -87,3 +87,94 @@ website:   	http://www.themepunch.com
 .show {
     opacity: 1;
 }
+
+
+/* img {
+    animation: shake 10s;
+    animation-iteration-count: 15s;
+} */
+
+.ekibimiz img:hover,
+.step__image img:hover,
+.item img:hover,
+.icon img:hover {
+    animation: shake2 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@keyframes shake2 {
+    0% {
+        transform: translate(5px, 5px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-5px, -10px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-15px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(25px, 10px) rotate(0deg);
+    }
+    40% {
+        transform: translate(5px, -5px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-5px, 10px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-30px, 5px) rotate(0deg);
+    }
+    70% {
+        transform: translate(30px, 5px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-5px, -5px) rotate(1deg);
+    }
+    90% {
+        transform: translate(5px, 10px) rotate(0deg);
+    }
+    100% {
+        transform: translate(20px, -10px) rotate(-1deg);
+    }
+}
+
+.ekibimiz img {
+    border-radius: 25px;
+    box-shadow: 10px 10px 10px #000;
+}

@@ -39,7 +39,7 @@ require_once 'utility/api/get-team-member.php';
 
 
                 <a href="doktor-detay.php?id=<?= $singleMember->member_id ?>">
-                    <div class="col-md-4">
+                    <div class="col-md-3 ekibimiz">
                         <img src="<?= $singleMember->member_photo ?>" alt="<?= $singleMember->member_name ?> Photo">
                         <div style="margin:20px;text-align:center;color:#10464e">
                             <h6><?= $singleMember->member_name ?></h6>

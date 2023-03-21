@@ -1924,6 +1924,7 @@ li p {
     width: 100%;
     padding: 0 12px;
     border: solid 1px #b1b1b1;
+    border-radius: 5px;
     height: 48px;
 }
 
@@ -4902,7 +4903,7 @@ input.input.error {
 .home-title,
 h2 {
     font-size: 3rem;
-    line-height: 3.5rem;
+    line-height: 2.0rem;
 }
 
 .home-title {

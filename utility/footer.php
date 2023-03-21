@@ -107,11 +107,11 @@
                  <p class="subscribe_success" id="subscribe_success" style="display: none"></p>
                  <p class="subscribe_error" id="subscribe_error" style="display: none"></p>
 
-                 <form name="subscribe_form" id="subscribe_form" method="post" action="#" onSubmit="return false">
-                   <input type="text" data-delay="300" placeholder="İsim Soyisim" name="subscribe_name" id="subscribe_name" onKeyPress="removeChecks();" class="input" />
-                   <input type="text" data-delay="300" placeholder="Email Adresi" name="subscribe_email" id="subscribe_email" onKeyPress="removeChecks();" class="input" />
-                   <input type="text" data-delay="300" placeholder="Telefon Numarası" name="subscribe_phone" id="subscribe_phone" onKeyPress="removeChecks();" class="input" />
-                   <input name="Subscribe" type="submit" value="GÖNDER" onClick="validateSubscription();" />
+                 <form  method="POST" action="mail/footer-mail.php">
+                   <input type="text" data-delay="300" placeholder="İsim Soyisim" name="name"  class="input" required="" />
+                   <input type="text" data-delay="300" placeholder="Email Adresi" name="email"  class="input" required="" />
+                   <input type="text" data-delay="300" placeholder="Telefon Numarası" name="phone"   class="input" required="" />
+                   <input name="Subscribe" type="submit" value="GÖNDER" />
                  </form>
                </div>
              </div>
@@ -161,9 +161,9 @@
 
          <div class="col-md-6">
            <div class="social-icons">
-             <a href="#." class="fb"><i class="icon-euro"></i></a>
-             <a href="#." class="tw"><i class="icon-youtube"></i></a>
-             <a href="#." class="gp"><i class="icon-instagram"></i></a>
+             <a href="https://www.facebook.com/healthtrackclinic" class="fb"><i class="icon-euro"></i></a>
+             <a href="https://www.linkedin.com/company/healthtrack-clinic/" class="tw"><i class="icon-linkedin3"></i></a>
+             <a href="https://www.instagram.com/healthtrackclinic/" class="gp"><i class="icon-instagram"></i></a>
 
            </div>
          </div>

@@ -97,13 +97,13 @@ include 'utility/api/get-treatments.php';
 
               <ul class="social-icons">
                 <li>
-                  <a href="#." class="fb"><i class="icon-euro"></i> </a>
+                  <a href="https://www.facebook.com/healthtrackclinic" class="fb"><i class="icon-euro"></i> </a>
                 </li>
                 <li>
-                  <a href="#." class="tw"><img src="images/youtube.png" alt=""> </a>
+                  <a href="https://www.linkedin.com/company/healthtrack-clinic/" class="tw"><i class="icon-linkedin3"></i> </a>
                 </li>
                 <li>
-                  <a href="#." class="gp"><img src="images/instagram.png" alt=""></i>
+                  <a href="https://www.instagram.com/healthtrackclinic/" class="gp"><img src="images/instagram.png" alt=""></i>
                   </a>
                 </li>
               </ul>
@@ -189,7 +189,7 @@ include 'utility/api/get-treatments.php';
               <a href="tedavi-detay.php?url=mobil-hizmetler">Mobil Hizmetler</a>
 
             </li>
-                <li class="parent"><a href="#">Randevu</a></li>
+                <li class="parent"><a href="randevu.php">Randevu</a></li>
                 <li><a href="iletisim.php">İletişim</a></li>
 
                 <!-- <li class="parent">
