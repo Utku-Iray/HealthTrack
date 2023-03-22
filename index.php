@@ -206,7 +206,7 @@ require_once 'utility/api/get-slider.php';
             </div>
         </div>
     </div>
-    <div class="latest-news dark-yeni">
+    <div class="latest-news ">
         <!-- <div class="container">
       <div class="row">
         <div class="col-md-2"></div>
@@ -241,7 +241,7 @@ require_once 'utility/api/get-slider.php';
       </div>
     </div> -->
         <!--Start Services-->
-        <div class="services-two">
+        <div class="services-two dark-yeni1">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
