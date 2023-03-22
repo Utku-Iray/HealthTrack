@@ -96,7 +96,7 @@ website:   	http://www.themepunch.com
 
 .ekibimiz img:hover,
 .step__image img:hover,
-.item img:hover,
+.at img:hover,
 .icon img:hover {
     animation: shake2 10s;
     animation-iteration-count: infinite;

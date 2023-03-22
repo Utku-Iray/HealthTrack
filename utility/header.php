@@ -170,7 +170,7 @@ include 'utility/api/get-treatments.php';
                 </li>
 
                 <li class="parent">
-                  <a href="tedaviler.php">Tedaviler</a>
+                  <a href="#">Tedaviler</a>
                   <ul class="submenu">
                     <?php foreach ($treatmentsResult as $singleTreatment) { ?>
                       <li class="parent">

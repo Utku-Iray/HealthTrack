@@ -296,7 +296,7 @@ require_once 'utility/api/get-slider.php';
                         <div id="demo">
                             <div class="span12">
                                 <div id="services-slide" class="owl-carousel">
-                                    <div class="item">
+                                    <div class="item at">
                                         <img src="images/at1.png" alt="" />
                                     </div>
                                     <!-- <div class="item">
