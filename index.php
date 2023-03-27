@@ -51,7 +51,7 @@ require_once 'utility/api/get-slider.php';
                     <img src="<?= $singleSlider->slider_image ?>" alt="<?= $singleSlider->title ?>" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                     <!-- LAYERS -->
 
-                    <div class="d-none tp-caption black_thin_34 black_thin_34_bold customin tp-resizeme rs-parallaxlevel-0" data-x="0" data-y="250" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-speed="500" data-start="1400" data-easing="Back.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap; font-size: 52px;color:#10464e">
+                    <div class="tp-caption black_thin_34 black_thin_34_bold customin tp-resizeme rs-parallaxlevel-0" data-x="0" data-y="250" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-speed="500" data-start="1400" data-easing="Back.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="display:none;z-index: 10; max-width: auto; max-height: auto; white-space: nowrap; font-size: 52px;color:#10464e">
                         <?= $singleSlider->title ?>
                         <br>
                         <h6 data-easing="Back.easeOut"><?= $singleSlider->content ?></h6>

@@ -49,8 +49,8 @@ include 'utility/api/get-treatments.php';
   <!--Owl Carousel-->
   <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="css/cubeportfolio.min.css">
-  	<!--FancyBox-->
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+  <!--FancyBox-->
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
 
   <!-- Mobile Menu -->
   <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
@@ -163,36 +163,36 @@ include 'utility/api/get-treatments.php';
                       </li> -->
 
                     <li class="parent"><a href="ekip.php">Ekibimiz</a> </li>
-                   </li>
-
-                    <li class="parent"><a href="misyon-vizyon.php">Değerlerimiz</a></li>
-                  </ul>
                 </li>
 
-                <li class="parent">
-                  <a href="#">Tedaviler</a>
-                  <ul class="submenu">
-                    <?php foreach ($treatmentsResult as $singleTreatment) { ?>
-                      <li class="parent">
-                        <a href="tedavi-detay.php?url=<?= $singleTreatment->url ?>"><?= $singleTreatment->name ?></a>
-                      </li>
-                    <?php  } ?>
+                <li class="parent"><a href="misyon-vizyon.php">Değerlerimiz</a></li>
+              </ul>
+              </li>
+
+              <li class="parent">
+                <a href="#">Tedaviler</a>
+                <ul class="submenu">
+                  <?php foreach ($treatmentsResult as $singleTreatment) { ?>
+                    <li class="parent">
+                      <a href="tedavi-detay.php?url=<?= $singleTreatment->url ?>"><?= $singleTreatment->name ?></a>
+                    </li>
+                  <?php  } ?>
 
 
-                  </ul>
-                </li>
+                </ul>
+              </li>
 
-           
 
-                <li class="parent"><a href="saglikli-haber.php">Sağlıklı Haber</a></li>
-                <li class="parent" >
-              <a href="tedavi-detay.php?url=mobil-hizmetler">Mobil Hizmetler</a>
 
-            </li>
-                <li class="parent"><a href="randevu.php">Randevu</a></li>
-                <li><a href="iletisim.php">İletişim</a></li>
+              <li class="parent"><a href="saglikli-haber.php">Sağlıklı Haber</a></li>
+              <li class="parent">
+                <a href="tedavi-detay.php?url=mobil-hizmetler">Mobil Hizmetler</a>
 
-                <!-- <li class="parent">
+              </li>
+              <li class="parent"><a href="randevu.php">Randevu</a></li>
+              <li><a href="iletisim.php">İletişim</a></li>
+
+              <!-- <li class="parent">
                   <a disabled><i class="icon-world" style="font-size: larger;"></i></a>
                   <ul class="submenu">
                     <li><a href="<?php
@@ -202,7 +202,7 @@ include 'utility/api/get-treatments.php';
                     </li>
                   </ul>
                 </li> -->
-                <!-- <li><a href="randevu.php">Randevu</a></li> -->
+              <!-- <li><a href="randevu.php">Randevu</a></li> -->
 
 
               </ul>
@@ -223,24 +223,21 @@ include 'utility/api/get-treatments.php';
             <li class="item-select parent"><a href="index.php">Anasayfa</a></li>
 
             <li class="parent">
-              <a href="neden-biz.php">Neden Biz?</a>
+              <a href="#">Neden Biz?</a>
               <ul class="submenu">
                 <!-- <li class="parent">
                         <a href="misyon-vizyon.php">Misyonumuz ve Vizyonumuz</a>
                       </li> -->
 
-                      <li class="parent"><a href="#">Değerlerimiz</a>
-                    <ul class="submenu">
-                        <li> <a href="ekip.php">Ekibimiz</a> </li>
+                
+                <li class="parent"><a href="ekip.php">Ekibimiz</a></li>
 
-                      </ul></li>
-
-                <li class="parent"><a href="misyon-vizyon.php">Misyon Vizyon & Temel Değerler</a></li>
+                <li class="parent"><a href="misyon-vizyon.php">Değerlerimiz</a></li>
               </ul>
             </li>
 
             <li class="parent">
-              <a href="tedaviler.php">Tedaviler</a>
+              <a href="#">Tedaviler</a>
               <ul class="submenu">
                 <?php foreach ($treatmentsResult as $singleTreatment) { ?>
                   <li class="parent">
@@ -256,7 +253,7 @@ include 'utility/api/get-treatments.php';
               <a href="saglikli-haber.php">Sağlıklı Haber</a>
 
             </li>
-            <li class="parent" >
+            <li class="parent">
               <a href="tedavi-detay.php?url=mobil-hizmetler">Mobil Hizmetler</a>
 
             </li>
