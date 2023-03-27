@@ -39,6 +39,34 @@ website:   	http://www.themepunch.com
     padding: 0;
 }
 
+@media only screen and (max-width:500px) {
+    .tp-banner {
+        height: 430px !important;
+    }
+    .tp-caption.black_thin_34 {
+        margin-top: 80px !important;
+    }
+    .accordion img {
+        margin-top: -15px;
+    }
+    /* #services-slide .item img {
+        padding: 70px;
+    } */
+    .welcome {
+        padding: 50px 0;
+    }
+    .blog-margin {
+        margin-top: 50px;
+    }
+    .dark-yeni1 {
+        background: none;
+        margin: 0px;
+    }
+    .owl-item .post {
+        padding: 30px !important;
+    }
+}
+
 .ilac-detail {
     background-color: white;
     margin-top: 30px;

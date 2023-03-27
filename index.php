@@ -51,7 +51,7 @@ require_once 'utility/api/get-slider.php';
                     <img src="<?= $singleSlider->slider_image ?>" alt="<?= $singleSlider->title ?>" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
                     <!-- LAYERS -->
 
-                    <div class="tp-caption black_thin_34 black_thin_34_bold customin tp-resizeme rs-parallaxlevel-0" data-x="0" data-y="250" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-speed="500" data-start="1400" data-easing="Back.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap; font-size: 52px;color:#10464e">
+                    <div class="d-none tp-caption black_thin_34 black_thin_34_bold customin tp-resizeme rs-parallaxlevel-0" data-x="0" data-y="250" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-speed="500" data-start="1400" data-easing="Back.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="z-index: 10; max-width: auto; max-height: auto; white-space: nowrap; font-size: 52px;color:#10464e">
                         <?= $singleSlider->title ?>
                         <br>
                         <h6 data-easing="Back.easeOut"><?= $singleSlider->content ?></h6>
@@ -74,7 +74,7 @@ require_once 'utility/api/get-slider.php';
         <ul id="accordion" class="accordion">
             <li>
                 <div class="link">
-                    <span class="appointment-title">Randevu Al</span><img class="icon-chevron-down" src="images/anasayfa.png" style="width: 30px; float:right; margin-right:20px;" alt="">
+                    <span class="appointment-title">Randevunuzu birlikte planlayalım.</span><img class="icon-chevron-down" src="images/anasayfa.png" style="width: 30px; float:right; margin-right:20px;" alt="">
                     <i class="icon-chevron-down"></i>
                 </div>
 
@@ -137,7 +137,7 @@ require_once 'utility/api/get-slider.php';
 
     <div class="container steps padding-top-bottom">
         <div class="home-title">
-            <h2 class="baslik">İyİ Olma Yolculuğunuza Hazır mısınız?</h2>
+            <h2 class="baslik">İYİ OLMA HALİNİZİ ADIM ADIM DESTEKLİYORUZ</h2>
         </div>
 
         <div class="row">
@@ -771,16 +771,16 @@ require_once 'utility/api/get-slider.php';
   </div> -->
 
         <!--Start Latest News-->
-        <div class="latest-news dark-yeni">
+        <div class="latest-news dark-yeni blog-margin">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="main-title">
                             <h2><span>Sağlıklı</span> Haber</h2>
-                            <p>
+                            <!-- <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Similique aut rerum atque molestiae, quos sequi.
-                            </p>
+                            </p> -->
                         </div>
                     </div>
                 </div>
