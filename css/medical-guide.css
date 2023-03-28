@@ -705,10 +705,11 @@ li p {
 .patients-testi .testi-sec p {
     font-family: "Josefin Sans", sans-serif;
     line-height: 32px;
+    font-size: 22px !important;
     font-weight: 400;
     font-style: italic;
     width: 92%;
-    color: #666666;
+    color: #ffffff;
     display: inline-block;
 }
 
