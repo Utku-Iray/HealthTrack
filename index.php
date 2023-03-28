@@ -74,7 +74,7 @@ require_once 'utility/api/get-slider.php';
         <ul id="accordion" class="accordion">
             <li>
                 <div class="link">
-                    <span class="appointment-title">Randevunuzu Birlikte Planlayalım.</span><img class="icon-chevron-down" src="images/anasayfa.png" style="width: 30px; float:right; margin-right:20px;" alt="">
+                    <span class="appointment-title">Randevunuzu Birlikte Planlayalım</span><img class="icon-chevron-down" src="images/anasayfa.png" style="width: 30px; float:right; margin-right:20px;" alt="">
                     <i class="icon-chevron-down"></i>
                 </div>
 

@@ -17,7 +17,7 @@ if (isset($_GET["url"])) {
 <!--Start Banner-->
 <div class="sub-banner">
 
-    <img class="banner-img" src="<?= $selectedNewsResult["news_image"] ?>" alt="">
+    <img class="banner-img" src="images/tedavi-banner.png" alt="">
     <div class="detail">
         <div class="container">
             <div class="row">
