@@ -65,6 +65,9 @@ website:   	http://www.themepunch.com
     .owl-item .post {
         padding: 30px !important;
     }
+    .sub-banner .banner-img {
+        height: 150px;
+    }
 }
 
 .ilac-detail {

@@ -74,7 +74,7 @@ require_once 'utility/api/get-slider.php';
         <ul id="accordion" class="accordion">
             <li>
                 <div class="link">
-                    <span class="appointment-title">Randevunuzu birlikte planlayalım.</span><img class="icon-chevron-down" src="images/anasayfa.png" style="width: 30px; float:right; margin-right:20px;" alt="">
+                    <span class="appointment-title">Randevunuzu Birlikte Planlayalım.</span><img class="icon-chevron-down" src="images/anasayfa.png" style="width: 30px; float:right; margin-right:20px;" alt="">
                     <i class="icon-chevron-down"></i>
                 </div>
 
@@ -382,20 +382,14 @@ require_once 'utility/api/get-slider.php';
                                             <div class="height30"></div>
                                             <h5 style="line-height: 30px;color:white"><?= $generalInfoBanner1["description"] ?></h5>
                                             <div class="height20"></div>
-
                                             <span class="name" style="color: white;"><?= $generalInfoBanner1["title"] ?></span>
-
                                             <div class="height35"></div>
-
-
                                         </div>
                                         <div class="testi-sec">
                                             <div class="height30"></div>
                                             <h4 style="line-height: 30px;color:white"><?= $generalInfoBanner2["description"] ?></h4>
                                             <div class="height20"></div>
-
                                             <span class="name" style="color: white;"><?= $generalInfoBanner2["title"] ?></span>
-
                                             <div class="height35"></div>
 
 

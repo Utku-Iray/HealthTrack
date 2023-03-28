@@ -16,7 +16,7 @@ $treatmentsQuery = $vt->prepare("SELECT t.*, tt.name, tt.content, tt.url, tt.sho
                               FROM treatments t
                               INNER JOIN treatments_translation tt ON t.treatment_id = tt.treatment_id
                               WHERE tt.language_code = '$selectedLang'
-                              ORDER BY t.treatment_click_count DESC
+                              ORDER BY t.treatment_sort DESC
                               LIMIT 3
                               ");
 $treatmentsQuery->execute();

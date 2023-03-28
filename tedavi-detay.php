@@ -18,7 +18,7 @@ if (isset($_GET["url"])) {
 
 <div class="sub-banner">
 
-	<img class="banner-img" src="<?= $selectedTreatmentResult["treatment_main_img"] ?>" alt="">
+	<img class="banner-img" src="images/tedavi-banner.png" alt="">
 	<div class="detail">
 		<div class="container">
 			<div class="row">
