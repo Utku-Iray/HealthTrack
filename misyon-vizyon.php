@@ -46,7 +46,7 @@ require_once 'utility/api/get-mission-vision.php';
 		<div class="row">
 				<div class="col-md-12">
 					<div class="main-title ht-list-design">
-						<h4 style="text-align: center;"> <?= $generalInfoCoreValues["title"] ?></h4> <br><br>
+						<h4> <?= $generalInfoCoreValues["title"] ?></h4> <br><br>
 						<?= $generalInfoCoreValues["description"] ?>
 					</div>
 
@@ -75,7 +75,7 @@ require_once 'utility/api/get-mission-vision.php';
 			<div class="row">
 				<div class="col-md-12">
 					<div class="main-title ht-list-design">
-						<h4 style="text-align: center;"><?= $generalInfoPolicy["title"] ?></h4> <br><br>
+						<h4><?= $generalInfoPolicy["title"] ?></h4> <br><br>
 						<?= $generalInfoPolicy["description"] ?>
 
 					</div>
@@ -86,7 +86,7 @@ require_once 'utility/api/get-mission-vision.php';
 			<div class="row">
 				<div class="col-md-12">
 					<div class="main-title">
-						<h4 style="text-align: center;"><?= $generalInfoSustainability["title"] ?></h4> <br><br>
+						<h4><?= $generalInfoSustainability["title"] ?></h4> <br><br>
 						<span style="text-align: justify;"> <?= $generalInfoSustainability["description"] ?></span>
 					</div>
 				</div>
