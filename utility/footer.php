@@ -155,7 +155,7 @@
        <div class="row">
          <div class="col-md-6">
            <span class="copyrights">Copyright &copy; 2022 Fikirbuzz. Bütün Hakları Gizlidir.
-             <div style="padding-top: 5px;"> <a href="#">Gizlilik Politikası</a> | <a href="#">Kullanım Şartları Sözleşmesi</a> | <a href="#">Tedavi Onayı</a> | <a href="#">İptal Politikası</a></div>
+             <div style="padding-top: 5px;"> <a href="gizlilik-politikasi.php">Gizlilik Politikası</a> | <a href="kvkk-metni.php">KVKK Aydınlatma Metni</a> | <a href="tedavi-onayi.php">Tedavi Onayı</a></div>
            </span>
          </div>
 
