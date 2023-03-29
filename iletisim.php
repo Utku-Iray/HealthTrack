@@ -9,7 +9,7 @@ require_once 'utility/api/get-contact-information.php';
 
 <div class="sub-banner">
 
-	<img class="banner-img" src="images/banner/7.png" alt="">
+	<img class="banner-img" src="images/banner/banner-iletisim.jpg" alt="">
 	<div class="detail">
 		<div class="container">
 			<div class="row">

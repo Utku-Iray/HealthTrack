@@ -18,7 +18,7 @@ if (isset($_GET["id"])) {
 
 <div class="sub-banner">
 
-	<img class="banner-img" src="images/banner/4.png" alt="">
+	<img class="banner-img" src="images/banner/banner-ekibimiz.jpg" alt="">
 
 	<div class="detail">
 		<div class="container">

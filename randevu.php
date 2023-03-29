@@ -4,7 +4,7 @@ include 'utility/header.php'; ?>
 
 <div class="sub-banner">
 
-    <img class="banner-img" src="images/banner/8.png" alt="">
+    <img class="banner-img" src="images/banner/banner-randevu.jpg" alt="">
     <div class="detail">
         <div class="container">
             <div class="row">

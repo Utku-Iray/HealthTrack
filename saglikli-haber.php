@@ -9,7 +9,7 @@ require_once 'utility/api/get-news.php';
 
 <div class="sub-banner">
 
-    <img class="banner-img" src="images/banner/6.png" alt="">
+    <img class="banner-img" src="images/banner/banner-sagklikli.jpg" alt="">
     <div class="detail">
         <div class="container">
             <div class="row">

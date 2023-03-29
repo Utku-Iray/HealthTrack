@@ -9,7 +9,7 @@ require_once 'utility/api/get-team-member.php';
    
    <div class="sub-banner">
    
-   	<img class="banner-img" src="images/sub-banner.jpg" alt="">
+   	<img class="banner-img" src="images/banner/banner-ekibimiz.jpg" alt="">
     <div class="detail">
     	<div class="container">
         	<div class="row">
