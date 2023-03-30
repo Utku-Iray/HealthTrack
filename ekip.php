@@ -24,7 +24,7 @@ require_once 'utility/api/get-team-member.php';
 <!--End Banner-->
 
 <!--Start Content-->
-<div class="content" style="margin-bottom: 50px;">
+<div class="content" style="margin-bottom: 50px;padding:0 15px">
 
     <div class="container" style="padding-top: 50px;">
         <div class="row">
