@@ -40,6 +40,9 @@ website:   	http://www.themepunch.com
 }
 
 @media only screen and (max-width:500px) {
+    .loader img {
+        width: 50% !important;
+    }
     .procedure-text p img {
         width: 100% !important;
     }
@@ -229,4 +232,8 @@ website:   	http://www.themepunch.com
 
 .procedure-text p img {
     width: 50%;
+}
+
+.loader img {
+    width: 25%;
 }
