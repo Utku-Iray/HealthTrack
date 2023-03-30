@@ -40,14 +40,24 @@ website:   	http://www.themepunch.com
 }
 
 @media only screen and (max-width:500px) {
+    .procedure-text p img {
+        width: 100% !important;
+    }
+    .welcome .main-title .optimal-saglik {
+        width: 100% !important;
+    }
+    .accordion li i {
+        top: 5px !important;
+    }
     .tp-banner {
-        height: 430px !important;
+        height: 240px !important;
     }
     .tp-caption.black_thin_34 {
         margin-top: 80px !important;
     }
     .accordion img {
-        margin-top: -15px;
+        margin-top: 4px;
+        width: 22px !important;
     }
     /* #services-slide .item img {
         padding: 70px;
@@ -208,4 +218,15 @@ website:   	http://www.themepunch.com
 .ekibimiz img {
     border-radius: 25px;
     box-shadow: 10px 10px 14px #739fa7;
+}
+
+.welcome .main-title .optimal-saglik {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.procedure-text p img {
+    width: 50%;
 }

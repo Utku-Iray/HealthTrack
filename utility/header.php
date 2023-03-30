@@ -69,7 +69,7 @@ include 'utility/api/get-treatments.php';
       <div class="loader">
 
 
-        <img src="images/giris-ekrani.gif" style="width: 25%;" type="video/gif">
+        <img src="images/giris-ekrani.gif" style="width: 50%;" type="video/gif">
 
       </div>
     </div>

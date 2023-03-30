@@ -118,7 +118,8 @@ if (isset($_GET["url"])) {
 					</div>
 					<br><br>
 					<div class="col-md-12" style="align-items:center;">
-						<button class="btn" style="border: solid 1px #3B919E; background-color:white; color:#3B919E !important;">Ne Dersiniz? Başlayalım Mı ?</button>
+					<a href="images/pdf/iv-paketler.pdf" target="_blank">
+						<button class="btn" style="border: solid 1px #3B919E; background-color:white; color:#3B919E !important;">Ne Dersiniz? Başlayalım Mı ?</button></a>
 					</div>
 				</div>
 			</div>
