@@ -280,7 +280,7 @@ img:hover {
 /*..... HEADER ......*/
 
 .header {
-    padding: 28px 0;
+    padding: 7px 0;
     min-height: 98px;
 }
 
@@ -305,7 +305,7 @@ img:hover {
     color: #333;
     font-family: "Josefin Sans", sans-serif;
     font-size: 16px;
-    padding: 12px 24px !important;
+    padding: 12px 12px !important;
 }
 
 .header .nav li.parent:hover a {
@@ -417,6 +417,15 @@ img:hover {
     background: url(../images/banner-4.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
+    margin: -50px;
+}
+
+.dark-yeni1 {
+    background: url(../images/banner-4.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: -144px;
+    margin-top: 10px;
 }
 
 .dark-backk {
@@ -483,7 +492,7 @@ img:hover {
 /*..... SERVICES TWO ......*/
 
 .services-two {
-    padding: 90px 0 55px 0;
+    padding: 40px 0 55px 0;
 }
 
 .services-two .service-sec {
@@ -513,10 +522,16 @@ img:hover {
     margin: -5px 0 0 0;
 }
 
+.services-two .service-sec .detail p {
+    padding: 5px;
+}
+
 
 /*..... MAIN TITLE ......*/
 
 .main-title {
+    /* text-align: center; */
+    color: #10464e;
     margin: 0 0 50px 0;
 }
 
@@ -528,11 +543,29 @@ img:hover {
     font-weight: 100;
 }
 
+.main-title h2 {
+    color: #10464e;
+}
+
+.main-title ul {
+    /* justify-content: center; */
+    display: grid;
+}
+
+
+/* .main-title p {
+    text-align: center;
+} */
+
+li p {
+    color: black;
+}
+
 
 /*..... WELCOME ......*/
 
 .welcome {
-    padding: 90px 0;
+    padding: 200px 0;
 }
 
 
@@ -569,8 +602,9 @@ img:hover {
 /*..... DR QUOTE ......*/
 
 .dr-quote {
-    background: url(../images/yorumlar.jpg) no-repeat fixed;
-    height: 500px;
+    /* background: url(../images/yorumlar.jpg) no-repeat fixed; */
+    background-color: #10464e;
+    height: 400px;
     width: 100%;
     text-align: center;
     background-size: 100%;
@@ -605,6 +639,7 @@ img:hover {
 .latest-news .post {}
 
 .latest-news .post .detail {
+    margin-top: 10px;
     background: #fff;
     padding: 20px;
     position: relative;
@@ -671,10 +706,11 @@ img:hover {
 .patients-testi .testi-sec p {
     font-family: "Josefin Sans", sans-serif;
     line-height: 32px;
+    font-size: 22px !important;
     font-weight: 400;
     font-style: italic;
     width: 92%;
-    color: #666666;
+    color: #ffffff;
     display: inline-block;
 }
 
@@ -1660,16 +1696,17 @@ img:hover {
 }
 
 .member-detail .team-detail ul li span {
-    font-size: 18px;
-    font-size: 18px;
+    font-size: 16px;
     float: right;
-    width: 78%;
+    line-height: 24px;
+    width: 100%;
 }
 
 .member-detail .team-detail ul li span.title {
     color: #353535;
     font-weight: 700;
-    width: 22%;
+    width: 100%;
+    margin-bottom: 20px;
     float: left;
 }
 
@@ -1902,6 +1939,7 @@ img:hover {
     width: 100%;
     padding: 0 12px;
     border: solid 1px #b1b1b1;
+    border-radius: 5px;
     height: 48px;
 }
 
@@ -2006,7 +2044,7 @@ img:hover {
 }
 
 .contact-us .get-in-touch span {
-    font-size: 20px;
+    font-size: 15px;
     display: block;
     line-height: 34px;
 }
@@ -2753,7 +2791,21 @@ img:hover {
     font-family: 'Montserrat';
 }
 
-.procedures .procedure-text {}
+.procedures .procedure-text h2 {
+    color: #10464e;
+}
+
+.procedures .procedure-text h3 {
+    color: #10464e;
+}
+
+.procedures .procedure-text h4 {
+    color: #10464e;
+}
+
+.procedures .procedure-text h1 {
+    color: #10464e;
+}
 
 .procedures .procedure-text .detail {}
 
@@ -2777,7 +2829,7 @@ img:hover {
 
 .procedures .procedure-text .detail h4 {
     margin: 0 0 10px 0;
-    color: #222222;
+    color: #10464e;
     font-weight: 700;
 }
 
@@ -4471,6 +4523,9 @@ h2.resp-accordion:last-child {
 /*Here your can change the breakpoint to set the accordion, when screen resolution changed*/
 
 @media only screen and (max-width: 768px) {
+    .dark-yeni {
+        background-size: 0%;
+    }
     ul.resp-tabs-list {
         display: none;
     }
@@ -4866,7 +4921,7 @@ input.input.error {
 .home-title,
 h2 {
     font-size: 3rem;
-    line-height: 3.5rem;
+    line-height: 2.7rem;
 }
 
 .home-title {

@@ -9,7 +9,7 @@ include 'utility/api/get-treatments.php';
 <html>
 
 <head>
-  <title>Health Track</title>
+  <title>Healthtrack</title>
   <meta name="keywords" content="" />
   <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
@@ -49,8 +49,8 @@ include 'utility/api/get-treatments.php';
   <!--Owl Carousel-->
   <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" type="text/css" href="css/cubeportfolio.min.css">
-  	<!--FancyBox-->
-    <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
+  <!--FancyBox-->
+  <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css">
 
   <!-- Mobile Menu -->
   <link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
@@ -107,13 +107,13 @@ include 'utility/api/get-treatments.php';
 
               <ul class="social-icons">
                 <li>
-                  <a href="#." class="fb"><i class="icon-euro"></i> </a>
+                  <a href="https://www.facebook.com/healthtrackclinic" class="fb"><i class="icon-euro"></i> </a>
                 </li>
                 <li>
-                  <a href="#." class="tw"><img src="images/youtube.png" alt=""> </a>
+                  <a href="https://www.linkedin.com/company/healthtrack-clinic/" class="tw"><i class="icon-linkedin3"></i> </a>
                 </li>
                 <li>
-                  <a href="#." class="gp"><img src="images/instagram.png" alt=""></i>
+                  <a href="https://www.instagram.com/healthtrackclinic/" class="gp"><img src="images/instagram.png" alt=""></i>
                   </a>
                 </li>
               </ul>
@@ -172,37 +172,37 @@ include 'utility/api/get-treatments.php';
                         <a href="misyon-vizyon.php">Misyonumuz ve Vizyonumuz</a>
                       </li> -->
 
-                    <li class="parent"><a href="#">Değerlerimiz</a>
-                    <ul class="submenu">
-                        <li> <a href="ekip.php">Ekibimiz</a> </li>
-
-                      </ul></li>
-
-                    <li class="parent"><a href="misyon-vizyon.php">Misyon Vizyon & Temel Değerler</a></li>
-                  </ul>
+                    <li class="parent"><a href="ekip.php">Ekibimiz</a> </li>
                 </li>
 
-                <li class="parent">
-                  <a href="tedaviler.php">Tedaviler</a>
-                  <ul class="submenu">
-                    <?php foreach ($treatmentsResult as $singleTreatment) { ?>
-                      <li class="parent">
-                        <a href="tedavi-detay.php?url=<?= $singleTreatment->url ?>"><?= $singleTreatment->name ?></a>
-                      </li>
-                    <?php  } ?>
+                <li class="parent"><a href="misyon-vizyon.php">Değerlerimiz</a></li>
+              </ul>
+              </li>
+
+              <li class="parent">
+                <a href="#">Tedaviler</a>
+                <ul class="submenu">
+                  <?php foreach ($treatmentsResult as $singleTreatment) { ?>
+                    <li class="parent">
+                      <a href="tedavi-detay.php?url=<?= $singleTreatment->url ?>"><?= $singleTreatment->name ?></a>
+                    </li>
+                  <?php  } ?>
 
 
-                  </ul>
-                </li>
+                </ul>
+              </li>
 
-           
 
-                <li class="parent"><a href="saglikli-haber.php">Sağlıklı Haber</a></li>
 
-                <li class="parent"><a href="#">Randevu Al</a></li>
-                <li><a href="iletisim.php">İletişim</a></li>
+              <li class="parent"><a href="saglikli-haber.php">Sağlıklı Haber</a></li>
+              <li class="parent">
+                <a href="tedavi-detay.php?url=mobil-hizmetler">Mobil Hizmetler</a>
 
-                <!-- <li class="parent">
+              </li>
+              <li class="parent"><a href="randevu.php">Randevu</a></li>
+              <li><a href="iletisim.php">İletişim</a></li>
+
+              <!-- <li class="parent">
                   <a disabled><i class="icon-world" style="font-size: larger;"></i></a>
                   <ul class="submenu">
                     <li><a href="<?php
@@ -212,7 +212,7 @@ include 'utility/api/get-treatments.php';
                     </li>
                   </ul>
                 </li> -->
-                <!-- <li><a href="randevu.php">Randevu</a></li> -->
+              <!-- <li><a href="randevu.php">Randevu</a></li> -->
 
 
               </ul>
@@ -233,24 +233,21 @@ include 'utility/api/get-treatments.php';
             <li class="item-select parent"><a href="index.php">Anasayfa</a></li>
 
             <li class="parent">
-              <a href="neden-biz.php">Neden Biz?</a>
+              <a href="#">Neden Biz?</a>
               <ul class="submenu">
                 <!-- <li class="parent">
                         <a href="misyon-vizyon.php">Misyonumuz ve Vizyonumuz</a>
                       </li> -->
 
-                      <li class="parent"><a href="#">Değerlerimiz</a>
-                    <ul class="submenu">
-                        <li> <a href="ekip.php">Ekibimiz</a> </li>
 
-                      </ul></li>
+                <li class="parent"><a href="ekip.php">Ekibimiz</a></li>
 
-                <li class="parent"><a href="misyon-vizyon.php">Misyon Vizyon & Temel Değerler</a></li>
+                <li class="parent"><a href="misyon-vizyon.php">Değerlerimiz</a></li>
               </ul>
             </li>
 
             <li class="parent">
-              <a href="tedaviler.php">Tedaviler</a>
+              <a href="#">Tedaviler</a>
               <ul class="submenu">
                 <?php foreach ($treatmentsResult as $singleTreatment) { ?>
                   <li class="parent">
@@ -264,6 +261,10 @@ include 'utility/api/get-treatments.php';
 
             <li class="parent">
               <a href="saglikli-haber.php">Sağlıklı Haber</a>
+
+            </li>
+            <li class="parent">
+              <a href="tedavi-detay.php?url=mobil-hizmetler">Mobil Hizmetler</a>
 
             </li>
 
@@ -289,7 +290,7 @@ include 'utility/api/get-treatments.php';
     <!-- Mobile Menu End -->
     <div style="display: flex;justify-content: center;align-items: center;position: fixed;bottom: 15px;right: 15px;z-index: 999999;-webkit-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);-moz-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);-ms-animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);animation: pulse 1.25s infinite cubic-bezier(0.66, 0, 0, 1);">
 
-      <a target="_blank" href="https://api.whatsapp.com/send?phone=908508400220&amp;text=Hi!"><svg style="pointer-events:none;display:block;height: 70px;width: 70px;" width="50px" height="50px" viewBox="0 0 1024 1024">
+      <a target="_blank" href="https://api.whatsapp.com/send?phone=908508400220&amp;text=Hi!"><svg style="pointer-events:none;display:block;height: 55px;width: 55px;" width="50px" height="50px" viewBox="0 0 1024 1024">
           <defs>
             <path id="htwasqicona-chat" d="M1023.941 765.153c0 5.606-.171 17.766-.508 27.159-.824 22.982-2.646 52.639-5.401 66.151-4.141 20.306-10.392 39.472-18.542 55.425-9.643 18.871-21.943 35.775-36.559 50.364-14.584 14.56-31.472 26.812-50.315 36.416-16.036 8.172-35.322 14.426-55.744 18.549-13.378 2.701-42.812 4.488-65.648 5.3-9.402.336-21.564.505-27.15.505l-504.226-.081c-5.607 0-17.765-.172-27.158-.509-22.983-.824-52.639-2.646-66.152-5.4-20.306-4.142-39.473-10.392-55.425-18.542-18.872-9.644-35.775-21.944-50.364-36.56-14.56-14.584-26.812-31.471-36.415-50.314-8.174-16.037-14.428-35.323-18.551-55.744-2.7-13.378-4.487-42.812-5.3-65.649-.334-9.401-.503-21.563-.503-27.148l.08-504.228c0-5.607.171-17.766.508-27.159.825-22.983 2.646-52.639 5.401-66.151 4.141-20.306 10.391-39.473 18.542-55.426C34.154 93.24 46.455 76.336 61.07 61.747c14.584-14.559 31.472-26.812 50.315-36.416 16.037-8.172 35.324-14.426 55.745-18.549 13.377-2.701 42.812-4.488 65.648-5.3 9.402-.335 21.565-.504 27.149-.504l504.227.081c5.608 0 17.766.171 27.159.508 22.983.825 52.638 2.646 66.152 5.401 20.305 4.141 39.472 10.391 55.425 18.542 18.871 9.643 35.774 21.944 50.363 36.559 14.559 14.584 26.812 31.471 36.415 50.315 8.174 16.037 14.428 35.323 18.551 55.744 2.7 13.378 4.486 42.812 5.3 65.649.335 9.402.504 21.564.504 27.15l-.082 504.226z"></path>
           </defs>

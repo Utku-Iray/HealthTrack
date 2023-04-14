@@ -68,8 +68,7 @@
                  <li><a href="index.php">Anasayfa</a></li>
                  <li><a href="hakkimizda.php">Hakkımızda</a></li>
                  <li><a href="iletisim.php">İletişim</a></li>
-                 <li><a href="uye-ol.php">Kayıt Ol</a></li>
-                 <li><a href="randevu.php">Randevu</a></li>
+                 <li><a href="#">Randevu</a></li>
                  <li><a href="video-gallery.php">Videolar</a></li>
                </ul>
              </div>
@@ -78,11 +77,11 @@
          <div class="col-md-3">
            <div class="useful-links">
              <div class="title">
-               <h5>Tedaviler</h5>
+               <h5>TEDAVİLER</h5>
              </div>
 
              <div class="detail">
-               <ul>
+               <ul style="display: grid;width:400px">
                  <?php foreach ($treatmentsResult as $singleTreatment) { ?>
                    <li>
                      <a href="tedavi-detay.php?url=<?= $singleTreatment->url ?>"><?= $singleTreatment->name ?></a>
@@ -108,11 +107,11 @@
                  <p class="subscribe_success" id="subscribe_success" style="display: none"></p>
                  <p class="subscribe_error" id="subscribe_error" style="display: none"></p>
 
-                 <form name="subscribe_form" id="subscribe_form" method="post" action="#" onSubmit="return false">
-                   <input type="text" data-delay="300" placeholder="İsim Soyisim" name="subscribe_name" id="subscribe_name" onKeyPress="removeChecks();" class="input" />
-                   <input type="text" data-delay="300" placeholder="Email Adresi" name="subscribe_email" id="subscribe_email" onKeyPress="removeChecks();" class="input" />
-                   <input type="text" data-delay="300" placeholder="Telefon Numarası" name="subscribe_phone" id="subscribe_phone" onKeyPress="removeChecks();" class="input" />
-                   <input name="Subscribe" type="submit" value="GÖNDER" onClick="validateSubscription();" />
+                 <form  method="POST" action="mail/footer-mail.php">
+                   <input type="text" data-delay="300" placeholder="İsim Soyisim" name="name"  class="input" required="" />
+                   <input type="text" data-delay="300" placeholder="Email Adresi" name="email"  class="input" required="" />
+                   <input type="text" data-delay="300" placeholder="Telefon Numarası" name="phone"   class="input" required="" />
+                   <input name="Subscribe" type="submit" value="GÖNDER" />
                  </form>
                </div>
              </div>
@@ -155,16 +154,16 @@
      <div class="container">
        <div class="row">
          <div class="col-md-6">
-           <span class="copyrights">Kopyalanamaz &copy; 2022 Digital Health Agency. Bütün Hakları Gizlidir.
-             <div style="padding-top: 5px;"> <a href="#">Gizlilik Politikası</a> | <a href="#">Kullanım Şartları Sözleşmesi</a> | <a href="#">Tedavi Onayı</a> | <a href="#">İptal Politikası</a></div>
+           <span class="copyrights">Copyright &copy; 2022 Fikirbuzz. Bütün Hakları Gizlidir.
+             <div style="padding-top: 5px;"> <a href="gizlilik-politikasi.php">Gizlilik Politikası</a> | <a href="kvkk-metni.php">KVKK Aydınlatma Metni</a> | <a href="tedavi-onayi.php">Tedavi Onayı</a></div>
            </span>
          </div>
 
          <div class="col-md-6">
            <div class="social-icons">
-             <a href="#." class="fb"><i class="icon-euro"></i></a>
-             <a href="#." class="tw"><i class="icon-youtube"></i></a>
-             <a href="#." class="gp"><i class="icon-instagram"></i></a>
+             <a href="https://www.facebook.com/healthtrackclinic" class="fb"><i class="icon-euro"></i></a>
+             <a href="https://www.linkedin.com/company/healthtrack-clinic/" class="tw"><i class="icon-linkedin3"></i></a>
+             <a href="https://www.instagram.com/healthtrackclinic/" class="gp"><i class="icon-instagram"></i></a>
 
            </div>
          </div>
@@ -190,16 +189,17 @@
  <!-- Date Picker and input hover -->
  <script type="text/javascript" src="js/classie.js"></script>
  <script type="text/javascript" src="js/jquery-ui-1.10.3.custom.js"></script>
- 
-<!-- Date Picker and input hover -->
-<script type="text/javascript" src="js/jquery.fancybox.js"></script> 
-<script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
+
+ <!-- Date Picker and input hover -->
+ <script type="text/javascript" src="js/jquery.fancybox.js"></script>
+ <script type="text/javascript" src="js/jquery.fancybox-media.js"></script>
 
  <!-- Fun Facts Counter -->
  <script type="text/javascript" src="js/counter.js"></script>
 
  <!-- Welcome Tabs -->
- <script type="text/javascript" src="js/tabs.js"></script>
+ <script type="text/javascript" src="js/tabs.js"></script> 
+
 
  <!-- All Carousel -->
  <script type="text/javascript" src="js/owl.carousel.js"></script>
@@ -238,6 +238,9 @@
    });
  </script>
  <!-- Revolution Slider -->
+ <script>
+  var height = $(window).height() ;
+ </script>
  <script type="text/javascript">
    jQuery(".tp-banner")
      .show()
@@ -245,7 +248,7 @@
        dottedOverlay: "none",
        delay: 16000,
        startwidth: 1170,
-       startheight: 720,
+       startheight: height-140,
        hideThumbs: 200,
 
        thumbWidth: 100,

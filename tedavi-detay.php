@@ -18,11 +18,11 @@ if (isset($_GET["url"])) {
 
 <div class="sub-banner">
 
-	<img class="banner-img" src="<?= $selectedTreatmentResult["treatment_main_img"] ?>" alt="">
+	<img class="banner-img" src="images/tedavi-banner.png" alt="">
 	<div class="detail">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12">
+				<div class="col-md-12" style="justify-content: center;display:flex">
 
 					<div class="paging">
 						<h2><?= $selectedTreatmentResult["name"] ?></h2>
@@ -50,7 +50,7 @@ if (isset($_GET["url"])) {
 		<div class="container">
 
 			<div class="row">
-				<div class="col-md-4">
+				<!-- <div class="col-md-4">
 					<div class="procedures-links">
 						<span class="title">Tedaviler</span>
 						<ul id="procedures-links" class="accordion">
@@ -64,11 +64,11 @@ if (isset($_GET["url"])) {
 								</ul>
 							</li>
 					</div>
-				</div>
-				<div class="col-md-8">
-					<div class="main-title">
+				</div> -->
+				<div class="col-md-12">
+					<!-- <div class="main-title">
 						<h2><?= $selectedTreatmentResult["name"] ?></h2>
-					</div>
+					</div> -->
 					<div class="procedure-text">
 						<div class="detail">
 							<?= $selectedTreatmentResult["content"] ?></a>
@@ -118,7 +118,8 @@ if (isset($_GET["url"])) {
 					</div>
 					<br><br>
 					<div class="col-md-12" style="align-items:center;">
-						<button class="btn" style="border: solid 1px #3B919E; background-color:white; color:#3B919E !important;">Ne Dersiniz? Başlayalım Mı ?</button>
+					<a href="images/pdf/iv-paketler.pdf" target="_blank">
+						<button class="btn" style="border: solid 1px #3B919E; background-color:white; color:#3B919E !important;">Ne Dersiniz? Başlayalım Mı?</button></a>
 					</div>
 				</div>
 			</div>
@@ -130,10 +131,10 @@ if (isset($_GET["url"])) {
 					<div class="col-md-12">
 						<div class="main-title">
 							<h2><span>Sağlıklı</span> Haber</h2>
-							<p>
+							<!-- <p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 								Similique aut rerum atque molestiae, quos sequi.
-							</p>
+							</p> -->
 						</div>
 					</div>
 				</div>

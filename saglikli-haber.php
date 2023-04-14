@@ -9,7 +9,7 @@ require_once 'utility/api/get-news.php';
 
 <div class="sub-banner">
 
-    <img class="banner-img" src="images/banner/6.png" alt="">
+    <img class="banner-img" src="images/banner/banner-sagklikli.jpg" alt="">
     <div class="detail">
         <div class="container">
             <div class="row">
@@ -51,7 +51,7 @@ require_once 'utility/api/get-news.php';
                                         <a href="saglikli-haber-detay.php?url=<?= $singleNews->url ?>">
                                             <img class="lazyOwl" style="object-fit:contain !important;" src="<?= $singleNews->news_image ?>" alt="" />
                                             <div class="detail">
-                                                <img src="images/bloglar-ana-kapak.jpg" alt="" />
+                                                <!-- <img src="images/bloglar-ana-kapak.jpg" alt="" /> -->
                                                 <h4 style="font-weight: 500; padding-bottom:10px;"><?= $singleNews->title ?></h4>
                                                 <p>
                                                     <?= $singleNews->short_content ?>

@@ -11,29 +11,229 @@ email:     	support@themepunch.com
 website:   	http://www.themepunch.com
 -----------------------------------------------------------------------------*/
 
+.boxedcontainer {
+    max-width: 1170px;
+    margin: auto;
+    padding: 0px 30px;
+}
 
-
-.boxedcontainer		{	max-width: 1170px; margin:auto; padding:0px 30px;}
 
 /*********************************************
 	-	SETTINGS FOR BANNER CONTAINERS	-
 **********************************************/
 
-.tp-banner-container{
-	width:100%;
-	position:relative;
-	padding:0;
-
+.tp-banner-container {
+    width: 100%;
+    position: relative;
+    padding: 0;
 }
 
-.tp-banner{
-	width:100%;
-	position:relative;
+.tp-banner {
+    width: 100%;
+    position: relative;
 }
 
 .tp-banner-fullscreen-container {
-		width:100%;
-		position:relative;
-		padding:0;
+    width: 100%;
+    position: relative;
+    padding: 0;
 }
 
+@media only screen and (max-width:500px) {
+    .loader img {
+        width: 50% !important;
+    }
+    .procedure-text p img {
+        width: 100% !important;
+    }
+    .welcome .main-title .optimal-saglik {
+        width: 100% !important;
+    }
+    .accordion li i {
+        top: 5px !important;
+    }
+    .tp-banner {
+        height: 240px !important;
+    }
+    .tp-caption.black_thin_34 {
+        margin-top: 80px !important;
+    }
+    .accordion img {
+        margin-top: 4px;
+        width: 22px !important;
+    }
+    /* #services-slide .item img {
+        padding: 70px;
+    } */
+    .welcome {
+        padding: 50px 0;
+    }
+    .blog-margin {
+        margin-top: 50px;
+    }
+    .dark-yeni1 {
+        background: none;
+        margin: 0px;
+    }
+    .owl-item .post {
+        padding: 30px !important;
+    }
+    .sub-banner .banner-img {
+        height: 150px;
+    }
+}
+
+.ilac-detail {
+    background-color: white;
+    margin-top: 30px;
+    padding: 25px;
+    height: 360px;
+}
+
+.ilac-detail h4 {
+    height: 92px;
+}
+
+.ilac-detail ul {
+    padding: 15px;
+}
+
+.ilac-detail ul li {
+    list-style: disc;
+}
+
+.ilac img {
+    padding: 25px;
+    background-color: white;
+}
+
+.revealUp {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.anime {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+}
+
+
+/* img {
+    animation: shake 10s;
+    animation-iteration-count: 15s;
+} */
+
+.ekibimiz img:hover,
+.step__image img:hover,
+.at img:hover,
+.icon img:hover {
+    animation: shake2 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
+@keyframes shake2 {
+    0% {
+        transform: translate(5px, 5px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-5px, -10px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-15px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(25px, 10px) rotate(0deg);
+    }
+    40% {
+        transform: translate(5px, -5px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-5px, 10px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-30px, 5px) rotate(0deg);
+    }
+    70% {
+        transform: translate(30px, 5px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-5px, -5px) rotate(1deg);
+    }
+    90% {
+        transform: translate(5px, 10px) rotate(0deg);
+    }
+    100% {
+        transform: translate(20px, -10px) rotate(-1deg);
+    }
+}
+
+.ekibimiz img {
+    border-radius: 25px;
+    box-shadow: 10px 10px 14px #739fa7;
+}
+
+.welcome .main-title .optimal-saglik {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.procedure-text p img {
+    width: 50%;
+}
+
+.loader img {
+    width: 25%;
+}
