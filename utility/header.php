@@ -58,25 +58,25 @@ include 'utility/api/get-treatments.php';
 
   <!--PreLoader-->
   <link href="css/loader.css" rel="stylesheet" type="text/css" />
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11147791726"></script>
+ 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPVYXXJ05S"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'AW-11147791726');
+  gtag('config', 'G-SPVYXXJ05S');
 </script>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1XTRQ20QMY"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11172819475"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-1XTRQ20QMY');
+  gtag('config', 'AW-11172819475');
 </script>
-
 </head>
 
 <body>
@@ -172,24 +172,24 @@ include 'utility/api/get-treatments.php';
           <div class="col-md-9">
             <nav class="menu-2">
               <ul class="nav wtf-menu">
-                <li class="item-select parent"><a href="index.php">Anasayfa</a></li>
+                <li class="item-select parent"><a href="index.php"><?php echo $lang['homepage'] ?></a></li>
 
                 <li class="parent">
-                  <a href="#">Neden Biz?</a>
+                  <a href="#"><?php echo $lang['whyUs'] ?></a>
                   <ul class="submenu">
                     <!-- <li class="parent">
                         <a href="misyon-vizyon.php">Misyonumuz ve Vizyonumuz</a>
                       </li> -->
 
-                    <li class="parent"><a href="ekip.php">Ekibimiz</a> </li>
+                    <li class="parent"><a href="ekip.php"><?php echo $lang['ourTeam'] ?></a> </li>
                 </li>
 
-                <li class="parent"><a href="misyon-vizyon.php">Değerlerimiz</a></li>
+                <li class="parent"><a href="misyon-vizyon.php"><?php echo $lang['ourValues'] ?></a></li>
               </ul>
               </li>
 
               <li class="parent">
-                <a href="#">Tedaviler</a>
+                <a href="#"><?php echo $lang['treatments'] ?></a>
                 <ul class="submenu">
                   <?php foreach ($treatmentsResult as $singleTreatment) { ?>
                     <li class="parent">
@@ -203,24 +203,29 @@ include 'utility/api/get-treatments.php';
 
 
 
-              <li class="parent"><a href="saglikli-haber.php">Sağlıklı Haber</a></li>
+              <li class="parent"><a href="saglikli-haber.php"><?php echo $lang['healthyNews'] ?></a></li>
               <li class="parent">
-                <a href="tedavi-detay.php?url=mobil-hizmetler">Mobil Hizmetler</a>
+                <a href="tedavi-detay.php?url=mobil-hizmetler"><?php echo $lang['mobileServices'] ?></a>
 
               </li>
-              <li class="parent"><a href="randevu.php">Randevu</a></li>
-              <li><a href="iletisim.php">İletişim</a></li>
+              <li class="parent"><a href="randevu.php"><?php echo $lang['appointment'] ?></a></li>
+              <li><a href="iletisim.php"><?php echo $lang['contact'] ?></a></li>
 
-              <!-- <li class="parent">
+              <li class="parent">
                   <a disabled><i class="icon-world" style="font-size: larger;"></i></a>
                   <ul class="submenu">
                     <li><a href="<?php
                                   $langQuery['lang'] = "tr";
                                   $query_result = http_build_query($langQuery);
-                                  echo basename($_SERVER['PHP_SELF']) . "?" . $query_result;  ?>">Türkçe</a>
+                                  echo basename($_SERVER['PHP_SELF']) . "?" . $query_result;  ?>"><?php echo $lang['dilTurkce'] ?></a>
+                    </li>
+                    <li><a href="<?php
+                                  $langQuery['lang'] = "en";
+                                  $query_result = http_build_query($langQuery);
+                                  echo basename($_SERVER['PHP_SELF']) . "?" . $query_result;  ?>"><?php echo $lang['dilIngilizce'] ?></a>
                     </li>
                   </ul>
-                </li> -->
+                </li>
               <!-- <li><a href="randevu.php">Randevu</a></li> -->
 
 
@@ -239,24 +244,24 @@ include 'utility/api/get-treatments.php';
 
         <nav id="menu">
           <ul class="nav wtf-menu">
-            <li class="item-select parent"><a href="index.php">Anasayfa</a></li>
+            <li class="item-select parent"><a href="index.php"><?php echo $lang['homepage'] ?></a></li>
 
             <li class="parent">
-              <a href="#">Neden Biz?</a>
+              <a href="#"><?php echo $lang['whyUs'] ?></a>
               <ul class="submenu">
                 <!-- <li class="parent">
                         <a href="misyon-vizyon.php">Misyonumuz ve Vizyonumuz</a>
                       </li> -->
 
 
-                <li class="parent"><a href="ekip.php">Ekibimiz</a></li>
+                <li class="parent"><a href="ekip.php"><?php echo $lang['ourTeam'] ?></a></li>
 
-                <li class="parent"><a href="misyon-vizyon.php">Değerlerimiz</a></li>
+                <li class="parent"><a href="misyon-vizyon.php"><?php echo $lang['ourValues'] ?></a></li>
               </ul>
             </li>
 
             <li class="parent">
-              <a href="#">Tedaviler</a>
+              <a href="#"><?php echo $lang['treatments'] ?></a>
               <ul class="submenu">
                 <?php foreach ($treatmentsResult as $singleTreatment) { ?>
                   <li class="parent">
@@ -269,28 +274,34 @@ include 'utility/api/get-treatments.php';
 
 
             <li class="parent">
-              <a href="saglikli-haber.php">Sağlıklı Haber</a>
+              <a href="saglikli-haber.php"><?php echo $lang['healthyNews'] ?></a>
 
             </li>
             <li class="parent">
-              <a href="tedavi-detay.php?url=mobil-hizmetler">Mobil Hizmetler</a>
+              <a href="tedavi-detay.php?url=mobil-hizmetler"><?php echo $lang['mobileServices'] ?></a>
 
             </li>
+            <li><a href="iletisim.php"><?php echo $lang['appointment'] ?></a></li>
 
-            <li><a href="iletisim.php">İletişim</a></li>
+            <li><a href="iletisim.php"><?php echo $lang['contact'] ?></a></li>
             <!-- <li><a href="randevu.php">Randevu</a></li> -->
 
 
-            <!-- <li class="parent">
+            <li class="parent">
               <a disabled><i class="icon-world" style="font-size: larger;"></i></a>
               <ul class="submenu">
-                <li><a href="<?php
-                              $langQuery['lang'] = "tr";
-                              $query_result = http_build_query($langQuery);
-                              echo basename($_SERVER['PHP_SELF']) . "?" . $query_result;  ?>">Türkçe</a>
-                </li>
-              </ul>
-            </li> -->
+                    <li><a href="<?php
+                                  $langQuery['lang'] = "tr";
+                                  $query_result = http_build_query($langQuery);
+                                  echo basename($_SERVER['PHP_SELF']) . "?" . $query_result;  ?>"><?php echo $lang['dilTurkce'] ?></a>
+                    </li>
+                    <li><a href="<?php
+                                  $langQuery['lang'] = "en";
+                                  $query_result = http_build_query($langQuery);
+                                  echo basename($_SERVER['PHP_SELF']) . "?" . $query_result;  ?>"><?php echo $lang['dilIngilizce'] ?></a>
+                    </li>
+                  </ul>
+            </li>
 
           </ul>
         </nav>

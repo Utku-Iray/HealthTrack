@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
     //Datetimepicker plugin
     $('.datetimepicker').bootstrapMaterialDatePicker({
         format: 'dddd DD MMMM YYYY - HH:mm',

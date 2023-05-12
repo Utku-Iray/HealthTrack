@@ -9,7 +9,11 @@ require_once 'utility/api/get-contact-information.php';
 
 <div class="sub-banner">
 
-	<img class="banner-img" src="images/banner/banner-iletisim.jpg" alt="">
+	<img class="banner-img" src=<?php if ($selectedLang == "tr") {
+	echo "images/banner/banner-iletisim.jpg";
+	} else {
+		echo "images/banner/iletisim-en.png";
+	} ?> alt="">
 	<div class="detail">
 		<div class="container">
 			<div class="row">
@@ -59,8 +63,8 @@ require_once 'utility/api/get-contact-information.php';
 					<div class="col-md-7">
 
 						<div class="main-title">
-							<h2>Size Nasıl Yardımcı Olabiliriz?</h2>
-							<p>Daha detaylı bilgi almak için formu doldurarak bizimle iletişime geçebilirsiniz.</p>
+							<h2><?php echo $lang['howCanWeHelpYou'] ?></h2>
+							<p><?php echo $lang['howCanWeHelpYouDescription'] ?></p>
 						</div>
 
 						<div class="form">
@@ -68,13 +72,13 @@ require_once 'utility/api/get-contact-information.php';
 								<p class="success" id="success" style="display:none;"></p>
 								<p class="error" id="error" style="display:none;"></p>
 								<form method="POST" action="mail/mail.php">
-									<div class="col-md-6"><input type="text" data-delay="300" placeholder="İsim Soyisim" name="name" class="input" required=""></div>
-									<div class="col-md-6"><input type="text" data-delay="300" placeholder="E-mail" name="email" class="input" required=""></div>
-									<div class="col-md-6"><input type="text" data-delay="300" placeholder="Telefon Numarası" name="phone" class="input" required=""></div>
-									<div class="col-md-6"><input type="text" data-delay="300" placeholder="Konu" name="subject" class="input" required=""></div>
+									<div class="col-md-6"><input type="text" data-delay="300" placeholder="<?php echo $lang['nameSurname'] ?>" name="name" class="input" required=""></div>
+									<div class="col-md-6"><input type="text" data-delay="300" placeholder="<?php echo $lang['eMail'] ?>" name="email" class="input" required=""></div>
+									<div class="col-md-6"><input type="text" data-delay="300" placeholder="<?php echo $lang['phone'] ?>" name="phone" class="input" required=""></div>
+									<div class="col-md-6"><input type="text" data-delay="300" placeholder="<?php echo $lang['subject'] ?>" name="subject" class="input" required=""></div>
 
-									<div class="col-md-12"><textarea data-delay="500" class="required valid" placeholder="Message" name="message" id="message" required=""></textarea></div>
-									<div class="col-md-3"><button style="background-color: #42717a;color: white;" class="btn btn--secondary">Formu İlet <i class="energia-arrow-right"></i></button></div>
+									<div class="col-md-12"><textarea data-delay="500" class="required valid" placeholder="<?php echo $lang['message'] ?>" name="message" id="message" required=""></textarea></div>
+									<div class="col-md-3"><button style="background-color: #42717a;color: white;" class="btn btn--secondary"><?php echo $lang['form'] ?> <i class="energia-arrow-right"></i></button></div>
 								</form>
 
 							</div>
@@ -87,25 +91,25 @@ require_once 'utility/api/get-contact-information.php';
 
 						<div class="contact-get">
 							<div class="main-title">
-								<h2>Bize<span>ULAŞIN</span> </h2>
+								<h2><?php echo $lang['toUs'] ?><span> <?php echo $lang['contactpage'] ?></span> </h2>
 								<!-- <p>cursus lorem molestie vitae. Nulla vehicula, lacus ut suscipit fermentum, turpis felis ultricies.</p> -->
 							</div>
 
 							<div class="get-in-touch" style="margin-top: 60px;">
 								<div class="detail">
-									<span><b>Telefon Numarası:</b></span>
+									<span><b><?php echo $lang['phone'] ?>:</b></span>
 									<?php foreach ($contactQueryResult as $singleResult) {
 										if ($singleResult->contact_type == "Telefon") { ?>
 											<span><?= $singleResult->contact_content ?></span>
 									<?php 	}
 									} ?>
-									<span><b>E-posta:</b></span>
+									<span><b><?php echo $lang['eMail'] ?>:</b></span>
 									<?php foreach ($contactQueryResult as $singleResult) {
 										if ($singleResult->contact_type == "E-posta") { ?>
 											<span><?= $singleResult->contact_content ?></span>
 									<?php 	}
 									} ?>
-									<span><b>Adres:</b></span>
+									<span><b><?php echo $lang['adress'] ?>:</b></span>
 									<?php foreach ($contactQueryResult as $singleResult) {
 										if ($singleResult->contact_type == "Adres") { ?>
 											<span><?= $singleResult->contact_content ?></span>

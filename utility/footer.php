@@ -65,11 +65,11 @@
 
              <div class="detail">
                <ul>
-                 <li><a href="index.php">Anasayfa</a></li>
-                 <li><a href="hakkimizda.php">Hakkımızda</a></li>
-                 <li><a href="iletisim.php">İletişim</a></li>
-                 <li><a href="#">Randevu</a></li>
-                 <li><a href="video-gallery.php">Videolar</a></li>
+                 <li><a href="index.php"><?php echo $lang['homepage'] ?></a></li>
+                 <li><a href="hakkimizda.php"><?php echo $lang['ourTeam'] ?></a></li>
+                 <li><a href="iletisim.php"><?php echo $lang['contact'] ?></a></li>
+                 <li><a href="randevu.php"><?php echo $lang['appointment'] ?></a></li>
+                 <li><a href="video-gallery.php"><?php echo $lang['videos'] ?></a></li>
                </ul>
              </div>
            </div>
@@ -77,7 +77,7 @@
          <div class="col-md-3">
            <div class="useful-links">
              <div class="title">
-               <h5>TEDAVİLER</h5>
+               <h5><?php echo $lang['treatmentsFooter'] ?></h5>
              </div>
 
              <div class="detail">
@@ -94,7 +94,7 @@
          <div class="col-md-3">
            <div class="newsletter">
              <div class="title">
-               <h5>TANIŞALIM</h5>
+               <h5><?php echo $lang['letsMeet'] ?></h5>
              </div>
 
              <div class="detail">
@@ -108,10 +108,10 @@
                  <p class="subscribe_error" id="subscribe_error" style="display: none"></p>
 
                  <form  method="POST" action="mail/footer-mail.php">
-                   <input type="text" data-delay="300" placeholder="İsim Soyisim" name="name"  class="input" required="" />
-                   <input type="text" data-delay="300" placeholder="Email Adresi" name="email"  class="input" required="" />
-                   <input type="text" data-delay="300" placeholder="Telefon Numarası" name="phone"   class="input" required="" />
-                   <input name="Subscribe" type="submit" value="GÖNDER" />
+                   <input type="text" data-delay="300" placeholder="<?php echo $lang['nameSurname'] ?>" name="name"  class="input" required="" />
+                   <input type="text" data-delay="300" placeholder="<?php echo $lang['eMail'] ?>" name="email"  class="input" required="" />
+                   <input type="text" data-delay="300" placeholder="<?php echo $lang['phone'] ?>" name="phone"   class="input" required="" />
+                   <input name="Subscribe" type="submit" value="<?php echo $lang['send'] ?>" />
                  </form>
                </div>
              </div>
@@ -120,7 +120,7 @@
          <div class="col-md-3">
            <div class="get-touch">
              <div class="title">
-               <h5>BİZE ULAŞIN</h5>
+               <h5><?php echo $lang['contactUs'] ?></h5>
              </div>
 
              <div class="detail">
@@ -154,8 +154,9 @@
      <div class="container">
        <div class="row">
          <div class="col-md-6">
-           <span class="copyrights">Copyright &copy; 2022 Fikirbuzz. Bütün Hakları Gizlidir.
-             <div style="padding-top: 5px;"> <a href="gizlilik-politikasi.php">Gizlilik Politikası</a> | <a href="kvkk-metni.php">KVKK Aydınlatma Metni</a> | <a href="tedavi-onayi.php">Tedavi Onayı</a></div>
+           <span class="copyrights">Copyright &copy; 2022 Fikirbuzz. <?php echo $lang ["butunHaklariGizlidir"] ?>.
+             <div style="padding-top: 5px;"> <a href="gizlilik-politikasi.php"><?php echo $lang ["gizlilikPolitikasi"] ?></a> | <?php if ($selectedLang=="tr") {?>
+              <a href="kvkk-metni.php"> <?php echo $lang ["kvkk"] ?>|  </a>  <?php }   ?>  <a href="tedavi-onayi.php"><?php echo $lang ["tedaviOnayi"] ?></a></div>
            </span>
          </div>
 

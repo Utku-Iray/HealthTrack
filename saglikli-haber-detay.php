@@ -17,7 +17,11 @@ if (isset($_GET["url"])) {
 <!--Start Banner-->
 <div class="sub-banner">
 
-    <img class="banner-img" src="images/banner/banner-sagklikli.jpg" alt="">
+    <img class="banner-img" src=<?php if ($selectedLang == "tr") {
+	echo "images/banner/banner-sagklikli.jpg";
+	} else {
+		echo "images/banner/blog-en.png";
+	} ?> alt="">
     <div class="detail">
         <div class="container">
             <div class="row">
@@ -26,8 +30,8 @@ if (isset($_GET["url"])) {
                     <div class="paging">
                         <h2><?= $selectedNewsResult["title"] ?></h2>
                         <ul>
-                            <li><a href="index.php">Anasayfa</a></li>
-                            <li><a href="saglikli-haber.php">Sağlıklı Haber</a></li>
+                            <li><a href="index.php"><?php echo $lang['homepage'] ?></a></li>
+                            <li><a href="saglikli-haber.php"><?php echo $lang['healthyNews'] ?></a></li>
                             <li><a><?= $selectedNewsResult["title"] ?></a></li>
                         </ul>
                     </div>

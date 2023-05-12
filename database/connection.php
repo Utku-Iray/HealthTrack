@@ -7,9 +7,9 @@
 // try {
 //     $servername = "server.essehost.com";
 
-//     $databasename = 'essehost_healthtrack';
+//     $databasename = 'healthtrackcom_healthtrack';
 
-//     $username = "essehost_admin";
+//     $username = "healthtrackcom_admin";
 
 //     $password = "Essebilisim2023.";
 
@@ -20,7 +20,6 @@
 // } catch (PDOException $e) {
 //     echo "Connection failed: " . $e->getMessage();
 // }
-
 
 
 // guzel

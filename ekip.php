@@ -2,6 +2,7 @@
 include 'utility/header.php';
 
 require_once 'utility/api/get-team-member.php';
+
 ?>
 
 
@@ -10,7 +11,11 @@ require_once 'utility/api/get-team-member.php';
 
 <div class="sub-banner">
 
-    <img class="banner-img" src="images/banner/banner-ekibimiz.jpg" alt="">
+    <img class="banner-img" src=<?php if ($selectedLang == "tr") {
+	echo "images/banner/banner-ekibimiz.jpg";
+	} else {
+		echo "images/banner/ekibimiz-en.png";
+	} ?> alt="">
     <div class="detail">
         <div class="container">
             <div class="row">

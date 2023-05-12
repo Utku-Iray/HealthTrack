@@ -9,7 +9,11 @@ require_once 'utility/api/get-news.php';
 
 <div class="sub-banner">
 
-    <img class="banner-img" src="images/banner/banner-sagklikli.jpg" alt="">
+    <img class="banner-img" src=<?php if ($selectedLang == "tr") {
+	echo "images/banner/banner-sagklikli.jpg";
+	} else {
+		echo "images/banner/blog-en.png";
+	} ?> alt="">
     <div class="detail">
         <div class="container">
             <div class="row">
@@ -32,7 +36,7 @@ require_once 'utility/api/get-news.php';
             <div class="row">
                 <div class="col-md-12">
                     <div class="main-title">
-                        <h2><span>Sağlıklı</span> Haber</h2>
+                        <h2><span><?php echo $lang['healthy'] ?></span> <?php echo $lang['news'] ?></h2>
                         <!-- <p>
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Similique aut rerum atque molestiae, quos sequi.

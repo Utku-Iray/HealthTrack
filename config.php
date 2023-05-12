@@ -8,9 +8,9 @@ if (!isset($_SESSION['lang'])) {
     if ($_GET['lang'] == "tr") {
         $_SESSION['lang'] = "tr";
     }
-    // else  if ($_GET['lang'] == "en") {
-    //     $_SESSION['lang'] = "en";
-    // }
+    else  if ($_GET['lang'] == "en") {
+        $_SESSION['lang'] = "en";
+    }
 }
 
 

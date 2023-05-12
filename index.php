@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 include 'utility/header.php';
 
 require_once 'utility/api/get-news.php';
@@ -44,23 +44,34 @@ require_once 'utility/api/get-slider.php';
       <!-- SLIDE  -->
 
 
-      <?php foreach ($sliderResult as $singleSlider) { ?>
+      <?php
+      if ($selectedLang == "tr") {
+        foreach ($sliderResult as $singleSlider) { ?>
 
-        <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
-          <!-- MAIN IMAGE -->
-          <img src="<?= $singleSlider->slider_image ?>" alt="<?= $singleSlider->title ?>" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
-          <!-- LAYERS -->
+          <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
+            <!-- MAIN IMAGE -->
+            <img src="<?= $singleSlider->slider_image ?>"  alt="<?= $singleSlider->title ?>" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+            <!-- LAYERS -->
+  
+            <div class="tp-caption black_thin_34 black_thin_34_bold customin tp-resizeme rs-parallaxlevel-0" data-x="0" data-y="250" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-speed="500" data-start="1400" data-easing="Back.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="display:none;z-index: 10; max-width: auto; max-height: auto; white-space: nowrap; font-size: 52px;color:#10464e">
+              <?= $singleSlider->title ?>
+              <br>
+              <h6 data-easing="Back.easeOut"><?= $singleSlider->content ?></h6>
+              <a href="<?= $singleSlider->slider_link ?>" class="read-more" style="background-color:#10464e; line-height: initial; color: #fff; text-transform: uppercase; font-weight: 500; padding: 12px 36px; display: inline-block; font-size: 18px;">Daha Fazlası</a>
+            </div>
+  
+  
+          </li>
+        <?php  } ?>
+        <?php  } else { ?>
 
-          <div class="tp-caption black_thin_34 black_thin_34_bold customin tp-resizeme rs-parallaxlevel-0" data-x="0" data-y="250" data-customin="x:0;y:0;z:0;rotationX:90;rotationY:0;rotationZ:0;scaleX:1;scaleY:1;skewX:0;skewY:0;opacity:0;transformPerspective:200;transformOrigin:50% 0%;" data-speed="500" data-start="1400" data-easing="Back.easeOut" data-splitin="none" data-splitout="none" data-elementdelay="0.1" data-endelementdelay="0.1" style="display:none;z-index: 10; max-width: auto; max-height: auto; white-space: nowrap; font-size: 52px;color:#10464e">
-            <?= $singleSlider->title ?>
-            <br>
-            <h6 data-easing="Back.easeOut"><?= $singleSlider->content ?></h6>
-            <a href="<?= $singleSlider->slider_link ?>" class="read-more" style="background-color:#10464e; line-height: initial; color: #fff; text-transform: uppercase; font-weight: 500; padding: 12px 36px; display: inline-block; font-size: 18px;">Daha Fazlası</a>
-          </div>
-
-
-        </li>
-      <?php  } ?>
+          <li data-transition="fade" data-slotamount="7" data-masterspeed="500" data-saveperformance="on" data-title="Intro Slide">
+            <!-- MAIN IMAGE -->
+            <img src="images/banner/slider-ing.png"  alt="<?= $singleSlider->title ?>" data-bgposition="center top" data-bgfit="cover" data-bgrepeat="no-repeat">
+            
+          </li>
+       <?php } ?>
+      
     </ul>
     <div class="tp-bannertimer"></div>
   </div>
@@ -74,7 +85,7 @@ require_once 'utility/api/get-slider.php';
     <ul id="accordion" class="accordion">
       <li>
         <div class="link">
-          <span class="appointment-title">Randevunuzu Birlikte Planlayalım</span><img class="icon-chevron-down" src="images/anasayfa.png" style="width: 30px; float:right; margin-right:20px;" alt="">
+          <span class="appointment-title"><?php echo $lang['planYourAppointment'] ?></span><img class="icon-chevron-down" src="images/anasayfa.png" style="width: 30px; float:right; margin-right:20px;" alt="">
           <i class="icon-chevron-down"></i>
         </div>
 
@@ -87,28 +98,28 @@ require_once 'utility/api/get-slider.php';
               <input class="input__field input__field--kohana" type="text" name="name" required="" />
               <label class="input__label input__label--kohana" for="input-29">
                 <i class="icon-user6 icon icon--kohana"></i>
-                <span class="input__label-content input__label-content--kohana">İsim Soyisim</span>
+                <span class="input__label-content input__label-content--kohana"><?php echo $lang['nameSurname'] ?></span>
               </label>
             </span>
             <span class="input input--kohana">
               <input class="input__field input__field--kohana" type="text" name="email" required="" />
               <label class="input__label input__label--kohana" for="input-30">
                 <i class="icon-dollar icon icon--kohana"></i>
-                <span class="input__label-content input__label-content--kohana">Email</span>
+                <span class="input__label-content input__label-content--kohana"><?php echo $lang['eMail'] ?></span>
               </label>
             </span>
             <span class="input input--kohana last">
               <input class="input__field input__field--kohana" type="text" name="phone" required="" />
               <label class="input__label input__label--kohana" for="input-31">
                 <i class="icon-phone5 icon icon--kohana"></i>
-                <span class="input__label-content input__label-content--kohana">Telefon Numarası</span>
+                <span class="input__label-content input__label-content--kohana"><?php echo $lang['phone'] ?></span>
               </label>
             </span>
             <span class="input input--kohana">
               <input class="input__field input__field--kohana" type="text" name="subject" required="" />
               <label class="input__label input__label--kohana" for="input-30">
                 <i class="icon-dollar icon icon--kohana"></i>
-                <span class="input__label-content input__label-content--kohana">Konu</span>
+                <span class="input__label-content input__label-content--kohana"><?php echo $lang['subject'] ?></span>
               </label>
             </span>
             <!-- <span class="input input--kohana">
@@ -119,11 +130,11 @@ require_once 'utility/api/get-slider.php';
               <input class="input__field input__field--kohana" type="text" name="message" required="" />
               <label class="input__label input__label--kohana" for="textarea">
                 <i class="icon-new-message icon icon--kohana"></i>
-                <span class="input__label-content input__label-content--kohana">Mesaj</span>
+                <span class="input__label-content input__label-content--kohana"><?php echo $lang['message'] ?></span>
               </label>
             </span>
 
-            <button style="background-color: white;;color: #42717a;margin-top:10px" class="btn btn--secondary">Formu İlet <i class="energia-arrow-right"></i></button>
+            <button style="background-color: white;;color: #42717a;margin-top:10px" class="btn btn--secondary"><?php echo $lang['form'] ?> <i class="energia-arrow-right"></i></button>
           </form>
         </section>
       </li>
@@ -137,7 +148,7 @@ require_once 'utility/api/get-slider.php';
 
   <div class="container steps padding-top-bottom">
     <div class="home-title">
-      <h2 class="baslik">İYİ OLMA HALİNİZİ ADIM ADIM DESTEKLİYORUZ</h2>
+      <h2 class="baslik"><?php echo $lang['weSupportYourWellBeingStepByStep'] ?></h2>
     </div>
 
     <div class="row">
@@ -318,17 +329,15 @@ require_once 'utility/api/get-slider.php';
         <div class="row">
           <div class="col-md-12">
             <div class="main-title">
-              <h2 style="font-size: 39px; padding-bottom:10px;">Optimal Sağlığı Korumak için <span> Temel Bakım</span></h2>
-              <img class="optimal-saglik" src="images/sablon3.PNG" alt="">
+              <h2 style="font-size: 39px; padding-bottom:10px;"><?php echo $lang['toMaintainOptimalHealth'] ?><span> <?php echo $lang['basicCare'] ?></span></h2>
+              <img class="optimal-saglik" src=<?php if ($selectedLang == "tr") {
+           echo "images/sablon3.PNG";
+              } else {
+              echo  "images/banner/sablon-3.png";
+              } ?> alt="">
               <p>
-                Yoğun stres, aşırı çevre kirliliği, endüstriyel tarım ürünleriyle beslenmek, paketli gıdaları
-                tüketmek, hareketsiz bir yaşam ve sonuçta devamlı olarak enerji deposunu tüketen bedenimiz…
-                Bu şartlara adapte olmaya çalışan bedenimiz, bir süre sonra yıpranıyor. Yıpranma ilerledikçe hastalık belirtileri (semptomlar) ortaya çıkmaya başlıyor.
-                Oysa, bedensel, zihinsel ve ruhsal sağlığımızı güvence altına almak için gereken
-                düzenlemeleri yaparsak, hastalıklara karşı önlem almış olacağız. Hastalıklardan korunarak
-                yaşam kalitemizi yükselteceğimiz gibi, yaşamdan aldığımız hazzı da artıracağız.
-                Optimum düzeyde sağlıklı olmak için yaşam tarzımızı düzenlemeye çabalamalıyız. Bunu elde edebilmeniz için tüm Healthtrack ekibi hazır, sizi bekliyor.
-              </p>
+              <?php echo $lang['basicCareDescription'] ?>
+               </p>
             </div>
           </div>
         </div>
@@ -357,7 +366,7 @@ require_once 'utility/api/get-slider.php';
                     <div class="detail" style="padding-top: 30px">
                       <h4><?= $singleTreatmentForHome->name ?></h4>
                       <p> <?= $singleTreatmentForHome->short_content ?></p>
-                      <a href="tedavi-detay.php?url=<?= $singleTreatmentForHome->url ?>">DEVAMINI OKU</a>
+                      <a href="tedavi-detay.php?url=<?= $singleTreatmentForHome->url ?>"><?php echo $lang['seeMoree'] ?></a>
                     </div>
                   </div>
 
@@ -777,7 +786,7 @@ require_once 'utility/api/get-slider.php';
         <div class="row">
           <div class="col-md-12">
             <div class="main-title">
-              <h2><span>Sağlıklı</span> Haber</h2>
+              <h2><span><?php echo $lang['healthy'] ?></span> <?php echo $lang['news'] ?></h2>
               <!-- <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                                 Similique aut rerum atque molestiae, quos sequi.
@@ -802,7 +811,7 @@ require_once 'utility/api/get-slider.php';
                             <?= $singleNews->short_content ?>
                           </p>
                           <div style="padding-top: 18px;">
-                            <a href="saglikli-haber-detay.php?url=<?= $singleNews->url ?>" class="btn" style="background-color: #3B919E; color:white;">Devamını Okuyun</a>
+                            <a href="saglikli-haber-detay.php?url=<?= $singleNews->url ?>" class="btn" style="background-color: #3B919E; color:white;"><?php echo $lang['seeMoree'] ?></a>
                           </div>
                           <span><i class="icon-clock3"></i> <?= $singleNews->created_at ?></span>
                           <!-- <span class="comment"><a href="#"><i class="icon-icons206"></i> 5 Comments</a></span> -->

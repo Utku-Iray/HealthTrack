@@ -21,7 +21,11 @@ require_once 'utility/api/get-mission-vision.php';
 
 <div class="sub-banner">
 
-	<img class="banner-img" src="images/banner/banner-degerlerimiz.jpg" alt="">
+	<img class="banner-img" src=<?php if ($selectedLang == "tr") {
+	echo "images/banner/banner-degerlerimiz.jpg";
+	} else {
+		echo "images/banner/degerlerimiz-en.png";
+	} ?>  alt="">
 	<div class="detail">
 		<div class="container">
 			<div class="row">

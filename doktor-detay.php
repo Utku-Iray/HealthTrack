@@ -59,7 +59,7 @@ if (isset($_GET["id"])) {
 						</div>
 
 						<ul>
-							<li><span class="title">Açıklama</span> <span><?= $membersResult["description"] ?></span></li>
+							<li><span class="title"><?php echo $lang["description"] ?></span> <span><?= $membersResult["description"] ?></span></li>
 
 						</ul>
 

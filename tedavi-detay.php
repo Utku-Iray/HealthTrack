@@ -27,8 +27,8 @@ if (isset($_GET["url"])) {
 					<div class="paging">
 						<h2><?= $selectedTreatmentResult["name"] ?></h2>
 						<ul>
-							<li><a href="index.php">Anasayfa</a></li>
-							<li><a href="tedaviler.php">Tedaviler</a></li>
+							<li><a href="index.php"><?php echo $lang['homepage'] ?></a></li>
+							<li><a href="tedaviler.php"><?php echo $lang['treatments'] ?></a></li>
 							<li><a><?= $selectedTreatmentResult["name"] ?></a></li>
 						</ul>
 					</div>
@@ -119,7 +119,7 @@ if (isset($_GET["url"])) {
 					<br><br>
 					<div class="col-md-12" style="align-items:center;">
 					<a href="images/pdf/iv-paketler.pdf" target="_blank">
-						<button class="btn" style="border: solid 1px #3B919E; background-color:white; color:#3B919E !important;">Ne Dersiniz? Başlayalım Mı?</button></a>
+						<button class="btn" style="border: solid 1px #3B919E; background-color:white; color:#3B919E !important;"><?php echo $lang['sayWhatShallWeBegin'] ?></button></a>
 					</div>
 				</div>
 			</div>
@@ -130,7 +130,7 @@ if (isset($_GET["url"])) {
 				<div class="row">
 					<div class="col-md-12">
 						<div class="main-title">
-							<h2><span>Sağlıklı</span> Haber</h2>
+							<h2><span><?php echo $lang['healthy'] ?></span> <?php echo $lang['news'] ?></h2>
 							<!-- <p>
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 								Similique aut rerum atque molestiae, quos sequi.

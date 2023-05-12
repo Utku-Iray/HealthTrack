@@ -28,12 +28,10 @@ require_once 'utility/api/get-team-member.php';
 
     <div class="container" style="padding-top: 50px;">
         <div class="row">
-            <h2 style="text-align: center;">SAĞLIK VERİLERİNE İLİŞKİN AÇIK RIZA METNİ</h2>
+            <h2 style="text-align: center;"><?php echo $lang["tedaviOnayiTitle"] ?></h2>
             <br>
             <p>
-            İnternet Sitesi İletişim/Randevu Aydınlatma Metni’nde belirtilen sağlık verileriniz internet ortamında (healthtrack.com.tr aracılığıyla) tarafımızla paylaşıldığından bu paylaşım yöntemiyle birlikte, sağlık verileriniz sunucuları yurt içinde olan sunucularla da paylaşılmaktadır. Bu sebepten ötürü mevzubahis verilerinizi ancak KVKK m.8 uyarınca “Açık Rıza” vermeniz halinde internet sitemiz aracılığıyla toplayabilmekteyiz. 
-<br><br>Mevzubahis aydınlatma metninde belirtilen amaçların gerçekleştirilebilmesi için sizlerden açık rızanızı talep etmekteyiz. Açık rıza vermemeniz halinde bu bilgiler tarafımızla paylaşılamadığından sağlık hizmeti planlamanızı doğru şekilde gerçekleştirmemiz mümkün olmayacaktır. Alternatif olarak bizimle paylaşmanız gereken dokümanları fiziki olarak kliniğimize gelerek de paylaşabilirsiniz.
-
+            <?php echo $lang["tedaviOnayiDescription"] ?>
             </p>
 
 
