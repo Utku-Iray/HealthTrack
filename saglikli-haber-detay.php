@@ -18,10 +18,10 @@ if (isset($_GET["url"])) {
 <div class="sub-banner">
 
     <img class="banner-img" src=<?php if ($selectedLang == "tr") {
-	echo "images/banner/banner-sagklikli.jpg";
-	} else {
-		echo "images/banner/blog-en.png";
-	} ?> alt="">
+                                    echo "images/banner/banner-sagklikli.jpg";
+                                } else {
+                                    echo "images/banner/blog-en.png";
+                                } ?> alt="">
     <div class="detail">
         <div class="container">
             <div class="row">
@@ -56,7 +56,6 @@ if (isset($_GET["url"])) {
                         <div class="detail">
                             <?= $selectedNewsResult["content"] ?></a>
 
-
                         </div>
                     </div>
                 </div>
@@ -74,6 +73,10 @@ if (isset($_GET["url"])) {
 
     <script type="text/javascript">
         $(document).ready(function() {
+            const pageURL = new URL(location);
+            pageURL.searchParams.set("url", "<?= $selectedNewsResult["url"] ?>");
+            window.history.pushState({}, null, pageURL);
+
             var interval = 0;
             const nid = "<?= $selectedNewsResult["news_id"] ?>";
 

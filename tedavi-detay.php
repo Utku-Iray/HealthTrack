@@ -118,8 +118,8 @@ if (isset($_GET["url"])) {
 					</div>
 					<br><br>
 					<div class="col-md-12" style="align-items:center;">
-					<a href="images/pdf/iv-paketler.pdf" target="_blank">
-						<button class="btn" style="border: solid 1px #3B919E; background-color:white; color:#3B919E !important;"><?php echo $lang['sayWhatShallWeBegin'] ?></button></a>
+						<a href="images/pdf/iv-paketler.pdf" target="_blank">
+							<button class="btn" style="border: solid 1px #3B919E; background-color:white; color:#3B919E !important;"><?php echo $lang['sayWhatShallWeBegin'] ?></button></a>
 					</div>
 				</div>
 			</div>
@@ -180,6 +180,11 @@ if (isset($_GET["url"])) {
 
 	<script type="text/javascript">
 		$(document).ready(function() {
+
+			const pageURL = new URL(location);
+			pageURL.searchParams.set("url", "<?= $selectedTreatmentResult["url"] ?>");
+			window.history.pushState({}, null, pageURL);
+
 			var interval = 0;
 			const tid = "<?= $selectedTreatmentResult["treatment_id"] ?>";
 
