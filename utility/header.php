@@ -4,6 +4,8 @@ include "config.php";
 
 include 'utility/api/get-contact-main-information.php';
 include 'utility/api/get-treatments.php';
+
+include 'utility/api/get-languages.php';
 ?>
 <!DOCTYPE html>
 <html>
@@ -58,25 +60,31 @@ include 'utility/api/get-treatments.php';
 
   <!--PreLoader-->
   <link href="css/loader.css" rel="stylesheet" type="text/css" />
- 
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-SPVYXXJ05S"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-SPVYXXJ05S');
-</script>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11172819475"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SPVYXXJ05S"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'AW-11172819475');
-</script>
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SPVYXXJ05S');
+  </script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11172819475"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'AW-11172819475');
+  </script>
 </head>
 
 <body>
@@ -212,20 +220,18 @@ include 'utility/api/get-treatments.php';
               <li><a href="iletisim.php"><?php echo $lang['contact'] ?></a></li>
 
               <li class="parent">
-                  <a disabled><i class="icon-world" style="font-size: larger;"></i></a>
-                  <ul class="submenu">
+                <a disabled><i class="icon-world" style="font-size: larger;"></i></a>
+                <ul class="submenu">
+                  <?php
+                  foreach ($languageTranslations as $singleLang) { ?>
                     <li><a href="<?php
-                                  $langQuery['lang'] = "tr";
+                                  $langQuery['lang'] = $singleLang->main_code;
                                   $query_result = http_build_query($langQuery);
-                                  echo basename($_SERVER['PHP_SELF']) . "?" . $query_result;  ?>"><?php echo $lang['dilTurkce'] ?></a>
+                                  echo basename($_SERVER['PHP_SELF']) . "?" . $query_result;  ?>"><?= $singleLang->name ?></a>
                     </li>
-                    <li><a href="<?php
-                                  $langQuery['lang'] = "en";
-                                  $query_result = http_build_query($langQuery);
-                                  echo basename($_SERVER['PHP_SELF']) . "?" . $query_result;  ?>"><?php echo $lang['dilIngilizce'] ?></a>
-                    </li>
-                  </ul>
-                </li>
+                  <?php    } ?>
+                </ul>
+              </li>
               <!-- <li><a href="randevu.php">Randevu</a></li> -->
 
 
@@ -290,17 +296,17 @@ include 'utility/api/get-treatments.php';
             <li class="parent">
               <a disabled><i class="icon-world" style="font-size: larger;"></i></a>
               <ul class="submenu">
-                    <li><a href="<?php
-                                  $langQuery['lang'] = "tr";
-                                  $query_result = http_build_query($langQuery);
-                                  echo basename($_SERVER['PHP_SELF']) . "?" . $query_result;  ?>"><?php echo $lang['dilTurkce'] ?></a>
-                    </li>
-                    <li><a href="<?php
-                                  $langQuery['lang'] = "en";
-                                  $query_result = http_build_query($langQuery);
-                                  echo basename($_SERVER['PHP_SELF']) . "?" . $query_result;  ?>"><?php echo $lang['dilIngilizce'] ?></a>
-                    </li>
-                  </ul>
+                <?php
+                foreach ($languageTranslations as $langs) { ?>
+                  <li><a href="<?php
+                                $langQuery['lang'] = $langs->main_code;
+                                $query_result = http_build_query($langQuery);
+                                echo basename($_SERVER['PHP_SELF']) . "?" . $query_result;  ?>"><?= $langs->name ?></a>
+                  </li>
+                <?php    } ?>
+
+
+              </ul>
             </li>
 
           </ul>
