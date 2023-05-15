@@ -91,7 +91,7 @@ require_once 'utility/api/get-contact-information.php';
 
 						<div class="contact-get">
 							<div class="main-title">
-								<h2><?php echo $lang['toUs'] ?><span> <?php echo $lang['contactpage'] ?></span> </h2>
+								<h2><?php echo $lang['toUs'] ?> <?php echo $lang['contactpage'] ?> </h2>
 								<!-- <p>cursus lorem molestie vitae. Nulla vehicula, lacus ut suscipit fermentum, turpis felis ultricies.</p> -->
 							</div>
 

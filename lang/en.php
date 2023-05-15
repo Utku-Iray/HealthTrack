@@ -61,7 +61,7 @@ $lang = array(
     //İletişim Sayfası
     "howCanWeHelpYou" => "How can we help you?",
     "howCanWeHelpYouDescription" => "For more detailed information, you can contact us by filling out the form.",
-    "toUs" => "To Us",
+    "toUs" => "",
     "contactpage" => "Contact"
 
 );
