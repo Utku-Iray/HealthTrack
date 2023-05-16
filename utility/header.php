@@ -11,9 +11,9 @@ include 'utility/api/get-languages.php';
 <html>
 
 <head>
-  <title>Healthtrack</title>
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
+  <title>Healthtrack Clinic</title>
+  <meta name="keywords" content="Healthtrack, Healthtrackclinic, KadirDogruer, IVTerapi, IVTherapy, IVTerapiSerum, HolisticMedicine, MedicalService, Wellness, Glutatyon, NAD+, Kayropraktik, Homeopati, BütüncülTıp, HolistikTıp, VIPSağlıkHizmeti, AlternatifTıp" />
+  <meta name="description" content="Healthtrack’te size özel, bütüncül ve tamamlayıcı bir anlayışla tanışın. Kişiye özel analizler sonrası hazırladığımız IV Terapi ve NAD+ serumlarıyla iyi olma sürecinizi başlatın." />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 
@@ -171,7 +171,7 @@ include 'utility/api/get-languages.php';
       <div class="container">
         <div class="row">
           <div class="col-md-3">
-            <a href="index.php" class="logo"><img style="position: relative;
+            <a href="/" class="logo"><img style="position: relative;
     top: 50%;
     transform: translateY(-0%);" src="images/logo-4.png" alt="" /></a>
           </div>
@@ -180,7 +180,7 @@ include 'utility/api/get-languages.php';
           <div class="col-md-9">
             <nav class="menu-2">
               <ul class="nav wtf-menu">
-                <li class="item-select parent"><a href="index.php"><?php echo $lang['homepage'] ?></a></li>
+                <li class="item-select parent"><a href="/"><?php echo $lang['homepage'] ?></a></li>
 
                 <li class="parent">
                   <a href="#"><?php echo $lang['whyUs'] ?></a>
@@ -250,7 +250,7 @@ include 'utility/api/get-languages.php';
 
         <nav id="menu">
           <ul class="nav wtf-menu">
-            <li class="item-select parent"><a href="index.php"><?php echo $lang['homepage'] ?></a></li>
+            <li class="item-select parent"><a href="/"><?php echo $lang['homepage'] ?></a></li>
 
             <li class="parent">
               <a href="#"><?php echo $lang['whyUs'] ?></a>

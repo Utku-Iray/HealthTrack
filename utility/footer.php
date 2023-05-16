@@ -65,7 +65,7 @@
 
              <div class="detail">
                <ul>
-                 <li><a href="index.php"><?php echo $lang['homepage'] ?></a></li>
+                 <li><a href="/"><?php echo $lang['homepage'] ?></a></li>
                  <li><a href="hakkimizda.php"><?php echo $lang['ourTeam'] ?></a></li>
                  <li><a href="iletisim.php"><?php echo $lang['contact'] ?></a></li>
                  <li><a href="randevu.php"><?php echo $lang['appointment'] ?></a></li>
