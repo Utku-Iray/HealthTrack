@@ -73,19 +73,16 @@ if (isset($_COOKIE["loginController"]) && $_COOKIE["loginController"] == "1") {
         $("#loginForm").submit(function(event) {
             event.preventDefault();
 
-            var email = document.getElementById('userMailInput').value;
-            var pwd = document.getElementById('userPasswordInput').value;
-            var rememberme = document.querySelector('#rememberMe').checked;
+            var $data = new FormData(this);
 
             $.ajax({
-                url: "API/login-action.php",
+                url: "API/login-action",
                 type: "POST",
-                data: {
-                    email: email,
-                    pwd: pwd,
-                    rememberme: rememberme,
-                },
+                contentType: false,
+                processData: false,
+                cache: false,
                 dataType: "json",
+                data: $data,
                 success: function(data) {
                     if (data.status == false) {
                         console.log("Error")

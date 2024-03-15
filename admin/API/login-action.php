@@ -1,11 +1,13 @@
 <?php
 include "../../database/connection.php";
 
-$email =  trim($_POST["email"]);
-$password = trim($_POST["pwd"]);
+
+$email = trim(filter_input(INPUT_POST, 'userMailInput'));
+$password = trim(filter_input(INPUT_POST, 'userPasswordInput'));
+
 
 if (
-    empty($email) ||   empty($password)
+    empty($email) && empty($password)
 ) {
     $errors['error'] = 'E-posta ve şifre boş bırakılamaz.';
 } else {
@@ -35,9 +37,7 @@ if (!empty($errors)) {
     if ($stmt = $vt->prepare($sql)) {
 
         $stmt->bindParam(":userMail", $param_usermail, PDO::PARAM_STR);
-
-
-        $param_usermail = trim($usermail);
+        $param_usermail = trim($email);
 
         if ($stmt->execute()) {
             if ($stmt->rowCount() == 1) {
