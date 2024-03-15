@@ -97,7 +97,7 @@ if (isset($_COOKIE["loginController"]) && $_COOKIE["loginController"] == "1") {
                             timer: 1500
                         })
                     } else {
-                        setInterval(reloadFunc, 3500)
+                        setInterval(reloadFunc, 3000)
                         Swal.fire({
                             position: 'top-start',
                             icon: 'success',

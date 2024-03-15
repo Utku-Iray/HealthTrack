@@ -33,8 +33,8 @@
                              <a href="#"><img src="assets/img/profileIcon.png" alt="" style="object-fit:contain;width:100px !important;height:100px !important;"></a>
                          </div>
                          <div class="detail">
-                             <h6>USER NAME</h6>
-                             <p class="mb-0">USER MAIL</p>
+                             <h6><?= $userFullName ?></h6>
+                             <p class="mb-0"><?= $userMail ?></p>
                              <!-- <a href="SETTINGS" title="" class=" waves-effect waves-block"><i class="zmdi zmdi-settings"></i></a> -->
                              <a href="logout.php" title="" class=" waves-effect waves-block"><i class="zmdi zmdi-power"></i></a>
                          </div>
